@@ -1,0 +1,50 @@
+Site suggestion :
+
+work search
+
+The Market need ( what I'm trying to solve ) :
+The users need an application that helps them to conduct and manage the job search is an effective way
+not only lok for a job but also , manage my appointments - my job search status ( in each place )
+where I send my CV already , whare I dont want to send CV
+Prefered places - add places - and when a job is opened get notification ( smart agent ) 
+
+
+market search :
+looking in israeli web sites : 
+https://www.alljobs.co.il/
+https://www.drushim.co.il/
+https://www.jobnet.co.il/
+https://www.jobmaster.co.il/
+https://www.mako.co.il/nexter-top-israeli-websites/2011/Article-305c187fe536231006.htm
+
+
+
+
+user stories :
+As a man that is looking for a Job I need to:    in order to :
+As a man that is looking for a Job I need to:    in order to :
+As a man that is looking for a Job I need to:    in order to :
+As a man that is looking for a Job I need to:    in order to :
+As a man that is looking for a Job I need to:    in order to :
+As a man that is looking for a Job I need to:    in order to :
+
+As an HR person I need to:    in order to :
+As an HR person I need to:    in order to :
+As an HR person I need to:    in order to :
+As an HR person I need to:    in order to :
+As an HR person I need to:    in order to :
+As an HR person I need to:    in order to :
+As an HR person I need to:    in order to :
+
+
+Details information :
+
+
+System Tree :
+
+Flow :
+
+
+System Components :
+
+
