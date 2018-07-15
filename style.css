@@ -1,0 +1,32 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    background-image: url("https://d2t44wh9rnwl5y.cloudfront.net/gsc/WCGH23/e4/89/35/e48935baf4224af5a8e56e17a14c4b54/images/landingpage/u2.jpg?token=b9c18902bc460d7a3080539a54d8702e");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.border-button{
+    border: 2px solid black;
+    padding : 10px;
+    font-size: 13px;  
+    width:100px;  
+}
+
+.main-header{
+    font-family: 'Juice ITC Bold', 'Juice ITC';
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+    background-color: lightblue;
+}
+
+.sub-header{
+    font-weight: 700;  
+    font-size: 32px;
+}
+
+main{
+    margin: auto;
+    text-align: center;
+}
