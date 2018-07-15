@@ -1,5 +1,6 @@
 body{
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 body.landing-page{
@@ -47,4 +48,94 @@ main{
     background-image: url("https://d26uhratvi024l.cloudfront.net/gsc/WCGH23/e4/89/35/e48935baf4224af5a8e56e17a14c4b54/images/register/u14.jpg?token=410b52a1b42faea7202ec539004ccd03");
     background-repeat: no-repeat;
     background-size: cover; 
+}
+.opacity-rec{
+    background-color: white;
+    opacity: 0.6;
+    height: 800px;
+    margin: 3%;
+}
+
+.opacity-rec>p{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.gray-rec{
+	 float: left;
+       margin: 10px;
+   
+    
+	background-color:rgba(225, 222, 231, 1);
+	padding: 20px;
+	width:350px;
+	height:376px;
+	
+}
+.gray-rec>h1{
+	font-size:24px;
+	
+}
+.gray-rec>div{
+    padding-bottom: 20px;
+}
+
+.info-rec{
+text-align:left;
+	 float: left;
+    width: 700px;
+    height: 500px;
+    margin: 10px;
+    
+}
+.image-and-lines{
+    padding-bottom: 30px;
+}
+
+.two-lines{
+    display: inline-block;
+    
+}
+
+
+.two-lines>h1{   
+	    font-size:28px;
+        margin:0;
+        display: inline-block;
+        font-weight: 700;
+}
+
+.two-lines > p{
+	font-size:20px;
+    margin:0;
+    font-weight: 700;
+   
+}
+
+input{
+    padding:10px;
+    border-width: 2px;
+    border-style: inset;
+}
+.full-line
+{
+    width: 93%;
+    padding: 8px;
+}
+
+.one-line{
+    display: inline;
+    padding-bottom: 10px;
+    
+}
+.one-line>input{
+width:42%;
+}
+.register-page button{
+    color: white;
+    font-size: 16px;
+    border: 0px;
+    background-color: rgba(51, 153, 255, 1);
+    padding:8px;
+    width: 100%;
 }
