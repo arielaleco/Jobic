@@ -21,17 +21,17 @@ body.landing-page{
 }
 
 .border-button{
-    border: 2px solid black;
+    border: 2px solid rgba(125,185,232,0);
     padding : 10px;
     font-size: 13px;  
     width:100px;  
     margin: 20px;
-    background-color: rgba(89,148,202,1);
+    background-color: rgba(53,97,161,1);
     color: white;
 }
 .border-button:hover{
     
-    background-color: lightblue;
+    background-color: rgba(89,148,202,1);
 }
 
 .main-header{        
@@ -109,7 +109,7 @@ main{
     margin: 10px 80px;
    
     
-	background-color:rgba(225, 222, 231, 1);
+	background-color:rgb(192, 197, 201);
 	padding: 20px;
 	width:350px;
 	height:330px;
@@ -185,11 +185,13 @@ input{
     padding:8px;
     margin-bottom: 20px;
 }
-.register-page button{
+
+
+.blue-button{
     color: white;
     font-size: 16px;
     border: 0px;
-    background-color: rgba(51, 153, 255, 1);
+    background-color: rgba(53,97,161,1);
     padding:8px;
     width: 100%;
 }
