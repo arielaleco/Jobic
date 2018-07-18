@@ -86,9 +86,16 @@ main{
     background-position: center top; 
     width:100vw;
     height:100vh;
+    position: absolute;
+    text-align: left;
 
 
 }
+.opacity-rec-color{
+    background-color: rgba(201, 213, 224, 0.7);
+    margin: 50px;
+}
+
 /* .opacity-rec{
     background-color: white;
     opacity: 0.6;
@@ -97,44 +104,20 @@ main{
     position: relative;
 } */
 
-.opacity-rec {
-    width: 1300px;
-    height: 600px;
-    display: block;
-    position: relative;
-    background-color: rgba(201, 213, 224, 0.7);
-    margin: 50px 30px;
-    /* background: linear-gradient(to bottom,rgba(201, 213, 224, 0.7) 91%,rgba(125,185,232,0) 100%);  */
-    }
-    
-    /* .opacity-rec::after {
-    content: "";
-   
-    background-color: red;
-    top: 80px;
-    left: 50px;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1; 
-    } */
 
-.opacity-rec>p{
+
+.opacity-rec-color>p{
     font-size: 40px;
     font-weight: 700;
     text-align: left;
-    padding : 10px 80px 1px;
+    padding : 10px 25px 1px;
 }
 
 .gray-rec{
-	 float: left;
-    margin: 10px 60px;
-   
+    background-color:rgb(192, 197, 201); 
+    margin: 20px 10px;
+    padding:10px;
     
-	background-color:rgb(192, 197, 201);
-	padding: 20px;
-	width:350px;
-	height:330px;
 	
 }
 
@@ -142,12 +125,19 @@ main{
 .gray-rec>h1{
     font-size:24px;
     margin-bottom: 24px;
-    
+    font-weight: 600;
 	
 }
 .gray-rec>div{
     padding-bottom: 20px;
 }
+
+.reg-info-rec{
+    text-align:left;
+    
+        padding: 5px;
+        
+    }
 
 .info-rec{
 text-align:left;
@@ -179,7 +169,7 @@ text-align:left;
 }
 
 .two-lines > p{
-	font-size:20px;
+	font-size:16px;
     margin:0;
     font-weight: 700;
    
@@ -192,7 +182,7 @@ input{
 }
 .full-line
 {
-    width: 93%;
+    width: 100%;
     padding: 8px;
     
 }
@@ -203,7 +193,7 @@ input{
     
 }
 .one-line>input{
-    width:42%;
+    width:49.3%;
     padding:8px;
     margin-bottom: 20px;
 }

@@ -6,9 +6,9 @@ app.config(function($routeProvider) {
       templateUrl: 'app/landingPage/landingPage.html',
       controller: 'landingPageCtrl'
     })
-    .when('/register', {
-      templateUrl: 'app/register/register.html',
-      controller: 'registerCtrl'
+    .when('/signUp', {
+      templateUrl: 'app/signUp/signUp.html',
+      controller: 'signUpCtrl'
     })
     .when('/moviessection', {
         templateUrl: 'app/movies/moviessection.html',
