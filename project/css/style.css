@@ -28,9 +28,9 @@ body{
 .border-button{
     border: 2px solid rgba(125,185,232,0);
     padding : 10px;
-    font-size: 13px;  
+    font-size: 16px;  
     width:100px;  
-    margin: 20px;
+    /* margin: 20px; */
     background-color: rgba(53,97,161,1);
     color: white;
 }
@@ -199,11 +199,9 @@ input{
 }
 
 
-.blue-button{
-    color: white;
-    font-size: 16px;
-    border: 0px;
-    background-color: rgba(53,97,161,1);
-    padding:8px;
+.width-button{    
     width: 100%;
 }
+
+
+
