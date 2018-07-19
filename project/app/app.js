@@ -14,9 +14,9 @@ app.config(function($routeProvider) {
         templateUrl: 'app/profile/profile.html',
         controller: 'profileCtrl'
       })
-    .when('/moviessection/:movieId', {
-        templateUrl: 'app/movies/movieFullDetails.html',
-        controller: 'movieFullDetailsCtrl'
+    .when('/resume', {
+        templateUrl: 'app/resume/resume.html',
+        controller: 'resumeCtrl'
       })
     .otherwise({
       redirectTo: '/'
