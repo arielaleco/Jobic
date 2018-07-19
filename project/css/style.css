@@ -1,3 +1,5 @@
+
+
 * {
     padding: 0px;
     margin:0px;
@@ -9,14 +11,8 @@ body{
    
 }
 
-.landing-page{              
-    /* width:100%;
-    min-height: 720px; 
-    height: 100%; */
-/* background-image: url("../app/resources/images/glenn-carstens-peters_small.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; */
-
+/* ==============================  landing game ============================== */
+.landing-page{                  
     background-image: url('../app/resources/images/glenn-carstens-peters_small.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -76,7 +72,53 @@ main{
 }
 
 
-/* ==================  register page ================== */
+/* ==============================  main menu ============================== */
+
+#main-menu{
+    background-color: rgb(51, 153, 255);  
+    font-weight: 600;
+    padding:0px;
+}
+
+#main-menu a{
+    color:white;
+    width:146px;
+    text-align: center;
+}
+
+
+#img-container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+#img-container a{
+    font-family: 'Juice ITC Bold', 'Juice ITC';
+    font-size: 50px;
+    font-weight: 700;
+ 
+    
+}
+.centered {
+    position: absolute;
+    top: 21%;
+    left: 99%;
+    transform: translate(-50%, -50%);
+}
+
+#navbarSupportedContent ul{
+    padding-left: 70px;
+    height:60px;
+}
+#navbarSupportedContent>ul>li{
+    font-size: 14px;
+    /* padding:10px 40px; */
+}
+#navbarSupportedContent>ul>li:hover{
+    background-color: green;
+}
+
+/* ============================== register page ============================== */
 .register-page{
     font-family: 'Raleway', sans-serif;        
     background-size: cover; 
