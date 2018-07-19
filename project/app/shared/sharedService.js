@@ -5,6 +5,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.title = anObj.title;
         this.file  = anObj.file;
         this.date  = anObj.date;
+        this.index  = anObj.index;
         this.description = anObj.description;
         
     }
