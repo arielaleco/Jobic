@@ -252,5 +252,17 @@ margin:auto;
 
 /* ============================== resume-page ============================== */
 .resume-div{
-    
+
+}
+.card-header{
+    padding: 0px;
+    margin: 0px;
+}
+
+.card-header p{
+  display: inline;  
+  
+}
+.card-header i{
+    padding:0px 13px;
 }
