@@ -166,7 +166,7 @@ main{
 
 .gray-rec>h1{
     font-size:24px;
-    margin-bottom: 24px;
+    margin-bottom: 11px;
     font-weight: 600;
 	
 }
@@ -265,4 +265,19 @@ margin:auto;
 }
 .card-header i{
     padding:0px 13px;
+}
+
+.icon-on-accordion{
+    /* display: none; */
+    /* display: inline; */
+    position: relative;
+    float:right;
+}
+
+.accordion-line{
+    width: 100%;;
+    text-align: left;
+}
+.input-in-accordion{
+    
 }

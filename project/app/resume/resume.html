@@ -10,97 +10,79 @@
 
 
                     <h1>Resume Versions</h1>
+                    <a href="javascript:void(0)" title="Add new Resume">
+                        <i class="fas fa-plus-square"></i>
+                    </a>
                     <div id="accordion">
-                            <!-- class="col-xl-3 col-lg-4 col-sm-6" -->
+                        <!-- class="col-xl-3 col-lg-4 col-sm-6" -->
 
-                    <div ng-repeat="resume in resumeArr" > 
+                        <div ng-repeat="resume in resumeArr">
                             <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h5 class="mb-0">
-                                                
-                                            <button class="btn btn-link" data-toggle="collapse" data-target="#{{resume.index}}" aria-expanded="true" aria-controls="collapseOne">
-                                                <i class="fas fa-caret-down"></i>
-                                                <p>{{resume.title}}</p>
-                                            </button>
-                                        </h5>
-                                    </div>
-        
-                                    <div id="{{resume.index}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Date : File : Description: Delete:
-        
-        
-        
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+
+                                        <button class="btn btn-link collapsed accordion-line" data-toggle="collapse" data-target="#{{resume.index}}" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            <i class="fas fa-caret-down"></i>
+                                            <p>{{resume.title}}</p>
+
+                                            <!-- <div class="icon-on-accordion">
+                                                <a href="javascript:void(0)" title="Delete current resume">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                            </div> -->
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="{{resume.index}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <div class="icon-on-accordion">
+                                            <a href="javascript:void(0)" title="Edit current resume">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" title="Delete current resume">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
                                         </div>
+                                        <p>
+                                            <strong>Date :</strong>{{resume.date}}</p>
+                                        <p>
+                                            <strong>File :</strong>{{resume.file}}</p>
+                                        <p>
+                                            <strong>Description :</strong>{{resume.description}}</p>
+                                        <input class="input-in-accordion" type="text" value="{{resume.description}}" ng-readonly="false">
+
                                     </div>
                                 </div>
-                    </div>    
+                            </div>
+                        </div>
 
-                        
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Collapsible Group Item #2
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                    accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Collapsible Group Item #3
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                    accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
-
-
-
-
-
-
-
-
-
-
-
                 </div>
+                <div class="col-xl-3 col-lg-2  col-sm-1"></div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-xl-3 col-lg-2  col-sm-1"></div>
+            <div class="col-xl-6 col-lg-7  col-sm-10">
+                <div class="gray-rec"></div>
             </div>
             <div class="col-xl-3 col-lg-2  col-sm-1"></div>
+
         </div>
-    </div>
-    <div class="row ">
-        <div class="col-xl-3 col-lg-2  col-sm-1"></div>
-        <div class="col-xl-6 col-lg-7  col-sm-10">
-            <div class="gray-rec"></div>
-        </div>
-        <div class="col-xl-3 col-lg-2  col-sm-1"></div>
 
     </div>
-
-</div>
