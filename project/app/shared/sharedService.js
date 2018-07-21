@@ -1,3 +1,5 @@
+//buttons- https://www.w3schools.com/howto/howto_css_more_button.asp
+
 app.factory('sharedService', function ($log, $q, $http) {
 
     resumeArr = [];
@@ -5,12 +7,22 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.title = anObj.title;
         this.file  = anObj.file;
         this.date  = anObj.date;
-        this.index  = anObj.index;
+        this.id  = anObj.id;
+        //this.editableNow="true";
         this.description = anObj.description;
         
     }
 
+    function findResumeById(resumeId)
+    {
+        for(var i=0;i<resumeArr.length;i++)
+        {
+            if (resumeArr[i].id== resumeId)
+            return i;
+        }
+        return -1;
 
+    }
 
     // ================= Read the Resume files ================= 
     readResumeFile();
@@ -37,8 +49,8 @@ app.factory('sharedService', function ($log, $q, $http) {
     }
 
     return {
-        fillResumeFile: fillResumeFile
-        
+        fillResumeFile : fillResumeFile,
+        findResumeById : findResumeById
     }
 
 });

@@ -254,10 +254,7 @@ margin:auto;
 .resume-div{
 
 }
-.card-header{
-    padding: 0px;
-    margin: 0px;
-}
+
 
 .card-header p{
   display: inline;  
@@ -272,12 +269,78 @@ margin:auto;
     /* display: inline; */
     position: relative;
     float:right;
+    margin-top: -21px;
+    margin-right: -14px;
+   
 }
+a.action-icons.readonly-mode{
+    color: black;
+}
+a.action-icons.edit-mode{
+    color: red;
+    outline: none;
+    background: #e5e5e5;
+}
+
 
 .accordion-line{
     width: 100%;;
     text-align: left;
 }
 .input-in-accordion{
+    padding:5px;
+    width:100%;
+   
+}
+
+.no-padding-no-margin{
+    padding:0px;
+    margin:0px;
+}
+#icon-row{
+    line-height: 1rem;
+}
+.action-icons{
+    background-color: white;
+    border: 0px;
+    color:gray;
     
+}
+
+
+.action-icons:hover, .action-icons:focus{
+    /* background-color: #0074a9; */
+    color:red;
+    outline: none;
+  }
+  .not-editable{
+      border: 0px;
+      color: gray;
+      
+  }
+  .editable{
+    border: 1px solid gray;
+    color: black;
+    
+  }
+
+
+  /* ========== */
+  .panel-heading.collapsed .fa-chevron-down,
+.panel-heading .fa-chevron-right {
+  display: none;
+}
+
+.panel-heading.collapsed .fa-chevron-right,
+.panel-heading .fa-chevron-down {
+  display: inline-block;
+}
+
+i.fa {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.collapsed ~ .panel-body {
+  padding: 0;
 }

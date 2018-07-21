@@ -4,20 +4,20 @@
         "file": "c:temp\\ProductManager.doc",
         "description": "Send to product manager roles in mobile companies",
         "date": "April 30, 2018",
-        "index": "0100"
+        "id": "0100"
     },
     {
         "title": "Project Manager Web",
         "file": "c:\\temp\\ProjectManager.doc",
         "description": "Send to Project manager roles in mobile companies",
         "date": "May 22, 2018",
-        "index": "0101"
+        "id": "0101"
     },
     {
         "title": "Front End development",
         "file": "c:\\temp\\FrontEnd.doc",
         "description": "Front end development expert roles",
         "date": "May 27, 2018",
-        "index": "0102"
+        "id": "0102"
     }
 ]
