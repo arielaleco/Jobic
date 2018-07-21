@@ -403,3 +403,10 @@ a.action-icons.edit-mode{
 
 
   /* ========== */
+  .open-dialog{
+  border-radius: 3px;
+  margin: 10px;
+}
+.confirmation-dialog{
+  display: none;
+}

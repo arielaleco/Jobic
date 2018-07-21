@@ -48,9 +48,19 @@ app.factory('sharedService', function ($log, $q, $http) {
         return asyncAction.promise;
     }
 
+    function deleteResumeRecord(resume){
+         var id = findResumeById(resume.id);
+        // if (id>-1)
+        // { resumeArr.splice(id+1, 1);}
+         alert("done");
+        
+        
+    }
+
     return {
         fillResumeFile : fillResumeFile,
-        findResumeById : findResumeById
+        findResumeById : findResumeById,
+        deleteResumeRecord: deleteResumeRecord
     }
 
 });

@@ -1,4 +1,4 @@
-var app = angular.module("JobicApp" , ["ngRoute"]); 
+var app = angular.module("JobicApp" , [ 'ngRoute']); 
 
 app.config(function($routeProvider) {
     $routeProvider

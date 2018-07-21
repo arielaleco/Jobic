@@ -21,8 +21,8 @@
                                 <div class="card-header no-padding-no-margin" id="headingOne">
                                     <h5 class="mb-0">
 
-                                        <button class="btn btn-link collapsed accordion-line" data-toggle="collapse" data-target="#{{resume.id}}" ng-click="accordionWasClicked()" aria-expanded="true"
-                                            aria-controls="collapseOne">
+                                        <button class="btn btn-link collapsed accordion-line" data-toggle="collapse" data-target="#{{resume.id}}" ng-click="accordionWasClicked()"
+                                            aria-expanded="true" aria-controls="collapseOne">
                                             <i class="fas fa-caret-down"></i>
                                             <i class="fas fa-caret-right"></i>
                                             <p>{{resume.title}}</p>
@@ -42,10 +42,50 @@
                                             <div class="icon-on-accordion">
                                                 <!-- <button class="action-icons" title="Edit current resume" ng-click="toggleEditMode(resume)"><i class="fas fa-edit"></i></button>
                                                 <button class="action-icons" title="Delete current resume resume" ng-click="toggleEditMode(resume)"><i class="fas fa-trash-alt"></i></button> -->
-                                              
-                                                <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode(resume)" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'"><i class="fas fa-edit"></i></a>
-                                                <a class="action-icons" title="Delete current resume resume" ng-click="toggleEditMode(resume)"><i class="fas fa-trash-alt"></i></a>
-                                                
+
+                                                <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode(resume)" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a class="action-icons" title="Delete current resume resume" ng-click="DeleteResume(resume)">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                                <button class="open-dialog" type="button" ng-click="confirmationDialog()">Single Button</button>
+
+                                               
+
+
+                                                <div ng-controller="confirmationController">
+                                                    <!-- <button class="open-dialog" type="button" ng-click="confirmationDialog(resume)">Single Button</button> -->
+                                                    <a class="open-dialog action-icons" title="Delete current resume resume" ng-click="confirmationDialog(resume)">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    <!-- <h4>Config being used:</h4>
+                                                    <div>
+                                                        {{confirmationDialogConfig}}
+                                                    </div> -->
+                                                    <div id="confirmation-dialog">
+                                                        <div class="modal fade confirmation-dialog" role="dialog">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">{{confirmationDialogConfig.title}}</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="span5">{{confirmationDialogConfig.message}}</div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                                        <button type="button" ng-repeat="button in confirmationDialogConfig.buttons" ng-click="executeDialogAction(button.action,resume)"
+                                                                            class="btn btn-primary">{{button.label}}</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
                                             </div>
                                         </div>
 
@@ -59,7 +99,7 @@
                                                 <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
                                                     <input class="input-in-accordion" type="text" value={{resume.date}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                 </div>
-                                                
+
                                             </div>
                                             <div class="row">
                                                 <div class="col-xl-3 col-lg-2  col-sm-2 no-padding-no-margin">
@@ -68,7 +108,7 @@
 
                                                 </div>
                                                 <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                    <input class="input-in-accordion" type="text" value={{resume.file}} ng-readonly="inReadOnlyMode"  ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                    <input class="input-in-accordion" type="text" value={{resume.file}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                 </div>
 
                                             </div>
@@ -79,7 +119,7 @@
 
                                                 </div>
                                                 <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                    <input class="input-in-accordion" type="text" value={{resume.description}} ng-readonly="inReadOnlyMode"  ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                    <input class="input-in-accordion" type="text" value={{resume.description}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                 </div>
 
                                             </div>
@@ -121,17 +161,17 @@
         </div>
 
         <div class="panel panel-info">
-                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#bar">
-                  <i class="fa fa-fw fa-chevron-down"></i>
-                  <i class="fa fa-fw fa-chevron-right"></i>Foo
-                </div>
-                <div class="panel-body">
-                  <!-- The inside div eliminates the 'jumping' animation. -->
-                  <div class="collapse" id="bar">
+            <div class="panel-heading collapsed" data-toggle="collapse" data-target="#bar">
+                <i class="fa fa-fw fa-chevron-down"></i>
+                <i class="fa fa-fw fa-chevron-right"></i>Foo
+            </div>
+            <div class="panel-body">
+                <!-- The inside div eliminates the 'jumping' animation. -->
+                <div class="collapse" id="bar">
                     Bar.
-                  </div>
                 </div>
-              </div>
+            </div>
+        </div>
 
-        
+
     </div>
