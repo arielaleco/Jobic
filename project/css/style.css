@@ -170,7 +170,7 @@ main{
     font-weight: 600;
 	
 }
-.gray-rec>div{
+.gray-rec .one-input{
     padding-bottom: 20px;
 }
 
@@ -228,8 +228,15 @@ input{
     padding: 8px;
     
 }
-
 .one-line{
+    padding: 0px 16px;
+}
+
+.one-line>input{
+    padding:8px;
+    margin-bottom: 20px;
+}
+/* .one-line{
     display: inline;
     padding-bottom: 10px;
     
@@ -238,7 +245,7 @@ input{
     width:49.3%;
     padding:8px;
     margin-bottom: 20px;
-}
+} */
 
 
 .width-button{    
@@ -249,6 +256,55 @@ input{
 margin:auto;
 
 }
+
+
+/* ============================== profile-page ============================== */
+
+.img-container {
+    position: relative;
+    width: 150px;
+    margin: auto;   
+}
+
+.profile-img {
+    border-radius: 50px;
+  opacity: 1;
+  display: block;
+  width: 150px;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+ 
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.img-container:hover .image {
+  opacity: 0.3;
+}
+
+.img-container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 6px 16px;
+  z-index: 2;
+}
+
+
 
 /* ============================== resume-page ============================== */
 .resume-div{
@@ -263,13 +319,37 @@ margin:auto;
 .card-header i{
     padding:0px 13px;
 }
+.accordion-line{
+    width: 100%;;
+    text-align: left;
+}
+
+.accordion-line.collapsed .fa-caret-down,
+.accordion-line .fa-caret-right {
+  display: none;
+}
+
+.accordion-line.collapsed .fa-caret-right,
+.accordion-line .fa-caret-down {
+  display: inline-block;
+}
+
+i.fa {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.collapsed ~ .panel-body {
+  padding: 0;
+}
+
 
 .icon-on-accordion{
     /* display: none; */
     /* display: inline; */
     position: relative;
     float:right;
-    margin-top: -21px;
+    margin-top: -17px;
     margin-right: -14px;
    
 }
@@ -283,10 +363,7 @@ a.action-icons.edit-mode{
 }
 
 
-.accordion-line{
-    width: 100%;;
-    text-align: left;
-}
+
 .input-in-accordion{
     padding:5px;
     width:100%;
@@ -326,21 +403,3 @@ a.action-icons.edit-mode{
 
 
   /* ========== */
-  .panel-heading.collapsed .fa-chevron-down,
-.panel-heading .fa-chevron-right {
-  display: none;
-}
-
-.panel-heading.collapsed .fa-chevron-right,
-.panel-heading .fa-chevron-down {
-  display: inline-block;
-}
-
-i.fa {
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.collapsed ~ .panel-body {
-  padding: 0;
-}

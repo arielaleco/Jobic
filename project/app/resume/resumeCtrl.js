@@ -24,5 +24,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         // make every things editable
 
     }
-
+    $scope.accordionWasClicked = function (){
+        $scope.inReadOnlyMode="true";
+    }
 });
