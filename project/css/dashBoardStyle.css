@@ -29,3 +29,8 @@
 .green{
     color: green;
 }
+#main-panel{
+    background-color: white;
+    margin: 10px;
+    height: 80%;
+}
