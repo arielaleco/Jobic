@@ -18,6 +18,10 @@ app.config(function($routeProvider) {
         templateUrl: 'app/resume/resume.html',
         controller: 'resumeCtrl'
       })
+      .when('/dashBoard', {
+        templateUrl: 'app/dashBoard/dashBoard.html',
+        controller: 'dashBoardCtrl'
+      })
     .otherwise({
       redirectTo: '/'
     })

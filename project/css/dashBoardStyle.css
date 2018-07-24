@@ -1,0 +1,25 @@
+#dashboard-page{
+    background-color: rgb(225, 222, 231);
+    position: relative;
+}
+.upper-panel{
+    height: 70px;
+}
+
+.text-arrow-rec{
+    background-color: white;
+    height: 86px;
+    margin: 10px;
+    text-align: center;
+}
+.text-arrow-rec>p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+.text-arrow-rec>h3{
+    padding: 0px;
+    margin: 0px;
+    font-size: 28px;
+    font-weight: 700;
+}
