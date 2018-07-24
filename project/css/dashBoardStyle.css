@@ -41,10 +41,28 @@
     display: inline;
     vertical-align: top;
 }
+#chat-page{
+    padding:5px;
+}
+
 .chat-card img{
     border-radius: 40px;
     height: 40px;
+    position: relative ; 
 }
+.chat-card i{
+    position: relative ; 
+    top:16px;
+    left:-16px;
+    background-color: blue;
+    color: white;
+    padding:4px;
+    border-radius: 30px;
+}
+.chat-card-up{
+    padding:5px;
+}
+
 .chat-card {
     background-color: white;
     margin: 5px 0px;
@@ -52,6 +70,7 @@
 }
 .chat-title{
     font-size: 14px;
+    padding-left: 5px;
 }
 /* .chat-status-date{
     font-size: 10px;
