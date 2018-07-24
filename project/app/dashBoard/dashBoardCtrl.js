@@ -1,9 +1,15 @@
-app.controller("dashBoardCtrl", function ($scope , $location) {
+app.controller("dashBoardCtrl", function ($scope , $location, chatService) {
 
-    // $scope.showResume = function () {
-       
-    //     $location.path("/resume" );
-        
-    // }
+
+    $scope.chatArr = [];
+    chatService.fillChatFile().then(function (chatArr) {
+        $scope.chatArr = chatArr;
+    }, function (error) {
+
+        $log.error(error)
+    });
+
+
+   
 
 });

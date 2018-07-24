@@ -1,40 +1,40 @@
-app.controller("resumeCtrl", function ($scope, $location, sharedService ) {
+app.controller("resumeCtrl", function ($scope, $location, sharedService) {
 
     $scope.confirmationDialogConfig = {};
-    $scope.confirmationDialog = function() {
+    $scope.confirmationDialog = function () {
         $scope.confirmationDialogConfig = {
-          title: "Caution!!!",
-          message: "Are you sure you want to delete?",
-          buttons: [{
-            label: "Delete",
-            action: "delete"
-          }]
+            title: "Caution!!!",
+            message: "Are you sure you want to delete?",
+            buttons: [{
+                label: "Delete",
+                action: "delete"
+            }]
         };
         $scope.showDialog(true);
-      };
-      $scope.showDialog = function(flag) {
+    };
+    $scope.showDialog = function (flag) {
         jQuery("#confirmation-dialog .modal").modal(flag ? 'show' : 'hide');
-      };
-      $scope.executeDialogAction = function(action) {
-        if(typeof $scope[action] === "function") {
-                  $scope[action]();
-            }
-      };
-    
-      $scope.reset = function() {
+    };
+    $scope.executeDialogAction = function (action) {
+        if (typeof $scope[action] === "function") {
+            $scope[action]();
+        }
+    };
+
+    $scope.reset = function () {
         console.log("Resetting...");
         $scope.showDialog();
-      };
-      
-      $scope.delete = function() {
+    };
+
+    $scope.delete = function () {
         console.log("Deleting...");
         $scope.showDialog();
-      };
-      
-      $scope.save = function() {
+    };
+
+    $scope.save = function () {
         console.log("Saving...");
         $scope.showDialog();
-      };
+    };
 
 
 
@@ -50,14 +50,12 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService ) {
         $log.error(error)
     });
 
-    $scope.inReadOnlyMode="true"
+    $scope.inReadOnlyMode = "true"
     $scope.toggleEditMode = function (resume) {
         // look for the resume
-        
-        if ($scope.inReadOnlyMode == "true")
-         { $scope.inReadOnlyMode = "" }
-         else
-         { $scope.inReadOnlyMode = "true" }
+
+        if ($scope.inReadOnlyMode == "true") { $scope.inReadOnlyMode = "" }
+        else { $scope.inReadOnlyMode = "true" }
 
         // var id = sharedService.findResumeById(resume.id);
         // if ($scope.resumeArr[id].editableNow == "true") { $scope.resumeArr[id].editableNow = "" }
@@ -67,19 +65,33 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService ) {
         // make every things editable
 
     }
-    $scope.accordionWasClicked = function (){
-        $scope.inReadOnlyMode="true";
+    $scope.accordionWasClicked = function () {
+        $scope.inReadOnlyMode = "true";
     }
 
-    $scope.DeleteResume = function(resume){
-        mscConfirm("Delete?",function(){
-            alert("Post deleted");
-          });
+    $scope.DeleteResume = function (resume) {
+        if (confirm("Delete This resume " + resume.title + "?")) {
+            sharedService.deleteResumeRecord(resume);
+        }
+
+        // mscConfirm("Delete?",function(){
+        //     alert("Post deleted");
+        //   });
 
     }
+    $scope.addNewResume = function () {
+        $(".collapse").collapse('hide');
+        sharedService.addNewResumeRecord();
+       // $(".collapse").collapse('toggle');
+    }
 
-    
-      
-  
+    $scope.collapseAllResume = function () {
+        $(".collapse").collapse('toggle');
+       
+    }
+
+
+   
+
 
 });

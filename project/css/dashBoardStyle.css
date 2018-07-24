@@ -34,3 +34,29 @@
     margin: 10px;
     height: 80%;
 }
+
+.user-name{
+    font-size:18px;
+    font-weight: 700;
+    display: inline;
+    vertical-align: top;
+}
+.chat-card img{
+    border-radius: 40px;
+    height: 40px;
+}
+.chat-card {
+    background-color: white;
+    margin: 5px 0px;
+    height: 80px;
+}
+.chat-title{
+    font-size: 14px;
+}
+.chat-status-date{
+    font-size: 10px;
+    display: inline;
+}
+.inline{
+    display: inline;
+}

@@ -26,7 +26,7 @@
                         <p>Heard Back From</p>
                         <h3>11</h3>
                         <p class="green">2%
-                                <i class="fas fa-caret-up"></i>
+                            <i class="fas fa-caret-up"></i>
                         </p>
 
                     </div>
@@ -34,24 +34,51 @@
                         <p>Job Proceess Progress</p>
                         <h3>2</h3>
                         <p class="green">20%
-                                <i class="fas fa-caret-up"></i>
+                            <i class="fas fa-caret-up"></i>
                         </p>
 
                     </div>
                     <div class="text-arrow-rec">
-                            <p><i class="fas fa-exclamation-triangle"></i>
-                                    Pay Attention</p>
-                        </div>
+                        <p>
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Pay Attention</p>
+                    </div>
 
 
 
                 </div>
                 <div class="col-xl-8 col-lg-8  col-sm-8">
                     <div id="main-panel">
-                    main panel
-                </div>
+                        main panel
+                    </div>
                 </div>
                 <div class="col-xl-2 col-lg-2  col-sm-2">
+                    <div id="chat-page" ng-controller="dashBoardCtrl">
+                        <div ng-repeat="chat in chatArr">
+                            <div class="chat-card">
+                                <img ng-src="{{chat.imageUrl}}">
+                                <div class="inline">
+                                    <div>
+                                            <p class="user-name">{{chat.userName}}</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="chat-status-date">{{chat.status}}</p>
+                                        <p class="chat-status-date">{{chat.date}}</p>
+                                    </div>
+                                    <p class="chat-title">{{chat.title}}</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        this.userName = anObj.userName; this.imageUrl = anObj.imageUrl; this.date = anObj.date; this.title = anObj.title; this.likes
+                        = anObj.likes;
+                    </div>
+
+
+
+
                     left panel
                 </div>
             </div>

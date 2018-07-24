@@ -2,6 +2,7 @@
 
 app.factory('sharedService', function ($log, $q, $http) {
 
+    maxId = 0;
     resumeArr = [];
     function Resume(anObj ) {
         this.title = anObj.title;
@@ -10,6 +11,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.id  = anObj.id;
         //this.editableNow="true";
         this.description = anObj.description;
+        this.isOpen = false;
         
     }
 
@@ -29,7 +31,8 @@ app.factory('sharedService', function ($log, $q, $http) {
     function readResumeFile() {
         // read json file
         $http.get("app/shared/resume.json").then(function Succsess(response) {
-            response.data.forEach(function AddCar(anObj) {
+            response.data.forEach(function AddResume(anObj) {
+                maxId++;
                 resumeArr.push(new Resume(anObj))
                  
             });
@@ -50,17 +53,34 @@ app.factory('sharedService', function ($log, $q, $http) {
 
     function deleteResumeRecord(resume){
          var id = findResumeById(resume.id);
-        // if (id>-1)
-        // { resumeArr.splice(id+1, 1);}
-         alert("done");
+        if (id>-1)
+        { resumeArr.splice(id+1, 1);}
+         //alert("done");
         
         
+    }
+    function addNewResumeRecord(){
+        //var anObj ;
+        var anObj = new Object();
+        anObj.title ="Title";
+        anObj.file  = "File";
+        //var x =Date.now();
+        var d = new Date();
+        
+        anObj.date  = d.toDateString();
+        anObj.id  = maxId;        
+        anObj.description = "file Description";
+        maxId++;
+        anObj.isOpen= true;
+        resumeArr.push(anObj);
+        //resumeArr.push(new Resume(anObj))
     }
 
     return {
         fillResumeFile : fillResumeFile,
         findResumeById : findResumeById,
-        deleteResumeRecord: deleteResumeRecord
+        deleteResumeRecord: deleteResumeRecord,
+        addNewResumeRecord:addNewResumeRecord
     }
 
 });
