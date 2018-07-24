@@ -13,7 +13,7 @@
     text-align: center;
 }
 .text-arrow-rec>p{
-    padding: 0px;
+    padding: 2px 0px;
     margin: 0px;
     font-size: 14px;
 }
@@ -22,4 +22,10 @@
     margin: 0px;
     font-size: 28px;
     font-weight: 700;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
 }
