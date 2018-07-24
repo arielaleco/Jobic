@@ -36,7 +36,7 @@
 }
 
 .user-name{
-    font-size:18px;
+    font-size:15px;
     font-weight: 700;
     display: inline;
     vertical-align: top;
@@ -53,10 +53,13 @@
 .chat-title{
     font-size: 14px;
 }
-.chat-status-date{
+/* .chat-status-date{
     font-size: 10px;
     display: inline;
+} */
+.float-left,.float-right{
+    font-size: 10px;
 }
-.inline{
+/* .inline{
     display: inline;
-}
+} */

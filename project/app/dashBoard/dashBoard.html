@@ -56,18 +56,24 @@
                     <div id="chat-page" ng-controller="dashBoardCtrl">
                         <div ng-repeat="chat in chatArr">
                             <div class="chat-card">
-                                <img ng-src="{{chat.imageUrl}}">
-                                <div class="inline">
-                                    <div>
-                                            <p class="user-name">{{chat.userName}}</p>
+
+                                <div class="d-flex bg-secondary text-white">
+                                    <div class="p-2 bg-info">
+                                        <img ng-src="{{chat.imageUrl}}">
                                     </div>
-                                    
-                                    <div>
-                                        <p class="chat-status-date">{{chat.status}}</p>
-                                        <p class="chat-status-date">{{chat.date}}</p>
+                                    <div class="p-2 ">
+                                        <p class="user-name">{{chat.userName}}</p>
+                                        <div class="clearfix">
+                                            <span class="float-left">{{chat.status}}</span>
+                                            <span class="float-right">{{chat.date}}</span>
+                                        </div>
                                     </div>
-                                    <p class="chat-title">{{chat.title}}</p>
+
                                 </div>
+                                <p class="chat-title">{{chat.title}}</p>
+
+                               
+                                
 
                             </div>
 
