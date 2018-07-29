@@ -52,11 +52,13 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
 
 
     $scope.inReadOnlyMode = "true"
-    $scope.toggleEditMode = function (resume) {
+    $scope.toggleEditMode = function () {
         // look for the resume
 
-        if ($scope.inReadOnlyMode == "true") { $scope.inReadOnlyMode = "" }
-        else { $scope.inReadOnlyMode = "true" }
+        if ($scope.inReadOnlyMode == "true"){
+             $scope.inReadOnlyMode = "" }
+        else { 
+            $scope.inReadOnlyMode = "true" }
 
         // var id = sharedService.findResumeById(resume.id);
         // if ($scope.resumeArr[id].editableNow == "true") { $scope.resumeArr[id].editableNow = "" }
@@ -101,7 +103,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     });
 
     
-    $scope.DeletecoverLetter = function (coverLetter) {
+    $scope.DeleteCoverLetter = function (coverLetter) {
         if (confirm("Delete This cover Letter " + coverLetter.title + "?")) {
             sharedService.deleteCoverLetterRecord(coverLetter);
         }
@@ -110,6 +112,10 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         //     alert("Post deleted");
         //   });
 
+    }
+    $scope.addNewCoverLetter = function () {
+        $(".collapse").collapse('hide');
+        sharedService.addNewCoverLetterRecord();       
     }
 
 });
