@@ -8,7 +8,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.title = anObj.title;
         this.file = anObj.file;
         this.date = anObj.date;
-        this.id = anObj.id;
+        this.id =  "Resume" + resumeIdIndex;
         //this.editableNow="true";
         this.description = anObj.description;
         this.isOpen = false;
@@ -31,7 +31,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.title = anObj.title;
         this.content = anObj.content;
         this.date = anObj.date;
-        this.id = anObj.id;
+        this.id =  "CoverLetter" + coverLetterIdIndex;
         this.description = anObj.description;
         this.isOpen = false;
     }
@@ -44,25 +44,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         return -1;
 
     }
-
-
-    // ================= Read the Resume files ================= 
-    // readResumeFile();
-    // function readResumeFile() {
-    //     // read json file
-    //     $http.get("app/shared/resume.json").then(function Succsess(response) {
-    //         response.data.forEach(function AddResume(anObj) {
-    //             maxId++;
-    //             resumeArr.push(new Resume(anObj))
-
-    //         });
-    //     },
-
-    //         function Error() {
-    //             $log.Error;
-    //         });
-
-    // }
+   
     readDatabaseFile();
     function readDatabaseFile() {
         $http.get("app/shared/database.json").then(function Succsess(response) {
@@ -112,18 +94,20 @@ app.factory('sharedService', function ($log, $q, $http) {
     }
     function addNewResumeRecord() {
         //var anObj ;
+        resumeIdIndex++;        
+
         var anObj = new Object();
         anObj.title = "Title";
         anObj.file = "File";
         //var x =Date.now();
         var d = new Date();
-
-        anObj.date = d.toDateString();
-        anObj.id = resumeIdIndex;
+        anObj.date = d.toDateString();        
         anObj.description = "file Description";
-        resumeIdIndex++;
         anObj.isOpen = true;
+        var newId = "Resume" + resumeIdIndex; 
+        anObj.id = newId;        
         resumeArr.push(anObj);
+        return (newId);
         //resumeArr.push(new Resume(anObj))
     }
 

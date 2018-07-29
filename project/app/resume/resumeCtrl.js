@@ -84,13 +84,18 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     }
     $scope.addNewResume = function () {
         $(".collapse").collapse('hide');
-        sharedService.addNewResumeRecord();
+        var addedIndex = sharedService.addNewResumeRecord();
+        alert(addedIndex);
+
+        
+        $("#"+addedIndex).collapse('show');
+      
        // $(".collapse").collapse('toggle');
     }
 
     $scope.collapseAllResume = function () {
-        $(".collapse").collapse('toggle');
-       
+      //  $(".collapse").collapse('toggle');
+        $("#Resume4").collapse('toggle');
     }
 
     //=============================================================
