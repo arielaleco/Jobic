@@ -1,9 +1,12 @@
-app.controller("jobProcessCtrl", function ($scope , $location) {
+app.controller("jobProcessCtrl", function ($scope , $location , sharedService) {
 
-    // $scope.showResume = function () {
-       
-    //     $location.path("/resume" );
-        
-    // }
+    // $scope.resumeArr = [];
+    // sharedService.fillResumeFile().then(function (resumeArr) {
+    //     $scope.resumeArr = resumeArr;
+    // }, function (error) {
+
+    //     $log.error(error)
+    // });
+
 
 });

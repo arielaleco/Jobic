@@ -1,0 +1,159 @@
+not in use !!
+
+<div class="resume-page">
+
+    <modal-window-directive></modal-window-directive>
+
+
+
+    <div ng-controller="resumeCtrl">
+        <div class="container-fluid">
+
+
+            <div class="row ">
+                <div class="col-xl-2 col-lg-2  col-sm-1"></div>
+                <div class="col-xl-8 col-lg-8  col-sm-10">
+                    <div class="gray-rec">
+
+
+                        <h1>Resume Versions</h1>
+                        <a href="javascript:void(0)" title="Collapse All" ng-click="collapseAllResume()">collapse all</a>
+                        <a href="javascript:void(0)" title="Add new Resume" ng-click="addNewResume()">
+                            <i class="fas fa-plus-square"></i>
+                        </a>
+
+
+                        <div id="accordion">
+                            <!-- class="col-xl-3 col-lg-4 col-sm-6" -->
+
+                            <div ng-repeat="resume in resumeArr">
+                                <div class="card">
+                                    <div class="card-header no-padding-no-margin" id="headingOne">
+                                        <h5 class="mb-0">
+
+                                            <button class="btn btn-link collapsed accordion-line" data-toggle="collapse" data-target="#{{resume.id}}" ng-click="accordionWasClicked()"
+                                                aria-expanded="{{resume.isOpen}}" aria-controls="collapseOne">
+                                                <i class="fas fa-caret-down"></i>
+                                                <i class="fas fa-caret-right"></i>
+                                                <p>{{resume.title}}</p>
+
+                                                <!-- <div class="icon-on-accordion">
+                                                <a href="javascript:void(0)" title="Delete current resume">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                            </div> -->
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="{{resume.id}}" is-open="false" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div id="icon-row">
+                                                <div class="icon-on-accordion">
+                                                    <!-- <button class="action-icons" title="Edit current resume" ng-click="toggleEditMode(resume)"><i class="fas fa-edit"></i></button>
+                                                <button class="action-icons" title="Delete current resume resume" ng-click="toggleEditMode(resume)"><i class="fas fa-trash-alt"></i></button> -->
+
+                                                    <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode(resume)" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a class="action-icons" title="Delete current resume resume" ng-click="DeleteResume(resume)">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </a>
+
+
+
+
+                                                    <!-- <button class="open-dialog" type="button" ng-click="confirmationDialog()">Single Button</button> -->
+
+
+
+
+                                                    <!-- <div ng-controller="confirmationController">
+                                                    
+                                                    <div id="confirmation-dialog">
+                                                        <div class="modal fade confirmation-dialog" role="dialog">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">{{confirmationDialogConfig.title}}</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="span5">{{confirmationDialogConfig.message}}</div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                                        <button type="button" ng-repeat="button in confirmationDialogConfig.buttons" ng-click="executeDialogAction(button.action,resume)"
+                                                                            class="btn btn-primary">{{button.label}}</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="container-fluid">
+                                                <div class="row no-padding">
+                                                    <div class="col-xl-3 col-lg-2  col-sm-2 no-padding-no-margin">
+                                                        <p>Date :</p>
+
+
+                                                    </div>
+                                                    <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
+                                                        <input class="input-in-accordion" type="text" value={{resume.date}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                    </div>
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-lg-2  col-sm-2 no-padding-no-margin">
+                                                        <p>File :</p>
+
+
+                                                    </div>
+                                                    <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
+                                                        <input class="input-in-accordion" type="text" value={{resume.file}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                    </div>
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-lg-2  col-sm-2 no-padding-no-margin">
+                                                        <p>Description :</p>
+
+
+                                                    </div>
+                                                    <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
+                                                        <input class="input-in-accordion" type="text" value={{resume.description}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2  col-sm-1"></div>
+                </div>
+            </div>
+
+
+
+            <div class="row ">
+                <div class="col-xl-2 col-lg-2  col-sm-1"></div>
+                <div class="col-xl-8 col-lg-8  col-sm-10">
+                    <div class="gray-rec"></div>
+                </div>
+                <div class="col-xl-2 col-lg-2  col-sm-1"></div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>

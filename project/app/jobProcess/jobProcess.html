@@ -1,4 +1,51 @@
 <div id="jobProcess">
+    <div class="no-padding-no-margin col-xl-4 col-lg-3 ">
+        <div class="gray-rec">
+            <p>Send CV</p>
+            <div class="one-input">
+                <input class="form-control full-line" placeholder="Company">
+            </div>
 
+            <div class="one-input">
+                <input class="form-control full-line" placeholder="Job Title">
+            </div>
+
+            <div class="one-input">
+                <input class="form-control full-line" placeholder="Contact person">
+            </div>
+            <div class="one-input">
+                <div ng-controller="resumeCtrl">
+                    
+                    <select class="form-control" placeholder="Contact person">
+                            <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
+                        
+                    </select>
+                </div>
+                <!-- <input class="full-line" placeholder="CV Version"> -->
+            </div>
+            <div class="one-input">
+                <input class="form-control full-line" placeholder="Cover Letter Version">
+            </div>
+            <div class="one-input">
+                <input class="form-control full-line" placeholder="Protfolio Version">
+            </div>
+            <div class="one-input">
+                <input type="form-control date" class="full-line" placeholder="Date">
+            </div>
+            <div class="one-input">
+                <input class="form-control full-line" placeholder="Link To Source">
+            </div>
+            <div class="one-input">
+                <input type="form-control email" class="full-line" placeholder="Email">
+            </div>
+            <div class="one-input">
+                <input class="form-control full-line" placeholder="Description">
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
 
 </div>

@@ -401,6 +401,10 @@ a.action-icons.edit-mode{
     
   }
 
+  .align-center{
+      margin: auto;
+  }
+
 
   /* ========== */
   .open-dialog{

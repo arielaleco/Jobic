@@ -50,6 +50,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         $log.error(error)
     });
 
+
     $scope.inReadOnlyMode = "true"
     $scope.toggleEditMode = function (resume) {
         // look for the resume
@@ -90,8 +91,25 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
        
     }
 
+    //=============================================================
+    $scope.coverLetterArr = [];
+    sharedService.fillCoverLetterFile().then(function (coverLetterArr) {
+        $scope.coverLetterArr = coverLetterArr;
+    }, function (error) {
 
-   
+        $log.error(error)
+    });
 
+    
+    $scope.DeletecoverLetter = function (coverLetter) {
+        if (confirm("Delete This cover Letter " + coverLetter.title + "?")) {
+            sharedService.deleteCoverLetterRecord(coverLetter);
+        }
+
+        // mscConfirm("Delete?",function(){
+        //     alert("Post deleted");
+        //   });
+
+    }
 
 });
