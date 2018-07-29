@@ -2,7 +2,7 @@
     background-color: rgb(225, 222, 231);
     position: relative;
 }
-.upper-panel{
+#upper-panel{
     height: 70px;
 }
 
@@ -29,7 +29,7 @@
 .green{
     color: green;
 }
-#main-panel{
+#middle-panel{
     background-color: white;
     margin: 10px;
     height: 80%;
@@ -79,6 +79,18 @@
 .float-left,.float-right{
     font-size: 10px;
 }
+
+#lower-panel{
+    background-color: red;
+    width:100%; 
+}
+.main-panel{
+    background-color: green;
+}               
+               
+
+
+
 /* .inline{
     display: inline;
 } */

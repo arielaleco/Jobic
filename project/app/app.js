@@ -22,6 +22,10 @@ app.config(function($routeProvider) {
         templateUrl: 'app/dashBoard/dashBoard.html',
         controller: 'dashBoardCtrl'
       })
+      .when('/jobProcess', {
+        templateUrl: 'app/jobProcess/jobProcess.html',
+        controller: 'jobProcessCtrl'
+      })      
     .otherwise({
       redirectTo: '/'
     })
