@@ -44,8 +44,9 @@ app.factory('sharedService', function ($log, $q, $http) {
         return -1;
 
     }
-   
-    //  my-json-server.typicode.com/arielaleco/Jobic/resumes
+     // https://my-json-server.typicode.com/
+    //  http://my-json-server.typicode.com/arielaleco/Jobic/resumes
+    // my-json-server.typicode.com/user/repo/posts/1
 
     readDatabaseFile();
     function readDatabaseFile() {
