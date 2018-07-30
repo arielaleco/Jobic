@@ -45,6 +45,8 @@ app.factory('sharedService', function ($log, $q, $http) {
 
     }
    
+    //  my-json-server.typicode.com/arielaleco/Jobic/resumes
+
     readDatabaseFile();
     function readDatabaseFile() {
         
