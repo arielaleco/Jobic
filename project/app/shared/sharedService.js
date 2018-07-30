@@ -47,9 +47,10 @@ app.factory('sharedService', function ($log, $q, $http) {
    
     readDatabaseFile();
     function readDatabaseFile() {
-        $http.get("app/shared/database.json").then(function Succsess(response) {
+        
+        $http.get("../../db.json").then(function Succsess(response) {
 
-            response.data.resume.forEach(function AddResume(anObj) {
+            response.data.resumes.forEach(function AddResume(anObj) {
                 resumeIdIndex++;
                 resumeArr.push(new Resume(anObj))
 
@@ -57,6 +58,11 @@ app.factory('sharedService', function ($log, $q, $http) {
             response.data.coverLetters.forEach(function AddCover(anObj) {
                 coverLetterIdIndex++;
                 coverLetterArr.push(new CoverLetter(anObj))
+
+            });
+            response.data.cvSents.forEach(function AddcvSent(anObj) {
+                cvSentIdIndex++;
+                cvSentArr.push(new cvSent(anObj))
 
             });
 
@@ -130,6 +136,26 @@ app.factory('sharedService', function ($log, $q, $http) {
         coverLetterArr.push(anObj);
         //resumeArr.push(new Resume(anObj))
     }
+
+    // ================= CV Sent ================= 
+    cvSentIdIndex = 0;
+    cvSentArr = [];
+    function cvSent(anObj) {
+        this.company    = anObj.company;
+        this.JobTitle   = anObj.JobTitle;
+        this.email      = anObj.email;
+        this.linkToAdSource = anObj.linkToAdSource;
+        this.description    = anObj.description;
+        this.resumeVersion  = anObj.resumeVersion;
+        this.coverLetterVersion = anObj.coverLetterVersion;                        
+        this.protfolioVersion   = anObj.protfolioVersion;                        
+
+        this.date = anObj.date;
+        this.id =  "cvSent" + coverLetterIdIndex;        
+        this.isOpen = false;
+    }
+   
+    
 
 
     return {

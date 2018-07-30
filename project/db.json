@@ -1,5 +1,5 @@
 {
-"resume": [
+"resumes": [
     {
         "title": "Product Manager Web",
         "file": "c:temp\\ProductManager.doc",
@@ -66,7 +66,7 @@
         
     }
 ],
-"cvSent": [
+"cvSents": [
     { 
         "company": "Facebook",        
         "JobTitle": "Product Manager Cloud",
@@ -95,6 +95,7 @@
         "JobTitle": "Product Manager",
         "contactPeron": "‎Tom Muallem",                
         "email": "tom.muallem@tangelogames.com",
+        "description":"Tangelo Games Israel is looking for its next Product Manager",        
         "linkToAdSource":"https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
         "resumeVersion":"2",
         "coverLetterVersion":"3",
