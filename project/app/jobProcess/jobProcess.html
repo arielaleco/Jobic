@@ -1,5 +1,5 @@
 <div id="jobProcess">
-    <div class="no-padding-no-margin col-xl-4 col-lg-3 ">
+    <div class="no-padding-no-margin col-xl-4 col-lg-4 ">
         <div class="gray-rec">
             <p>Send CV</p>
             <div class="one-input">
@@ -14,34 +14,50 @@
                 <input class="form-control full-line" placeholder="Contact person">
             </div>
             <div class="one-input">
-                <div ng-controller="resumeCtrl">
-                    
-                    <select class="form-control" placeholder="Contact person">
-                            <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
-                        
-                    </select>
-                </div>
-                <!-- <input class="full-line" placeholder="CV Version"> -->
+                <input type="form-control email" class="full-line" placeholder="Email">
             </div>
             <div class="one-input">
-                <input class="form-control full-line" placeholder="Cover Letter Version">
+                <input class="form-control full-line" placeholder="Link To Ad Source">
             </div>
+
+            <div class="one-input">
+                <input class="form-control full-line" placeholder="Description">
+            </div>
+            <div ng-controller="resumeCtrl">
+                <div class="one-input">
+                    <select class="form-control" placeholder="Contact person">
+                        <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
+
+                    </select>
+                </div>
+                <div class="one-input">
+
+
+                    <select class="form-control" placeholder="Cover Letter Version">
+                        <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
+
+                    </select>
+
+                </div>
+            </div>
+            <!-- <select class="form-control">
+                    <option>C++</option>
+                    <option selected>Swift</option>
+                    <option disabled>Java</option>
+                    <optgroup label="JavaScript">
+                      <option>jQuery</option>
+                      <option>React.js</option>
+                      <option>Angular.js</option>
+                    </optgroup>
+                  </select> -->
             <div class="one-input">
                 <input class="form-control full-line" placeholder="Protfolio Version">
             </div>
             <div class="one-input">
                 <input type="form-control date" class="full-line" placeholder="Date">
             </div>
-            <div class="one-input">
-                <input class="form-control full-line" placeholder="Link To Source">
-            </div>
-            <div class="one-input">
-                <input type="form-control email" class="full-line" placeholder="Email">
-            </div>
-            <div class="one-input">
-                <input class="form-control full-line" placeholder="Description">
-            </div>
 
+            <button class="border-button width-button" ng-click="registerUser()">Send &amp; Save</button>
         </div>
 
 

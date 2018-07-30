@@ -89,7 +89,13 @@
 .main-panel{
     background-color: green;
 }               
-               
+/* #lower-panel #bar{
+    height:100px;
+}    */
+#bar{
+    height:100px!important;
+}   
+
 
 
 
