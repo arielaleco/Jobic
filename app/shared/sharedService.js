@@ -8,7 +8,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.title = anObj.title;
         this.file = anObj.file;
         this.date = anObj.date;
-        this.id =  "Resume" + resumeIdIndex;
+        this.id = "Resume" + resumeIdIndex;
         //this.editableNow="true";
         this.description = anObj.description;
         this.isOpen = false;
@@ -31,7 +31,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.title = anObj.title;
         this.content = anObj.content;
         this.date = anObj.date;
-        this.id =  "CoverLetter" + coverLetterIdIndex;
+        this.id = "CoverLetter" + coverLetterIdIndex;
         this.description = anObj.description;
         this.isOpen = false;
     }
@@ -44,54 +44,98 @@ app.factory('sharedService', function ($log, $q, $http) {
         return -1;
 
     }
-     // https://my-json-server.typicode.com/
+    // https://my-json-server.typicode.com/
     //  http://my-json-server.typicode.com/arielaleco/Jobic/resumes
     // my-json-server.typicode.com/user/repo/posts/1
 
-    readDatabaseFile();
-    function readDatabaseFile() {
-        
-        $http.get("../../db.json").then(function Succsess(response) {
+    // readDatabaseFile();
+    // function readDatabaseFile() {
 
-            response.data.resumes.forEach(function AddResume(anObj) {
+    //     $http.get("../../db.json").then(function Succsess(response) {
+
+    //         response.data.resumes.forEach(function AddResume(anObj) {
+    //             resumeIdIndex++;
+    //             resumeArr.push(new Resume(anObj))
+
+    //         });
+    //         response.data.coverLetters.forEach(function AddCover(anObj) {
+    //             coverLetterIdIndex++;
+    //             coverLetterArr.push(new CoverLetter(anObj))
+
+    //         });
+    //         response.data.cvSents.forEach(function AddcvSent(anObj) {
+    //             cvSentIdIndex++;
+    //             cvSentArr.push(new cvSent(anObj))
+
+    //         });
+
+
+    //     },
+
+    //         function Error() {
+    //             $log.Error;
+    //         });
+
+    // }
+
+    function fillResumeFile() {        
+        var asyncAction = $q.defer();
+        if (resumeArr.length > 0) // I read from server once)
+        {
+            asyncAction.resolve(resumeArr);
+        }
+        else {
+
+        $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/resumes").then(function Succsess(response) {
+            response.data.forEach(function AddResume(anObj) {
                 resumeIdIndex++;
                 resumeArr.push(new Resume(anObj))
 
             });
-            response.data.coverLetters.forEach(function AddCover(anObj) {
-                coverLetterIdIndex++;
-                coverLetterArr.push(new CoverLetter(anObj))
-
-            });
-            response.data.cvSents.forEach(function AddcvSent(anObj) {
-                cvSentIdIndex++;
-                cvSentArr.push(new cvSent(anObj))
-
-            });
-
-
+            asyncAction.resolve(resumeArr);
         },
 
             function Error() {
                 $log.Error;
             });
 
-    }
-
-
-    function fillResumeFile() {
-        // define asynchronous object
-        var asyncAction = $q.defer();
-        asyncAction.resolve(resumeArr);
+        };
         return asyncAction.promise;
     }
+
 
     function fillCoverLetterFile() {
         // define asynchronous object
         var asyncAction = $q.defer();
-        asyncAction.resolve(coverLetterArr);
+        if (coverLetterArr.length > 0) // I read from server once)
+        {
+            asyncAction.resolve(coverLetterArr);
+        }
+        else {
+
+            $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/coverLetters").then(function Succsess(response) {
+                response.data.forEach(function AddCover(anObj) {
+                    coverLetterIdIndex++;
+                    coverLetterArr.push(new CoverLetter(anObj))
+
+                });
+                asyncAction.resolve(coverLetterArr);
+            },
+
+                function Error() {
+                    $log.Error;
+                });
+        };
+
         return asyncAction.promise;
     }
+
+    // function fillCoverLetterFile() {
+    //     // define asynchronous object
+    //     var asyncAction = $q.defer();
+    //     asyncAction.resolve(coverLetterArr);
+    //     return asyncAction.promise;
+    // }
 
 
     function deleteResumeRecord(resume) {
@@ -103,18 +147,18 @@ app.factory('sharedService', function ($log, $q, $http) {
     }
     function addNewResumeRecord() {
         //var anObj ;
-        resumeIdIndex++;        
+        resumeIdIndex++;
 
         var anObj = new Object();
         anObj.title = "Title";
         anObj.file = "File";
         //var x =Date.now();
         var d = new Date();
-        anObj.date = d.toDateString();        
+        anObj.date = d.toDateString();
         anObj.description = "file Description";
         anObj.isOpen = true;
-        var newId = "Resume" + resumeIdIndex; 
-        anObj.id = newId;        
+        var newId = "Resume" + resumeIdIndex;
+        anObj.id = newId;
         resumeArr.push(anObj);
         return (newId);
         //resumeArr.push(new Resume(anObj))
@@ -144,26 +188,50 @@ app.factory('sharedService', function ($log, $q, $http) {
     cvSentIdIndex = 0;
     cvSentArr = [];
     function cvSent(anObj) {
-        this.company    = anObj.company;
-        this.JobTitle   = anObj.JobTitle;
-        this.email      = anObj.email;
+        this.company = anObj.company;
+        this.JobTitle = anObj.JobTitle;
+        this.email = anObj.email;
         this.linkToAdSource = anObj.linkToAdSource;
-        this.description    = anObj.description;
-        this.resumeVersion  = anObj.resumeVersion;
-        this.coverLetterVersion = anObj.coverLetterVersion;                        
-        this.protfolioVersion   = anObj.protfolioVersion;                        
+        this.description = anObj.description;
+        this.resumeVersion = anObj.resumeVersion;
+        this.coverLetterVersion = anObj.coverLetterVersion;
+        this.protfolioVersion = anObj.protfolioVersion;
 
         this.date = anObj.date;
-        this.id =  "cvSent" + coverLetterIdIndex;        
+        this.id = "cvSent" + coverLetterIdIndex;
         this.isOpen = false;
     }
-   
-    
+
+    function fillcvSentsFile() {        
+        var asyncAction = $q.defer();
+        if (cvSentArr.length > 0) // I read from server once)
+        {
+            asyncAction.resolve(cvSentArr);
+        }
+        else {
+
+            $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/cvSents").then(function Succsess(response) {
+                response.data.forEach(function AddcvSent(anObj) {
+                    cvSentIdIndex++;
+                    cvSentArr.push(new cvSent(anObj))
+
+                });
+                asyncAction.resolve(cvSentArr);
+            },
+
+                function Error() {
+                    $log.Error;
+                });
+        };
+
+        return asyncAction.promise;
+    }
 
 
     return {
         fillResumeFile: fillResumeFile,
         fillCoverLetterFile: fillCoverLetterFile,
+        fillcvSentsFile:fillcvSentsFile,
         findResumeById: findResumeById,
         deleteResumeRecord: deleteResumeRecord,
         addNewResumeRecord: addNewResumeRecord,
