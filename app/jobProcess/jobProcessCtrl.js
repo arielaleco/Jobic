@@ -1,12 +1,13 @@
 app.controller("jobProcessCtrl", function ($scope , $location , sharedService) {
 
-    // $scope.resumeArr = [];
-    // sharedService.fillResumeFile().then(function (resumeArr) {
-    //     $scope.resumeArr = resumeArr;
-    // }, function (error) {
+    $scope.cvSentArr = [];
+    sharedService.fillcvSentsFile().then(function (cvSentArr) {
+        $scope.cvSentArr = cvSentArr;
+    }, function (error) {
 
-    //     $log.error(error)
-    // });
+        $log.error(error)
+    });
+
 
 
 });

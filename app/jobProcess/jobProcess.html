@@ -1,67 +1,261 @@
 <div id="jobProcess">
-    <div class="no-padding-no-margin col-xl-4 col-lg-4 ">
-        <div class="gray-rec">
-            <p>Send CV</p>
-            <div class="one-input">
-                <input class="form-control full-line" placeholder="Company">
-            </div>
 
-            <div class="one-input">
-                <input class="form-control full-line" placeholder="Job Title">
-            </div>
+    <!-- <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#cardView"  >Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#listView">Menu 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#sendView">Menu 2</a>
+                </li>
+              </ul> -->
 
-            <div class="one-input">
-                <input class="form-control full-line" placeholder="Contact person">
-            </div>
-            <div class="one-input">
-                <input type="form-control email" class="full-line" placeholder="Email">
-            </div>
-            <div class="one-input">
-                <input class="form-control full-line" placeholder="Link To Ad Source">
-            </div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="javascript:void(0)" data-target="#cardView">
+                <i class="fas fa-th-list"></i> Card View</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="javascript:void(0)" data-target="#listView">
+                <i class="fas fa-th-large"></i> List View</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="javascript:void(0)" data-target="#sendView">
+                <i class="fas fa-plus-square"></i> Send CV Now</a>
+        </li>
+    </ul>
 
-            <div class="one-input">
-                <input class="form-control full-line" placeholder="Description">
-            </div>
-            <div ng-controller="resumeCtrl">
-                <div class="one-input">
-                    <select class="form-control" placeholder="Contact person">
-                        <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="cardView">
 
-                    </select>
+            <div class="container">
+                <div class="card-columns">
+
+                    <div class="card ">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
+                                content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
+                                content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
+                                content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
+                                content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
+                                card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
+                                card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
+                                card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
                 </div>
-                <div class="one-input">
-
-
-                    <select class="form-control" placeholder="Cover Letter Version">
-                        <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
-
-                    </select>
-
-                </div>
-            </div>
-            <!-- <select class="form-control">
-                    <option>C++</option>
-                    <option selected>Swift</option>
-                    <option disabled>Java</option>
-                    <optgroup label="JavaScript">
-                      <option>jQuery</option>
-                      <option>React.js</option>
-                      <option>Angular.js</option>
-                    </optgroup>
-                  </select> -->
-            <div class="one-input">
-                <input class="form-control full-line" placeholder="Protfolio Version">
-            </div>
-            <div class="one-input">
-                <input type="form-control date" class="full-line" placeholder="Date">
             </div>
 
-            <button class="border-button width-button" ng-click="registerUser()">Send &amp; Save</button>
+
         </div>
+        <div class="tab-pane container fade" id="listView">
+
+            <div class="card-columns11">
+                <div class="card w-150">card1</div>
+                <div class="card w-150">card1</div>
+                <div class="card w-150">card1</div>
+                <div class="card w-150">card1</div>
+                <div class="w-150">card1</div>
+                <div class="w-150">card1</div>
+                <div class="w-150">card1</div>
+                <div class="w-150">card1</div>
+            </div>
+            <div class="col-lg-12">landscapeImage</div>
+
+            <div class="container1">
+                <div class="inline-block" ng-repeat="cvSent in cvSentArr">
+                        <div class="w-150">card1</div>
+                      
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                    <div class="inline-block" ng-repeat="cvSent in cvSentArr">
+                    <div class="card-columns1">
+                        <div class="card h-100 w-150">
+                            <div class="card-header bg-transparent border-success">{{cvSent.company}}</div>
+                            <div class="card-body">
+                                <p class="card-text">{{cvSent.JobTitle}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">{{cvSent.date}}</small>
+                            </div>
+                        </div>
 
 
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="tab-pane container fade" id="sendView">
+
+                <div class="no-padding-no-margin col-xl-4 col-lg-4 ">
+                    <div class="gray-rec">
+                        <p>Send CV</p>
+                        <div class="one-input">
+                            <input class="form-control full-line" placeholder="Company">
+                        </div>
+
+                        <div class="one-input">
+                            <input class="form-control full-line" placeholder="Job Title">
+                        </div>
+
+                        <div class="one-input">
+                            <input class="form-control full-line" placeholder="Contact person">
+                        </div>
+                        <div class="one-input">
+                            <input type="form-control email" class="full-line" placeholder="Email">
+                        </div>
+                        <div class="one-input">
+                            <input class="form-control full-line" placeholder="Link To Ad Source">
+                        </div>
+
+                        <div class="one-input">
+                            <input class="form-control full-line" placeholder="Description">
+                        </div>
+                        <div ng-controller="resumeCtrl">
+                            <div class="one-input">
+                                <select class="form-control" placeholder="Contact person">
+                                    <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
+
+                                </select>
+                            </div>
+                            <div class="one-input">
+
+
+                                <select class="form-control" placeholder="Cover Letter Version">
+                                    <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+                        <!-- <select class="form-control">
+                                            <option>C++</option>
+                                            <option selected>Swift</option>
+                                            <option disabled>Java</option>
+                                            <optgroup label="JavaScript">
+                                              <option>jQuery</option>
+                                              <option>React.js</option>
+                                              <option>Angular.js</option>
+                                            </optgroup>
+                                          </select> -->
+                        <div class="one-input">
+                            <input class="form-control full-line" placeholder="Protfolio Version">
+                        </div>
+                        <div class="one-input">
+                            <input type="form-control date" class="full-line" placeholder="Date">
+                        </div>
+
+                        <button class="border-button width-button" ng-click="registerUser()">Send &amp; Save</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
+
+
+
 
 </div>

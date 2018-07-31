@@ -414,3 +414,14 @@ a.action-icons.edit-mode{
 .confirmation-dialog{
   display: none;
 }
+
+.inline-block{
+    display: inline-block;
+}
+
+.w-150{
+    width: 150px;
+    display: inline-block;
+    /* background-color: bisque; */
+}
+

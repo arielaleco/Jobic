@@ -114,5 +114,41 @@
         "protfolioVersion":"1",        
         "date": "May 27, 2018"
     }
+    ,{ 
+        "company": "Slidely ",        
+        "JobTitle": "Product Manager",
+        "contactPeron": "Reut Tiger",                
+        "email": "slidely.mobileproductmanager@applynow.io",
+        "linkToAdSource":"https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
+        "description":"Slidely is looking for Mobile Product Manager",
+        "resumeVersion":"3",
+        "coverLetterVersion":"1",
+        "protfolioVersion":"2",        
+        "date": "July 31, 2018"
+    }
+    ,{ 
+        "company": "Natural Intelligence",        
+        "JobTitle": "Product Manager",
+        "contactPeron": "Elad Yaniv‎‏",                
+        "email": "https://my.tomigo.com/jobs/9736?p=oUBJA",
+        "linkToAdSource":"https://my.tomigo.com/jobs/9736?p=oUBJA",
+        "description":"Product Manager for core verticals group",
+        "resumeVersion":"2",
+        "coverLetterVersion":"3",
+        "protfolioVersion":"1",        
+        "date": "May 27, 2018"
+    }
+    ,{ 
+        "company": "VIBER",        
+        "JobTitle": "Junior Project Manager",
+        "contactPeron": "Natalie Katester Boimer‎‏‎‏",                
+        "email": "https://www.comeet.co/jobs/sygnia/92.005/product-manager/37.909?coref=1.1.u2C_207&1531992064653",
+        "linkToAdSource":"https://www.comeet.co/jobs/sygnia/92.005/product-manager/37.909?coref=1.1.u2C_207&1531992064653",
+        "description":"Sygnia is looking for an exceptional, highly professional and charismatic Product Manager",
+        "resumeVersion":"2",
+        "coverLetterVersion":"3",
+        "protfolioVersion":"1",        
+        "date": "May 27, 2018"
+    }
 ]
 }
