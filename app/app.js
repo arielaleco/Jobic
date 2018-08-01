@@ -1,4 +1,5 @@
-var app = angular.module("JobicApp" , [ 'ngRoute','chart.js']); 
+
+var app = angular.module("JobicApp" , [ 'ngRoute','chart.js','ngMaterial', 'ngMessages', 'material.svgAssetsCache']); 
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -30,3 +31,4 @@ app.config(function($routeProvider) {
       redirectTo: '/'
     })
   })
+  
