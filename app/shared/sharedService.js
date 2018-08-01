@@ -190,7 +190,8 @@ app.factory('sharedService', function ($log, $q, $http) {
     function cvSent(anObj) {
         this.company = anObj.company;
         this.JobTitle = anObj.JobTitle;
-        this.email = anObj.email;
+        this.contactPeron = anObj.contactPeron;
+        this.email = anObj.email;        
         this.linkToAdSource = anObj.linkToAdSource;
         this.description = anObj.description;
         this.resumeVersion = anObj.resumeVersion;
@@ -226,6 +227,10 @@ app.factory('sharedService', function ($log, $q, $http) {
 
         return asyncAction.promise;
     }
+    function addNewSentCV(obj){
+        cvSentIdIndex++;
+        cvSentArr.push(new cvSent(obj));
+    }
 
 
     return {
@@ -236,8 +241,8 @@ app.factory('sharedService', function ($log, $q, $http) {
         deleteResumeRecord: deleteResumeRecord,
         addNewResumeRecord: addNewResumeRecord,
         deleteCoverLetterRecord: deleteCoverLetterRecord,
-        addNewCoverLetterRecord: addNewCoverLetterRecord
-
+        addNewCoverLetterRecord: addNewCoverLetterRecord,
+        addNewSentCV : addNewSentCV
     }
 
 });

@@ -232,7 +232,7 @@ input{
     padding: 0px 16px;
 }
 
-.one-line>input{
+.one-line>input , .one-line>select{
     padding:8px;
     margin-bottom: 20px;
 }
@@ -415,9 +415,23 @@ a.action-icons.edit-mode{
   display: none;
 }
 
-.inline-block{
+.card-view{
     display: inline-block;
+    padding:5px;
 }
+
+.card-view .card-header, .card-view .card-body , .card-view .card-footer{
+    padding:4px;
+}
+
+.card-view .card-body{
+    height: 60px;
+}
+.card-view .card-header{
+    height: 55px;
+    background-color: blue;
+}
+
 
 .w-150{
     width: 150px;
@@ -425,3 +439,6 @@ a.action-icons.edit-mode{
     /* background-color: bisque; */
 }
 
+#jobProcess>ul{
+    padding:20px;
+}
