@@ -56,7 +56,7 @@
                                                         <p>Date :</p>
                                                     </div>
                                                     <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                        <input class="input-in-accordion" type="text" value={{resume.date}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                        <input class="input-in-accordion" type="text" value="{{resume.date| date:'yyyy-MM-dd HH:mm'}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -64,7 +64,7 @@
                                                         <p>File :</p>
                                                     </div>
                                                     <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                        <input class="input-in-accordion" type="text" value={{resume.file}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                        <input class="input-in-accordion" type="text" value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -72,7 +72,7 @@
                                                         <p>Description :</p>
                                                     </div>
                                                     <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                        <input class="input-in-accordion" type="text" value={{resume.description}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                        <input class="input-in-accordion" type="text" value="{{resume.description}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,7 +137,7 @@
                                                         <p>Date :</p>
                                                     </div>
                                                     <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                        <input class="input-in-accordion" type="text" value={{coverLetter.date}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                        <input class="input-in-accordion" type="text" value="{{coverLetter.date| date:'yyyy-MM-dd HH:mm'}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                     </div>
                                                 </div>
                                                 <div class="row">
