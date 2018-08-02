@@ -4,7 +4,7 @@ app.controller("mainMenuDirectiveCtrl", function ($scope, $location, sharedServi
     $scope.isActive = function (viewLocation) {
         
         var active = (viewLocation === $location.path());
-        alert(active);
+        // alert(active);
         return active;
    };
 
