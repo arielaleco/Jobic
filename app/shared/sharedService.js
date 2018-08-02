@@ -5,6 +5,7 @@ app.factory('sharedService', function ($log, $q, $http) {
     resumeIdIndex = 0;
     resumeArr = [];
     function Resume(anObj) {
+        this.type = "resume";
         this.title = anObj.title;
         this.file = anObj.file;
         this.date = anObj.date;
@@ -28,6 +29,7 @@ app.factory('sharedService', function ($log, $q, $http) {
     coverLetterIdIndex = 0;
     coverLetterArr = [];
     function CoverLetter(anObj) {
+        this.type = "coverLetter";
         this.title = anObj.title;
         this.content = anObj.content;
         this.date = anObj.date;

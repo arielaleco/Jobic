@@ -59,30 +59,31 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
              $scope.inReadOnlyMode = "" }
         else { 
             $scope.inReadOnlyMode = "true" }
-
-        // var id = sharedService.findResumeById(resume.id);
-        // if ($scope.resumeArr[id].editableNow == "true") { $scope.resumeArr[id].editableNow = "" }
-        // else { $scope.resumeArr[id].editableNow = "true" }
-
-        //alert("here");
-        // make every things editable
-
+    
     }
-    $scope.accordionWasClicked = function () {
+
+
+    $scope.SelectedObj={};
+
+    $scope.accordionWasClicked = function (obj) {
         $scope.inReadOnlyMode = "true";
+        $scope.SelectedObj = obj ;
+  
     }
 
-    $scope.DeleteResume = function (resume) {
-       // sharedService.deleteResumeRecord(resume);
-        // if (confirm("Delete This resume " + resume.title + "?")) {
-           
-        // }
-
-        // mscConfirm("Delete?",function(){
-        //     alert("Post deleted");
-        //   });
-
+    $scope.DeleteObj = function (obj) {
+        switch (obj.type) {
+            case "coverLetter":
+                 sharedService.deleteCoverLetterRecord(obj);
+             break;
+             case "resume":
+                  sharedService.deleteResumeRecord(obj);
+             break; 
+        }
+       
     }
+
+
     $scope.addNewResume = function () {
         $(".collapse").collapse('hide');
         var addedIndex = sharedService.addNewResumeRecord();

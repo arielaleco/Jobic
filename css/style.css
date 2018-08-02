@@ -311,12 +311,14 @@ margin:auto;
 
 }
 
+/* #accordionCoverLetter
+#accordionResume */
 
-#accordion .card-header p{
+.accordion .card-header p{
   display: inline;  
   
 }
-#accordion .card-header i{
+.accordion .card-header i{
     padding:0px 13px;
 }
 .accordion-line{

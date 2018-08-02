@@ -1,17 +1,7 @@
- 
-<!-- <div ng-controller="resumeCtrl"> -->
-        <div>
- <div class="container" >
-        
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-            Open modal
-        </button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leftModel">
-                Open Pop Window
-            </button> -->
+<div>
+    <div class="container">
 
-        <!-- The Modal -->
-        <div class="modal" id="Modal{{resume.id}}">
+        <div class="modal" id="ModalResume">
             <div class="modal-dialog">
                 <div class="modal-content">
 
@@ -23,16 +13,16 @@
 
                     <!-- Modal body -->
                     <div class="modal-body">
-                        Are you sure you want to delete {{resume.title}}
+                        Are you sure you want to delete {{SelectedObj.title}}
                     </div>
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="DeleteResume(resume)">Delete</button>
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="DeleteObj(SelectedObj)">Delete</button>
                     </div>
 
-                  
+
 
                 </div>
             </div>
@@ -40,4 +30,3 @@
 
     </div>
 </div>
-    
