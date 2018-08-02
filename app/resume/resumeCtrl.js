@@ -73,7 +73,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     }
 
     $scope.DeleteResume = function (resume) {
-        sharedService.deleteResumeRecord(resume);
+       // sharedService.deleteResumeRecord(resume);
         // if (confirm("Delete This resume " + resume.title + "?")) {
            
         // }

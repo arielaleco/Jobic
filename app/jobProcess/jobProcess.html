@@ -37,12 +37,18 @@
                 <div class="card-view" ng-repeat="cvSent in cvSentArr">
                     <div class="card-grid1">
                         <div class="card w-150">
-                            <div class="card-header bg-primary text-white border-success font-weight-bold">{{cvSent.company}}</div>
+                            <div class="card-header bg-primary text-white border-success font-weight-bold">{{cvSent.company}}
+
+                                    <a class="bg-primary action-icons" title="Delete current resume"  data-toggle="modal" data-target="#Modal{{resume.id}}">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a> 
+
+                            </div>
                             <div class="card-body">
                                 <p class="card-text">{{cvSent.JobTitle}}</p>
                             </div>
                             <div class="card-footer">
-                                    
+
                                 <small class="text-muted">{{cvSent.date| date:'yyyy-MM-dd HH:mm'}}</small>
                             </div>
                         </div>
@@ -59,27 +65,27 @@
         <div class="tab-pane container fade" id="listView">
 
 
-                <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col">Company</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr ng-repeat="cvSent in cvSentArr">
-                            <th scope="row">{{cvSent.company}}</th>
-                            <td>{{cvSent.JobTitle}}</td>
-                            <td>{{cvSent.date}}</td>
-                            <td>@mdo</td>
-                          </tr>
-                          
-                        </tbody>
-                      </table>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Company</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cvSent in cvSentArr">
+                        <th scope="row">{{cvSent.company}}</th>
+                        <td>{{cvSent.JobTitle}}</td>
+                        <td>{{cvSent.date}}</td>
+                        <td>@mdo</td>
+                    </tr>
 
-            
+                </tbody>
+            </table>
+
+
 
         </div>
         <div class="tab-pane container fade" id="sendView">
@@ -88,17 +94,17 @@
                 <div class="gray-rec">
                     <p>Send CV</p>
                     <div class="row one-line">
-                            <input type="date" class="form-control col-xl-4 col-sm-4 date"  placeholder="Date" ng-model="newCV.date">
-                        </div>
+                        <input type="date" class="form-control col-xl-4 col-sm-4 date" placeholder="Date" ng-model="newCV.date">
+                    </div>
                     <div class="row one-line">
                         <input class="form-control col-xl-6 col-sm-6" placeholder="Company" ng-model="newCV.company">
-                        <input class="form-control col-xl-6 col-sm-6" placeholder="Job Title"   ng-model="newCV.JobTitle" >
+                        <input class="form-control col-xl-6 col-sm-6" placeholder="Job Title" ng-model="newCV.JobTitle">
 
                     </div>
 
 
                     <div class="row one-line">
-                        <input class="form-control col-xl-6 col-sm-6" placeholder="Contact person"  ng-model="newCV.contactPeron">
+                        <input class="form-control col-xl-6 col-sm-6" placeholder="Contact person" ng-model="newCV.contactPeron">
                         <input class="form-control col-xl-6 col-sm-6" placeholder="Email" ng-model="newCV.email">
 
 
@@ -115,29 +121,44 @@
                     </div>
 
                     <div ng-controller="resumeCtrl">
-                    <div class="row one-line">
-                            <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion">
-                                    <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
-    
-                                </select>
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion">
-                                        <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
-        
-                                    </select>  
-                                    <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersion">
-                                            <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
-            
-                                        </select>         
+                            
+                        <div class="row one-line">
+                            <!-- <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion">
+                                <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
+
+                            </select>
+                        <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion">
+                                <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
+
+                            </select>
+                            <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersion">
+                                <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
+
+                            </select>
                         
+                        -->
+                            <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion" ng-options="resume.title for resume in resumeArr">
+                                    <option value="">-- choose an option --</option>
+    
+                            </select>
+                            <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
+                                    <option value="">-- choose an option --</option>
+
+                            </select>
+                            <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
+                                    <option value="">-- choose an option --</option>
+
+                            </select>
 
 
 
+
+
+                        </div>
 
                     </div>
 
-                </div>
 
-                    
                     <!-- <select class="form-control">
                                             <option>C++</option>
                                             <option selected>Swift</option>
@@ -148,10 +169,11 @@
                                               <option>Angular.js</option>
                                             </optgroup>
                                           </select> -->
-                    
-                   
+
+
 
                     <button class="border-button width-button" ng-click="SendAndSaveCV()">Send &amp; Save</button>
+                    <!-- // add Good Luck !!! -->
                 </div>
 
 
