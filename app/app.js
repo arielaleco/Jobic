@@ -1,5 +1,6 @@
 
-var app = angular.module("JobicApp" , [ 'ngRoute','chart.js','ngMaterial', 'ngMessages', 'material.svgAssetsCache']); 
+// var app = angular.module("JobicApp" , [ 'ngRoute','chart.js','ngMaterial', 'ngMessages', 'material.svgAssetsCache']); 
+var app = angular.module("JobicApp" , [ 'ngRoute','chart.js']); 
 
 app.config(function($routeProvider) {
     $routeProvider

@@ -115,7 +115,14 @@ main{
     /* padding:10px 40px; */
 }
 #navbarSupportedContent>ul>li:hover{
-    background-color: green;
+    background-color: rgb(171, 210, 248);  ;
+}
+
+#navbarSupportedContent>ul>li .active{
+    background-color: rgb(171, 210, 248);  ;
+    /* background-color: red; ; */
+    color:black;
+    height: 100%;;
 }
 
 /* ============================== register page ============================== */
@@ -429,12 +436,22 @@ a.action-icons.edit-mode{
 .card-view .card-body{
     height: 60px;
 }
+.card-view .card-body p{
+    font-size: 14px;
+}
+
+
 .card-view .card-header{
     height: 55px;
     background-color: blue;
 }
+.card-view .card-header p{
+   display: inline;
+}
 .card-view i{
-    padding-left:90%;
+   float:right;
+   font-size: 13px;
+   padding:2px;
 }
 
 .w-150{
@@ -445,4 +462,6 @@ a.action-icons.edit-mode{
 
 #jobProcess>ul{
     padding:20px;
+    width:600px;
+    margin: auto;
 }

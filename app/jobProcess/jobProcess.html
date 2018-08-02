@@ -37,12 +37,12 @@
                 <div class="card-view" ng-repeat="cvSent in cvSentArr">
                     <div class="card-grid1">
                         <div class="card w-150">
-                            <div class="card-header bg-primary text-white border-success font-weight-bold">{{cvSent.company}}
-
-                                    <a class="bg-primary action-icons" title="Delete current resume"  data-toggle="modal" data-target="#Modal{{resume.id}}">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a> 
-
+                            <div class="card-header bg-primary text-white border-success font-weight-bold">
+                               
+                                <a class="bg-primary action-icons" title="Delete current resume" data-toggle="modal" data-target="#Modal{{resume.id}}">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                                <p>{{cvSent.company}}</p>
                             </div>
                             <div class="card-body">
                                 <p class="card-text">{{cvSent.JobTitle}}</p>
@@ -121,7 +121,7 @@
                     </div>
 
                     <div ng-controller="resumeCtrl">
-                            
+
                         <div class="row one-line">
                             <!-- <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion">
                                 <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
@@ -138,15 +138,15 @@
                         
                         -->
                             <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion" ng-options="resume.title for resume in resumeArr">
-                                    <option value="">-- choose an option --</option>
-    
+                                <option value="">-- choose an option --</option>
+
                             </select>
                             <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
-                                    <option value="">-- choose an option --</option>
+                                <option value="">-- choose an option --</option>
 
                             </select>
                             <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
-                                    <option value="">-- choose an option --</option>
+                                <option value="">-- choose an option --</option>
 
                             </select>
 
