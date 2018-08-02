@@ -78,7 +78,7 @@ app.factory('sharedService', function ($log, $q, $http) {
 
     // }
 
-    function fillResumeFile() {        
+    function fillResumeFile() {
         var asyncAction = $q.defer();
         if (resumeArr.length > 0) // I read from server once)
         {
@@ -86,18 +86,27 @@ app.factory('sharedService', function ($log, $q, $http) {
         }
         else {
 
-        $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/resumes").then(function Succsess(response) {
-            response.data.forEach(function AddResume(anObj) {
-                resumeIdIndex++;
-                resumeArr.push(new Resume(anObj))
+            $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/resumes").then(function Succsess(response) {
+                // I may get here several time because its called eagc time I use ResumeCtrl
+                // so I will check the length again here 
+                if (resumeArr.length > 0) // I read from server once)
+                {
+                    asyncAction.resolve(resumeArr);
+                }
+                else {
 
-            });
-            asyncAction.resolve(resumeArr);
-        },
+                    response.data.forEach(function AddResume(anObj) {
+                        resumeIdIndex++;
+                        resumeArr.push(new Resume(anObj))
 
-            function Error() {
-                $log.Error;
-            });
+                    });
+                    asyncAction.resolve(resumeArr);
+                }
+            },
+
+                function Error() {
+                    $log.Error;
+                });
 
         };
         return asyncAction.promise;
@@ -114,12 +123,21 @@ app.factory('sharedService', function ($log, $q, $http) {
         else {
 
             $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/coverLetters").then(function Succsess(response) {
+                // I may get here several time because its called eagc time I use ResumeCtrl
+                // so I will check the length again here 
+                if (coverLetterArr.length > 0) // I read from server once)
+                {
+                    asyncAction.resolve(coverLetterArr);
+                }
+                else {
+
+
                 response.data.forEach(function AddCover(anObj) {
                     coverLetterIdIndex++;
                     coverLetterArr.push(new CoverLetter(anObj))
 
                 });
-                asyncAction.resolve(coverLetterArr);
+                asyncAction.resolve(coverLetterArr); }
             },
 
                 function Error() {
@@ -191,7 +209,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.company = anObj.company;
         this.JobTitle = anObj.JobTitle;
         this.contactPeron = anObj.contactPeron;
-        this.email = anObj.email;        
+        this.email = anObj.email;
         this.linkToAdSource = anObj.linkToAdSource;
         this.description = anObj.description;
         this.resumeVersion = anObj.resumeVersion;
@@ -203,7 +221,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.isOpen = false;
     }
 
-    function fillcvSentsFile() {        
+    function fillcvSentsFile() {
         var asyncAction = $q.defer();
         if (cvSentArr.length > 0) // I read from server once)
         {
@@ -227,7 +245,7 @@ app.factory('sharedService', function ($log, $q, $http) {
 
         return asyncAction.promise;
     }
-    function addNewSentCV(obj){
+    function addNewSentCV(obj) {
         cvSentIdIndex++;
         cvSentArr.push(new cvSent(obj));
     }
@@ -236,13 +254,13 @@ app.factory('sharedService', function ($log, $q, $http) {
     return {
         fillResumeFile: fillResumeFile,
         fillCoverLetterFile: fillCoverLetterFile,
-        fillcvSentsFile:fillcvSentsFile,
+        fillcvSentsFile: fillcvSentsFile,
         findResumeById: findResumeById,
         deleteResumeRecord: deleteResumeRecord,
         addNewResumeRecord: addNewResumeRecord,
         deleteCoverLetterRecord: deleteCoverLetterRecord,
         addNewCoverLetterRecord: addNewCoverLetterRecord,
-        addNewSentCV : addNewSentCV
+        addNewSentCV: addNewSentCV
     }
 
 });

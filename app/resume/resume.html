@@ -1,6 +1,6 @@
 <div class="resume-page">
 
-    <modal-window-directive></modal-window-directive>
+    <!-- <modal-window-directive></modal-window-directive> -->
 
 
 
@@ -23,6 +23,7 @@
                         <div id="accordion">
                             
                             <div ng-repeat="resume in resumeArr">
+                                 
                                 <div class="card">
                                     <div class="card-header no-padding-no-margin" id="headingOne">
                                         <h5 class="mb-0">
@@ -43,10 +44,16 @@
                                                     <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode()" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a class="action-icons" title="Delete current resume" ng-click="DeleteResume(resume)">
+                                                    <!-- <a class="action-icons" title="Delete current resume" ng-click="DeleteResume(resume)">
                                                         <i class="fas fa-trash-alt"></i>
-                                                    </a> 
-
+                                                    </a>  -->
+                                                    <a class="action-icons" title="Delete current resume"  data-toggle="modal" data-target="#Modal{{resume.id}}">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a> 
+                                                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                                            Open modal
+                                                        </button> -->
+                                                    <modal-window-directive></modal-window-directive>
                                                 </div>
                                             </div>
 

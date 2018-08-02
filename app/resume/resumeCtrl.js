@@ -73,9 +73,10 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     }
 
     $scope.DeleteResume = function (resume) {
-        if (confirm("Delete This resume " + resume.title + "?")) {
-            sharedService.deleteResumeRecord(resume);
-        }
+        sharedService.deleteResumeRecord(resume);
+        // if (confirm("Delete This resume " + resume.title + "?")) {
+           
+        // }
 
         // mscConfirm("Delete?",function(){
         //     alert("Post deleted");
