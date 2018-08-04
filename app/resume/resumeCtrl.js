@@ -62,6 +62,17 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     
     }
 
+    $scope.inReadOnlyModeCL = "true"
+    $scope.toggleEditModeCL = function () {
+        // look for the resume
+
+        if ($scope.inReadOnlyModeCL == "true"){
+             $scope.inReadOnlyModeCL = "" }
+        else { 
+            $scope.inReadOnlyModeCL = "true" }
+    
+    }
+
 
     $scope.SelectedObj={};
 
@@ -83,11 +94,22 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
        
     }
 
+
+    $scope.AddNewFunc=$scope.addNewResume;
+
+    $scope.AddNewObj = function (funcType) {
+        switch (funcType) {
+            case 1:
+                  $scope.AddNewFunc=$scope.addNewResume;
+             break;
+             case 2:
+                 $scope.AddNewFunc=$scope.addNewCoverLetter;
+             break; 
+        }
+    }
+
     $scope.addNew="";
-
-    $scope.addNewResume = function () {
-
-      
+    $scope.addNewResume = function () {      
         $(".accordion-line").collapse('hide');
         // $(".collapse").collapse('hide');
         var addedIndex = sharedService.addNewResumeRecord($scope.addNew);
@@ -97,9 +119,12 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
             $("#"+addedIndex).collapse('show');
         }, 200);
         $scope.addNew="";
+        //toggleEditMode();
+        $scope.SelectedObj = $scope.resumeArr[$scope.resumeArr.length-1] ;
+
         // $("#"+addedIndex).collapse('show');
       
-       // $(".collapse").collapse('toggle');
+       
     }
 
     $scope.collapseAllResume = function () {
@@ -128,8 +153,21 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
 
     }
     $scope.addNewCoverLetter = function () {
-        $(".collapse").collapse('hide');
-        sharedService.addNewCoverLetterRecord();       
+        // $(".collapse").collapse('hide');
+        // sharedService.addNewCoverLetterRecord();  
+        
+        $(".accordion-line").collapse('hide');
+        
+        var addedIndex = sharedService.addNewCoverLetterRecord($scope.addNew);
+        
+        setTimeout(function() {
+            
+            $("#"+addedIndex).collapse('show');
+        }, 200);
+        $scope.addNew="";        
+        $scope.SelectedObj = $scope.coverLetterArr[$scope.coverLetterArr.length-1] ;
+        
+
     }
 
     $scope.myValue="check";

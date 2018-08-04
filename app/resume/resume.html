@@ -6,22 +6,25 @@
             <div class="align-center col-xl-8 col-lg-8  col-sm-10">
                 <div class="gray-rec">
 
-
-                    <h1>Resume Versions</h1>
-                    <a href="javascript:void(0)" title="Collapse All" ng-click="collapseAllResume()">collapse all</a>
-                    <a href="javascript:void(0)" title="Add new Resume" ng-click="addNewResume()">                           
+                    <div class="gray-rec-header">
+                        <h1>Resume Versions</h1>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalInput" ng-click="AddNewObj(1)">
+                            <i class="fas fa-plus-square"></i> Add New</button>
+                    </div>
+                    <!-- <a href="javascript:void(0)" title="Collapse All" ng-click="collapseAllResume()">collapse all</a> -->
+                    <!-- <a href="javascript:void(0)" title="Add new Resume" ng-click="addNewResume()">                           
                         <i class="fas fa-plus-square"></i>
-                    </a>
-
-
-
+                    </a> -->
                     <!-- <span class="btn btn-default btn-file">
                             <i class="fas fa-plus-square"></i>
                             <input type="file"  onchange="angular.element(this).scope().addNewResume()" ng-model="myValue">Add New
                     </span> -->
-                    <a href="javascript:void(0)" title="Add new Resume" data-toggle="modal" data-target="#ModalInput">                           
-                            <i class="fas fa-plus-square"></i>Add New
-                        </a>
+
+
+
+                    <!-- <a class="add-new" href="javascript:void(0)" title="Add new Resume" data-toggle="modal" data-target="#ModalInput">                           
+                            <i class="fas fa-plus-square"></i>  Add New
+                        </a> -->
 
 
 
@@ -49,15 +52,29 @@
                                 <div id="{{resume.id}}" is-open="false" class="collapse" aria-labelledby="headingOne" data-parent="#accordionResume">
                                     <div class="card-body">
                                         <div id="icon-row">
+
+
+
+
+                                            <span class="switch-text">Edit Mode</span>
+                                            <label class="switch">
+                                                <input type="checkbox" ng-model="!inReadOnlyMode" ng-click="toggleEditMode()">
+                                                <span class="slider"></span>
+                                            </label>
+
                                             <div class="icon-on-accordion">
-                                                <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode()" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
+                                                <!-- <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode()" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
                                                     <i class="fas fa-edit"></i>
-                                                </a>
+                                                </a> -->
 
                                                 <a class="action-icons" title="Delete current resume" data-toggle="modal" data-target="#ModalResume">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </a>
+
                                             </div>
+
+
+
                                         </div>
 
                                         <div class="container-fluid">
@@ -76,12 +93,12 @@
                                                 </div>
                                                 <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
 
-                                                        
-                                                              
-                                                    <input type="file" class="input-in-accordion"  value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
-                                                        
 
-                                                    <input type="text" class="input-in-accordion"  value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+
+                                                    <input type="file" class="input-in-accordion" value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+
+
+                                                    <input type="text" class="input-in-accordion" value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -111,12 +128,16 @@
                 <div class="gray-rec">
 
 
-                    <h1>Cover Lettes Versions</h1>
+                    <!-- <h1>Cover Lettes Versions</h1>
                     <a href="javascript:void(0)" title="Collapse All" ng-click="collapseAllCoverLetter11()">collapse all</a>
                     <a href="javascript:void(0)" title="Add new Cover Letter" ng-click="addNewCoverLetter()">
                         <i class="fas fa-plus-square"></i>
-                    </a>
-
+                    </a> -->
+                    <div class="gray-rec-header">
+                            <h1>Cover Lettes Versions</h1>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalInput" ng-click="AddNewObj(2)">
+                                <i class="fas fa-plus-square"></i> Add New</button>
+                        </div>
 
                     <div id="accordionCoverLetter" class="accordion">
                         <div ng-repeat="coverLetter in coverLetterArr">
@@ -136,20 +157,45 @@
 
                                 <div id="{{coverLetter.id}}" is-open="false" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionCoverLetter">
                                     <div class="card-body">
-                                        <div id="icon-row">
+
+                                            <div id="icon-row">
+
+
+
+
+                                                    <span class="switch-text">Edit Mode</span>
+                                                    <label class="switch">
+                                                        <input type="checkbox" ng-model="!inReadOnlyModeCL" ng-click="toggleEditModeCL()">
+                                                        <span class="slider"></span>
+                                                    </label>
+        
+                                                    <div class="icon-on-accordion">
+                                                        <!-- <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode()" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
+                                                            <i class="fas fa-edit"></i>
+                                                        </a> -->
+        
+                                                        <a class="action-icons" title="Delete current cover Letter" data-toggle="modal" data-target="#ModalResume">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+        
+                                                    </div>
+        
+        
+        
+                                                </div>
+
+
+                                        <!-- <div id="icon-row">
                                             <div class="icon-on-accordion">
                                                 <a class="action-icons" title="Edit current Cover Letter" ng-click="toggleEditMode()" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
                                                     <i class="fas fa-edit"></i>
-                                                </a>
-                                                <!-- <a class="action-icons" title="Delete current cover Letter" ng-click="DeleteCoverLetter(coverLetter)">
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </a> -->
+                                                </a>                                                
                                                 <a class="action-icons" title="Delete current cover Letter" data-toggle="modal" data-target="#ModalResume">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </a>
 
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                         <div class="container-fluid">
                                             <div class="row no-padding">
@@ -157,8 +203,8 @@
                                                     <p>Date :</p>
                                                 </div>
                                                 <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                    <input class="input-in-accordion" type="text" value="{{coverLetter.date| date:'yyyy-MM-dd HH:mm'}}" ng-readonly="inReadOnlyMode"
-                                                        ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                    <input class="input-in-accordion" type="text" value="{{coverLetter.date| date:'yyyy-MM-dd HH:mm'}}" ng-readonly="inReadOnlyModeCL"
+                                                        ng-class="inReadOnlyModeCL ? 'not-editable' : 'editable'">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -167,7 +213,7 @@
                                                 </div>
                                                 <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
 
-                                                    <textarea class="input-in-accordion" type="text" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">{{coverLetter.content}}</textarea>
+                                                    <textarea class="input-in-accordion" type="text" ng-readonly="inReadOnlyModeCL" ng-class="inReadOnlyModeCL ? 'not-editable' : 'editable'">{{coverLetter.content}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -175,7 +221,7 @@
                                                     <p>Description :</p>
                                                 </div>
                                                 <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                    <input class="input-in-accordion" type="text" value={{coverLetter.description}} ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                    <input class="input-in-accordion" type="text" value={{coverLetter.description}} ng-readonly="inReadOnlyModeCL" ng-class="inReadOnlyModeCL ? 'not-editable' : 'editable'">
                                                 </div>
                                             </div>
                                         </div>

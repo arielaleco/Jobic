@@ -46,39 +46,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         return -1;
 
     }
-    // https://my-json-server.typicode.com/
-    //  http://my-json-server.typicode.com/arielaleco/Jobic/resumes
-    // my-json-server.typicode.com/user/repo/posts/1
-
-    // readDatabaseFile();
-    // function readDatabaseFile() {
-
-    //     $http.get("../../db.json").then(function Succsess(response) {
-
-    //         response.data.resumes.forEach(function AddResume(anObj) {
-    //             resumeIdIndex++;
-    //             resumeArr.push(new Resume(anObj))
-
-    //         });
-    //         response.data.coverLetters.forEach(function AddCover(anObj) {
-    //             coverLetterIdIndex++;
-    //             coverLetterArr.push(new CoverLetter(anObj))
-
-    //         });
-    //         response.data.cvSents.forEach(function AddcvSent(anObj) {
-    //             cvSentIdIndex++;
-    //             cvSentArr.push(new cvSent(anObj))
-
-    //         });
-
-
-    //     },
-
-    //         function Error() {
-    //             $log.Error;
-    //         });
-
-    // }
+   
 
     function fillResumeFile() {
         var asyncAction = $q.defer();
@@ -150,12 +118,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         return asyncAction.promise;
     }
 
-    // function fillCoverLetterFile() {
-    //     // define asynchronous object
-    //     var asyncAction = $q.defer();
-    //     asyncAction.resolve(coverLetterArr);
-    //     return asyncAction.promise;
-    // }
+    
 
 
     function deleteResumeRecord(resume) {
@@ -170,6 +133,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         resumeIdIndex++;
 
         var anObj = new Object();
+        anObj.type = "resume";
         anObj.title = resumeName;
         anObj.file = "File";
         //var x =Date.now();
@@ -191,18 +155,23 @@ app.factory('sharedService', function ($log, $q, $http) {
 
     
 
-    function addNewCoverLetterRecord() {
+    function addNewCoverLetterRecord(coverLetterName) {
         //var anObj ;
+        coverLetterIdIndex++;
+
         var anObj = new Object();
-        anObj.title = "Title";
+        anObj.type = "coverLetter";
+        anObj.title = coverLetterName;
         anObj.content = "Content";
         var d = new Date();
         anObj.date = d.toDateString();
         anObj.description = "Description...";
-        anObj.id = coverLetterIdIndex;
-        coverLetterIdIndex++;
         anObj.isOpen = true;
+
+        var newId = "CL" + coverLetterIdIndex;
+        anObj.id = newId;        
         coverLetterArr.push(anObj);
+        return (newId);
         //resumeArr.push(new Resume(anObj))
     }
 
