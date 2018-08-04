@@ -93,18 +93,28 @@
                         <div class="row one-line">
                             <input type="date" class="form-control col-xl-4 col-sm-4 date" placeholder="Date" ng-model="newCV.date">
                         </div>
-                        <div class="row one-line">                                
+                        <div class="row one-line">    
+                            <!-- <div class="col-xl-6 col-sm-6">
+                                    <input class="form-control" name="company" placeholder="Company" ng-model="newCV.company" ng-required="true" required>
+                                    <i class="fas fa-exclamation-circle required-field"></i>
+                            </div>
+                            <div class="col-xl-6 col-sm-6">
+                                    <input class="form-control" placeholder="Job Title" ng-model="newCV.JobTitle" ng-required="true">
+                                    <i class="fas fa-exclamation-circle required-field"></i>
+                            </div> -->
+
+
                             <input class="form-control col-xl-6 col-sm-6" name="company" placeholder="Company" ng-model="newCV.company" ng-required="true">
                             <!-- <h1 ng-if="!sendForm.company.$valid">The input field cannot be empty</h1> -->
-                            <i class="fas fa-exclamation-circle required-field"></i>
-                            <input class="form-control col-xl-6 col-sm-6" placeholder="Job Title" ng-model="newCV.JobTitle" ng-required="true">
+                            <!-- <i class="fas fa-exclamation-circle required-field"></i> -->
+                            <input class="form-control col-xl-6 col-sm-6"  name="JobTitle" placeholder="Job Title" ng-model="newCV.JobTitle" ng-required="true">
 
                         </div>
 
 
                         <div class="row one-line">
                             <input class="form-control col-xl-6 col-sm-6" placeholder="Contact person" ng-model="newCV.contactPeron">
-                            <input class="form-control col-xl-6 col-sm-6" placeholder="Email" ng-model="newCV.email">
+                            <input class="form-control col-xl-6 col-sm-6" name="email" placeholder="Email" ng-model="newCV.email" ng-required="true">
 
 
 
@@ -123,7 +133,7 @@
 
                             <div class="row one-line">
 
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion" ng-options="resume.title for resume in resumeArr">
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion" ng-options="resume.title for resume in resumeArr" ng-required="true">
                                     <option value="">-- choose an option --</option>
 
                                 </select>
@@ -144,7 +154,13 @@
 
                         </div>
                         <!-- <button class="border-button width-button" ng-click="SendAndSaveCV()">Send &amp; Save</button> -->
-                        <button class="border-button width-button" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button>
+                         <!-- <h1 ng-if="!sendForm.company.$valid">The input field cannot be empty</h1> -->
+
+                         <!-- ng-class="{clearance: item.clearance, new: item.salesStatus === 'new'}" -->
+                                                  
+                        <button id="send-cv-btn" class="border-button width-button" ng-disabled="(!sendForm.company.$valid) || (!sendForm.email.$valid) ||  (!sendForm.JobTitle.$valid)" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button>
+                        <!-- <button  class="border-button width-button disabled" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button>
+                        <button  class="border-button width-button" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button> -->
 
                         <modal-confirm-send-directive></modal-confirm-send-directive>
 
