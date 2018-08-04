@@ -87,14 +87,16 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
 
     $scope.addNewResume = function () {
 
-        
-        $(".collapse").collapse('hide');
+      
+        $(".accordion-line").collapse('hide');
+        // $(".collapse").collapse('hide');
         var addedIndex = sharedService.addNewResumeRecord($scope.addNew);
         
         setTimeout(function() {
+            
             $("#"+addedIndex).collapse('show');
         }, 200);
-        
+        $scope.addNew="";
         // $("#"+addedIndex).collapse('show');
       
        // $(".collapse").collapse('toggle');
