@@ -1,25 +1,13 @@
 <div id="jobProcess">
 
-    <!-- <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#cardView"  >Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#listView">Menu 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#sendView">Menu 2</a>
-                </li>
-              </ul> -->
-
     <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link active font-weight-bold" data-toggle="tab" href="javascript:void(0)" data-target="#cardView">
-                <i class="fas fa-th-list"></i> Card View</a>
+                <i class="fas fa-th-large"></i> Card View</a>
         </li>
         <li class="nav-item">
             <a class="nav-link font-weight-bold" data-toggle="tab" href="javascript:void(0)" data-target="#listView">
-                <i class="fas fa-th-large"></i> List View</a>
+                <i class="fas fa-th-list"></i> List View</a>
         </li>
         <li class="nav-item">
             <a class="nav-link font-weight-bold" data-toggle="tab" href="javascript:void(0)" data-target="#sendView">
@@ -38,7 +26,7 @@
                     <div class="card-grid1">
                         <div class="card w-150">
                             <div class="card-header bg-primary text-white border-success font-weight-bold">
-                               
+
                                 <a class="bg-primary action-icons" title="Delete current resume" data-toggle="modal" data-target="#Modal{{resume.id}}">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
@@ -90,94 +78,86 @@
         </div>
         <div class="tab-pane container fade" id="sendView">
 
-            <div class="no-padding-no-margin col-xl-8 col-lg-8 ">
+            <div class="align-center no-padding-no-margin1 col-xl-8 col-lg-8 ">
+
                 <div class="gray-rec">
                     <p>Send CV</p>
-                    <div class="row one-line">
-                        <input type="date" class="form-control col-xl-4 col-sm-4 date" placeholder="Date" ng-model="newCV.date">
-                    </div>
-                    <div class="row one-line">
-                        <input class="form-control col-xl-6 col-sm-6" placeholder="Company" ng-model="newCV.company">
-                        <input class="form-control col-xl-6 col-sm-6" placeholder="Job Title" ng-model="newCV.JobTitle">
 
-                    </div>
-
-
-                    <div class="row one-line">
-                        <input class="form-control col-xl-6 col-sm-6" placeholder="Contact person" ng-model="newCV.contactPeron">
-                        <input class="form-control col-xl-6 col-sm-6" placeholder="Email" ng-model="newCV.email">
+                    <form name="sendForm">
 
 
 
 
-                    </div>
-                    <div class="row one-line">
-                        <input class="form-control col-xl-6 col-sm-6" placeholder="Link To Ad Source" ng-model="newCV.linkToAdSource">
-                        <input class="form-control col-xl-6 col-sm-6" placeholder="Description" ng-model="newCV.description">
 
-
-
-
-                    </div>
-
-                    <div ng-controller="resumeCtrl">
 
                         <div class="row one-line">
-                            <!-- <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion">
-                                <option ng-repeat="resume in resumeArr">{{resume.title}}</option>
+                            <input type="date" class="form-control col-xl-4 col-sm-4 date" placeholder="Date" ng-model="newCV.date">
+                        </div>
+                        <div class="row one-line">                                
+                            <input class="form-control col-xl-6 col-sm-6" name="company" placeholder="Company" ng-model="newCV.company" ng-required="true">
+                            <!-- <h1 ng-if="!sendForm.company.$valid">The input field cannot be empty</h1> -->
+                            <i class="fas fa-exclamation-circle required-field"></i>
+                            <input class="form-control col-xl-6 col-sm-6" placeholder="Job Title" ng-model="newCV.JobTitle" ng-required="true">
 
-                            </select>
-                        <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion">
-                                <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
+                        </div>
 
-                            </select>
-                            <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersion">
-                                <option ng-repeat="coverLetter in coverLetterArr">{{coverLetter.title}}</option>
 
-                            </select>
-                        
-                        -->
-                            <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion" ng-options="resume.title for resume in resumeArr">
-                                <option value="">-- choose an option --</option>
+                        <div class="row one-line">
+                            <input class="form-control col-xl-6 col-sm-6" placeholder="Contact person" ng-model="newCV.contactPeron">
+                            <input class="form-control col-xl-6 col-sm-6" placeholder="Email" ng-model="newCV.email">
 
-                            </select>
-                            <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
-                                <option value="">-- choose an option --</option>
 
-                            </select>
-                            <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
-                                <option value="">-- choose an option --</option>
 
-                            </select>
 
+                        </div>
+                        <div class="row one-line">
+                            <input class="form-control col-xl-6 col-sm-6" placeholder="Link To Ad Source" ng-model="newCV.linkToAdSource">
+                            <input class="form-control col-xl-6 col-sm-6" placeholder="Description" ng-model="newCV.description">
 
 
 
 
                         </div>
 
-                    </div>
+                        <div ng-controller="resumeCtrl">
+
+                            <div class="row one-line">
+
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion" ng-options="resume.title for resume in resumeArr">
+                                    <option value="">-- choose an option --</option>
+
+                                </select>
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
+                                    <option value="">-- choose an option --</option>
+
+                                </select>
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
+                                    <option value="">-- choose an option --</option>
+
+                                </select>
 
 
-                    <!-- <select class="form-control">
-                                            <option>C++</option>
-                                            <option selected>Swift</option>
-                                            <option disabled>Java</option>
-                                            <optgroup label="JavaScript">
-                                              <option>jQuery</option>
-                                              <option>React.js</option>
-                                              <option>Angular.js</option>
-                                            </optgroup>
-                                          </select> -->
 
 
 
-                    <button class="border-button width-button" ng-click="SendAndSaveCV()">Send &amp; Save</button>
-                    <!-- // add Good Luck !!! -->
+                            </div>
+
+                        </div>
+                        <!-- <button class="border-button width-button" ng-click="SendAndSaveCV()">Send &amp; Save</button> -->
+                        <button class="border-button width-button" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button>
+
+                        <modal-confirm-send-directive></modal-confirm-send-directive>
+
+                        <!-- // add Good Luck !!! -->
+
+                    </form>
+
+
                 </div>
 
 
             </div>
+
         </div>
 
     </div>

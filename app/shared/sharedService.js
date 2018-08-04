@@ -189,6 +189,8 @@ app.factory('sharedService', function ($log, $q, $http) {
         if (id > -1) { coverLetterArr.splice(id, 1); }
     }
 
+    
+
     function addNewCoverLetterRecord() {
         //var anObj ;
         var anObj = new Object();
@@ -250,6 +252,10 @@ app.factory('sharedService', function ($log, $q, $http) {
     function addNewSentCV(obj) {
         cvSentIdIndex++;
         cvSentArr.push(new cvSent(obj));
+
+        // send the email
+        
+       
     }
 
 

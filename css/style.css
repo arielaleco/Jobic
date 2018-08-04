@@ -465,3 +465,8 @@ a.action-icons.edit-mode{
     width:600px;
     margin: auto;
 }
+.required-field{
+    margin-left: -20px;
+    z-index: 1;
+}
+

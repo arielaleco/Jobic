@@ -1,0 +1,67 @@
+<div>
+    <div class="container">
+
+        <div class="modal" id="ModalSend">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Confirm Send </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>Are you sure you want to send the following email to <strong> {{newCV.email}} </strong> </p>
+
+                        <div class="card">
+                                <div class="card-header bg-info text-white border-success font-weight-bold">
+                                        {{newCV.JobTitle}} position at {{newCV.company}}
+                                </div>
+                                <div class="card-body">
+                                  <!-- <h4 class="card-title">{{newCV.JobTitle}} position at {{newCV.company}} </h4> -->
+                                  <p class="card-text">{{newCV.coverLetterVersion.content}}</p>
+                                  <p class="no-padding-no-margin">Please check the attached files for more information.</p>
+                                  <p class="no-padding-no-margin">Thank you</p>
+                                  <p class="no-padding-no-margin">User</p>
+                                  <!-- <a href="#" class="card-link">Card link</a>
+                                  <a href="#" class="card-link">Another link</a> -->
+                                </div>
+                              </div>
+
+
+                        
+
+                        <!-- this.company = anObj.company;
+                        this.JobTitle = anObj.JobTitle;
+                        this.contactPeron = anObj.contactPeron;
+                        this.email = anObj.email;
+                        this.linkToAdSource = anObj.linkToAdSource;
+                        this.description = anObj.description;
+                        this.resumeVersion = anObj.resumeVersion;
+                        this.coverLetterVersion = anObj.coverLetterVersion;
+                        this.protfolioVersion = anObj.protfolioVersion;
+                
+                        this.date = anObj.date;
+                        this.id = "cvSent" + coverLetterIdIndex;
+                        this.isOpen = false; -->
+
+
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="SendAndSaveCV()">Send</button>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
