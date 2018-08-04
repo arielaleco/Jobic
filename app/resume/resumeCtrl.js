@@ -83,14 +83,19 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
        
     }
 
+    $scope.addNew="";
 
     $scope.addNewResume = function () {
-        $(".collapse").collapse('hide');
-        var addedIndex = sharedService.addNewResumeRecord();
-        alert(addedIndex);
 
         
-        $("#"+addedIndex).collapse('show');
+        $(".collapse").collapse('hide');
+        var addedIndex = sharedService.addNewResumeRecord($scope.addNew);
+        
+        setTimeout(function() {
+            $("#"+addedIndex).collapse('show');
+        }, 200);
+        
+        // $("#"+addedIndex).collapse('show');
       
        // $(".collapse").collapse('toggle');
     }
@@ -124,5 +129,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         $(".collapse").collapse('hide');
         sharedService.addNewCoverLetterRecord();       
     }
+
+    $scope.myValue="check";
 
 });

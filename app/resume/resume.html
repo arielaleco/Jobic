@@ -9,9 +9,23 @@
 
                     <h1>Resume Versions</h1>
                     <a href="javascript:void(0)" title="Collapse All" ng-click="collapseAllResume()">collapse all</a>
-                    <a href="javascript:void(0)" title="Add new Resume" ng-click="addNewResume()">
+                    <a href="javascript:void(0)" title="Add new Resume" ng-click="addNewResume()">                           
                         <i class="fas fa-plus-square"></i>
                     </a>
+
+
+
+                    <!-- <span class="btn btn-default btn-file">
+                            <i class="fas fa-plus-square"></i>
+                            <input type="file"  onchange="angular.element(this).scope().addNewResume()" ng-model="myValue">Add New
+                    </span> -->
+                    <a href="javascript:void(0)" title="Add new Resume" data-toggle="modal" data-target="#ModalInput">                           
+                            <i class="fas fa-plus-square"></i>Add New
+                        </a>
+
+
+
+                    <modal-input-directive></modal-input-directive>
 
                     <modal-window-directive></modal-window-directive>
 
@@ -61,7 +75,13 @@
                                                     <p>File :</p>
                                                 </div>
                                                 <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-                                                    <input class="input-in-accordion" type="text" value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+
+                                                        
+                                                              
+                                                    <input type="file" class="input-in-accordion"  value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
+                                                        
+
+                                                    <input type="text" class="input-in-accordion"  value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -170,7 +190,7 @@
             </div>
         </div>
 
-        <div ng-controller="addNewResumeModalCtrl" layout="row" ng-cloak="" style="height: 300px" class="dialogdemoOpenFromCloseTo">
+        <!-- <div ng-controller="addNewResumeModalCtrl" layout="row" ng-cloak="" style="height: 300px" class="dialogdemoOpenFromCloseTo">
             <style>
                 .edgePadding {
                     padding-left: 25px;
@@ -178,34 +198,8 @@
                 }
             </style>
 
-            <!-- <div layout="column" layout-align="center center" style="background-color: #f2f2f2" class="md-padding">
-                <span id="left">left</span>
-            </div>
-
-            <div layout="column" layout-align="center start" layout-padding="" flex="">
-                <p class="inset">
-                    A dialog can specify its origin and target with
-                    <code>openFrom</code> and
-                    <code>closeTo</code> properties. The options showFrom and closeTo can be specified as a string [where internally querySelector(
-                    ) is used to perform the DOM element lookup], element or an Rect object [with top, left, width, height
-                    fields].
-                </p>
-
-                <div class="dialog-demo-content" layout="column" layout-align="center center" style="width:100%">
-                    <md-button class="md-primary md-raised edgePadding" ng-click="openFromLeft()">
-                        Open From Left - Close To Right
-                    </md-button>
-                    <md-button class="md-primary md-raised edgePadding" ng-click="openOffscreen()">
-                        Open From Top Left - Close Slide Down
-                    </md-button>
-                </div>
-
-            </div>
-
-            <div layout="column" layout-align="center center" style="background-color: #f2f2f2" class="md-padding">
-                <span id="right">right</span>
-            </div> -->
-        </div>
+           
+        </div> -->
 
 
         <!-- </div> -->
