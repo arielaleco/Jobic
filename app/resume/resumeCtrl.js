@@ -108,17 +108,23 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         }
     }
 
+    $scope.addNewObj={
+        "title":"",
+        "description":"",
+        "file":"Drag & Drop File"
+    }
+
     $scope.addNew="";
     $scope.addNewFile="Drag & Drop File";
    
 
     $scope.addNewResume = function () {   
-        alert($scope.addNewFile);
+        // alert('add new resume' + $scope.addNewFile);
         
         
         $(".accordion-line").collapse('hide');
         // $(".collapse").collapse('hide');
-        var addedIndex = sharedService.addNewResumeRecord($scope.addNew);
+        var addedIndex = sharedService.addNewResumeRecord($scope.addNew, $scope.addNewFile);
         
         setTimeout(function() {
             
@@ -172,7 +178,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         
         $(".accordion-line").collapse('hide');
         
-        var addedIndex = sharedService.addNewCoverLetterRecord($scope.addNew);
+        var addedIndex = sharedService.addNewCoverLetterRecord($scope.addNew );
         
         setTimeout(function() {
             

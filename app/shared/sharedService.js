@@ -128,14 +128,14 @@ app.factory('sharedService', function ($log, $q, $http) {
 
 
     }
-    function addNewResumeRecord(resumeName) {
+    function addNewResumeRecord(resumeName , resumeFile) {
         //var anObj ;
         resumeIdIndex++;
 
         var anObj = new Object();
         anObj.type = "resume";
         anObj.title = resumeName;
-        anObj.file = "File";
+        anObj.file = resumeFile;
         //var x =Date.now();
         var d = new Date();
         anObj.date = d.toDateString();
