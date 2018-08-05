@@ -28,6 +28,10 @@ app.config(function($routeProvider) {
         templateUrl: 'app/jobProcess/jobProcess.html',
         controller: 'jobProcessCtrl'
       })      
+      .when('/sendCV', {
+        templateUrl: 'app/sendCV/sendCV.html',
+        controller: 'sendCVCtrl'
+      })
     .otherwise({
       redirectTo: '/'
     })

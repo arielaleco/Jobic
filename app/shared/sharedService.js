@@ -227,11 +227,55 @@ app.factory('sharedService', function ($log, $q, $http) {
        
     }
 
+// ================= Job Process Structure ================= 
+JobProcessIdIndex = 0;
+JobProcessArr = [];
+function JobProcess(anObj) {
+    
+    this.company = anObj.company;
+    this.JobTitle = anObj.JobTitle;
+    this.description = anObj.description;
+    this.resumeVersion = anObj.resumeVersion;
+    this.coverLetterVersion = anObj.coverLetterVersion;
+    this.protfolioVersion = anObj.protfolioVersion;
+    this.interviewsList =[];
+
+    this.date = anObj.date;
+    this.id = "JobProcess" + coverLetterIdIndex;
+        
+}
+
+function filljobProcesssFile() {
+    var asyncAction = $q.defer();
+    if (JobProcessArr.length > 0) // I read from server once)
+    {
+        asyncAction.resolve(JobProcessArr);
+    }
+    else {
+
+        $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/cvSents").then(function Succsess(response) {
+            response.data.forEach(function AddcvSent(anObj) {
+                JobProcessIdIndex++;
+                JobProcessArr.push(new JobProcess(anObj))
+
+            });
+            asyncAction.resolve(JobProcessArr);
+        },
+
+            function Error() {
+                $log.Error;
+            });
+    };
+
+    return asyncAction.promise;
+}
+
 
     return {
         fillResumeFile: fillResumeFile,
         fillCoverLetterFile: fillCoverLetterFile,
         fillcvSentsFile: fillcvSentsFile,
+        filljobProcesssFile: filljobProcesssFile,
         findResumeById: findResumeById,
         deleteResumeRecord: deleteResumeRecord,
         addNewResumeRecord: addNewResumeRecord,
