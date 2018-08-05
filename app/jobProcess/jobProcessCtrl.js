@@ -21,10 +21,21 @@ $scope.SendAndSaveCV = function(){
     // send the email
     // get the content of the cover letter
 
-    var mail = 'mailto:$scope.newCV.email?subject=' + $scope.newCV.description +
+    var mail = 'mailto:{{$scope.newCV.email}}?subject=' + $scope.newCV.description +
                '&body=' + $scope.newCV.description;
-     $window.open(mail);
- 
+    //  $window.open(mail);
+
+
+    // <script src="https://smtpjs.com/v2/smtp.js">
+    // </script>
+    // https://www.smtpjs.com/
+    //  Email.send("arielaleco@gmail.com",
+    //  "arielaleco@gmail.com",
+    //  "This is a subject",
+    //  "this is the body",
+    //  "smtp.yourisp.com",
+    //  "username",
+    //  "password");
     
     // send 
 
