@@ -83,11 +83,11 @@
 }
 
 #lower-panel{
-    background-color: red;
+    /* background-color: red; */
     width:100%; 
 }
 .main-panel{
-    background-color: green;
+    /* background-color: green; */
 }               
 /* #lower-panel #bar{
     height:100px;
