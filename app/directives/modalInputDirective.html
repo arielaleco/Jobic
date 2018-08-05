@@ -14,16 +14,43 @@
                     <!-- Modal body -->
                     <div class="modal-body">
                         <input class="input-in-accordion" type="text" ng-model="addNew">
-                        
 
-                                             
+                        <!-- ================================== -->
+                        <div class="container p-y-1">
+                            <div class="row m-b-1">
+                                    <div class="col-sm-12 offset-sm-12">
+                                <input class="input-in-accordion" type="text" ng-model="addNew">
+                                </div>
+                            </div>
+                            <div class="row m-b-1">
+                                <div class="col-sm-12 offset-sm-12">
+                                    
+                                    <!-- <button id="file-upload-btn" type="button" class="btn btn-primary btn-block align-middle" onclick="document.getElementById('inputFile').click()">Add Image</button> -->
+                                    <div  class="form-group inputDnD">
+                                        <label class="sr-only" for="inputFile">File Upload</label>
+                                        <input type="file" ng-model="addNewFile" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" onchange="angular.element(this).scope().fileWasSelected(this)"
+                                            data-title="{{addNewFile}}">
+                                            <!-- <input type="file" ng-model="addNewFile" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" ng-change="fileWasSelected(this)" onchange="readUrl(this)"
+                                            data-title="{{addNewFile}}"> -->
+                                    </div>
+                                    <button id="file-upload-btn" type="button" class="btn btn-primary btn-block align-middle" onclick="document.getElementById('inputFile').click()">Select File</button>
+
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ================================== -->
+
+
                     </div>
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="AddNewFunc()">Add</button>
-                        
+
                         <!-- <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="addNewCoverLetter()">Add</button>
                         <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="addNewResume()">Add</button> -->
                     </div>

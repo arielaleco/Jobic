@@ -109,7 +109,13 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     }
 
     $scope.addNew="";
-    $scope.addNewResume = function () {      
+    $scope.addNewFile="Drag & Drop File";
+   
+
+    $scope.addNewResume = function () {   
+        alert($scope.addNewFile);
+        
+        
         $(".accordion-line").collapse('hide');
         // $(".collapse").collapse('hide');
         var addedIndex = sharedService.addNewResumeRecord($scope.addNew);
@@ -126,6 +132,14 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
       
        
     }
+    $scope.fileWasSelected = function (obj) { 
+        // alert(obj.files);
+        $scope.addNewFile = obj.files[0].name; 
+        alert($scope.addNewFile);
+        $scope.$apply();
+        
+    }
+
 
     $scope.collapseAllResume = function () {
       //  $(".collapse").collapse('toggle');

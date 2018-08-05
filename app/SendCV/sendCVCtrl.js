@@ -21,6 +21,9 @@ $scope.SendAndSaveCV = function(){
     // send the email
     // get the content of the cover letter
 
+    // open an account in here and use it
+    // http://www.emailjs.com/
+
     var mail = 'mailto:{{$scope.newCV.email}}?subject=' + $scope.newCV.description +
                '&body=' + $scope.newCV.description;
     //  $window.open(mail);
