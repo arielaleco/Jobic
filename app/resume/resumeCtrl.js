@@ -95,24 +95,38 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     }
 
 
-    $scope.AddNewFunc=$scope.addNewResume;
+    
+    $scope.NewObj = new Object();
 
     $scope.AddNewObj = function (funcType) {
+
+         
+        $scope.NewObj.type = "Resume";
+        $scope.NewObj.title = "";
+        $scope.NewObj.description= "";
+        $scope.NewObj.file= "Drag & Drop File";
+        
+
         switch (funcType) {
             case 1:
-                  $scope.AddNewFunc=$scope.addNewResume;
+               
+                  $scope.NewObj.AddNewFunc=$scope.addNewResume;
+                  $scope.NewObj.panelTitle="Resume";        
              break;
              case 2:
-                 $scope.AddNewFunc=$scope.addNewCoverLetter;
+               
+                 $scope.NewObj.AddNewFunc=$scope.addNewCoverLetter;
+                 $scope.NewObj.panelTitle="Cover Letter";        
              break; 
         }
     }
 
-    $scope.NewObj={
-        "title":"",
-        "description":"",
-        "file":"Drag & Drop File"
-    }
+    
+    // $scope.NewObj={
+    //     "title":"",
+    //     "description":"",
+    //     "file":"Drag & Drop File"
+    // }
 
    
     

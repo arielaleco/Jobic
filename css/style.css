@@ -1,3 +1,13 @@
+/* 
+http://hugohd.com/editor/?
+dark blue = color : rgba(21,69,115,0); 
+medium blue = color : rgba(43,135,182,0); 
+light blue = color : rgba(71,208,255,0); 
+very light blue = color : rgba(119,253,255,0); 
+orange = color : rgba(236,71,0,0); 
+medium orange = color : rgba(246,130,0,0); 
+light orange = color : rgba(247,125,0,0); 
+ */
 
 
 * {
@@ -27,7 +37,7 @@ body{
     font-size: 16px;  
     width:100px;  
     /* margin: 20px; */
-    background-color: rgba(53,97,161,1);
+    background-color: rgba(21,69,115,1);
     color: white;
 }
 .border-button:hover{
@@ -42,8 +52,8 @@ body{
 .main-header{        
     color: white;
     /* background-color: lightblue; */
-    /* background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(89,148,202,1) 62%,rgba(95,154,207,0.7) 68%,rgba(125,185,232,0) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    background: linear-gradient(to bottom, rgba(30,87,153,1) 36%,rgba(89,148,202,1) 62%,rgba(95,154,207,0.7) 91%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+    /* background: linear-gradient(to bottom, rgba(30,87,153,1) 36%,rgba(89,148,202,1) 62%,rgba(95,154,207,0.7) 91%,rgba(125,185,232,0) 100%);  */
     padding-bottom: 30px;
     width:88%;
     margin: auto;
@@ -79,9 +89,22 @@ main{
 /* ==============================  main menu ============================== */
 
 #main-menu{
-    background-color: rgb(51, 153, 255);  
+    background-color: rgb(43,135,182);
+    
+    
     font-weight: 600;
     padding:0px;
+
+/* 
+    dark blue = color : rgba(21,69,115,0); 
+    medium blue = color : rgba(43,135,182,0); 
+    light blue = color : rgba(71,208,255,0); 
+    very light blue = color : rgba(119,253,255,0); 
+    orange = color : rgba(236,71,0,0); 
+    medium orange = color : rgba(246,130,0,0); 
+    light orange = color : rgba(247,125,0,0); 
+     */
+
 }
 
 #main-menu a{
@@ -119,13 +142,13 @@ main{
     /* padding:10px 40px; */
 }
 #navbarSupportedContent>ul>li:hover{
-    background-color: rgb(171, 210, 248);  ;
+    background-color: rgb(71,208,255)  ;
 }
 
 #navbarSupportedContent>ul>li .active{
-    background-color: rgb(171, 210, 248);  ;
+    background-color: rgb(21,69,115);  ;
     /* background-color: red; ; */
-    color:black;
+   
     height: 100%;;
 }
 
@@ -604,7 +627,7 @@ select:required:invalid{
     box-shadow: 0 0 5px solid currentColor;
   }
   inputDnD .form-control-file::after {
-    content: "arielarielaarielaarielaarielaarielaarielaarielaarielaarielaarielaa";
+    content: "";
     float: right;
   width:25%
   }
@@ -637,7 +660,13 @@ select:required:invalid{
     top:-35%;
   }
   
-
+  .buttons-color{
+    background-color : rgb(21,69,115);       
+    color:white;
+  }
+  .text-buttons-color{
+    color:rgb(21,69,115);       
+  }
 
 
 
