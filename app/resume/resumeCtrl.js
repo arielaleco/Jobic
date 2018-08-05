@@ -108,29 +108,29 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         }
     }
 
-    $scope.addNewObj={
+    $scope.NewObj={
         "title":"",
         "description":"",
         "file":"Drag & Drop File"
     }
 
-    $scope.addNew="";
-    $scope.addNewFile="Drag & Drop File";
+   
+    
    
 
     $scope.addNewResume = function () {   
-        // alert('add new resume' + $scope.addNewFile);
+         alert('add new resume' + $scope.NewObj.file);
         
         
         $(".accordion-line").collapse('hide');
         // $(".collapse").collapse('hide');
-        var addedIndex = sharedService.addNewResumeRecord($scope.addNew, $scope.addNewFile);
+        var addedIndex = sharedService.addNewResumeRecord($scope.NewObj.title, $scope.NewObj.file);
         
         setTimeout(function() {
             
             $("#"+addedIndex).collapse('show');
         }, 200);
-        $scope.addNew="";
+        $scope.NewObj.title="";
         //toggleEditMode();
         $scope.SelectedObj = $scope.resumeArr[$scope.resumeArr.length-1] ;
 
@@ -140,8 +140,8 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     }
     $scope.fileWasSelected = function (obj) { 
         // alert(obj.files);
-        $scope.addNewFile = obj.files[0].name; 
-        alert($scope.addNewFile);
+        $scope.NewObj.file = obj.files[0].name; 
+        alert($scope.NewObj.file);
         $scope.$apply();
         
     }
@@ -176,15 +176,13 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         // $(".collapse").collapse('hide');
         // sharedService.addNewCoverLetterRecord();  
         
-        $(".accordion-line").collapse('hide');
-        
-        var addedIndex = sharedService.addNewCoverLetterRecord($scope.addNew );
-        
+        $(".accordion-line").collapse('hide');        
+        var addedIndex = sharedService.addNewCoverLetterRecord($scope.NewObj.title );        
         setTimeout(function() {
             
             $("#"+addedIndex).collapse('show');
         }, 200);
-        $scope.addNew="";        
+        $scope.NewObj.title="";        
         $scope.SelectedObj = $scope.coverLetterArr[$scope.coverLetterArr.length-1] ;
         
 
