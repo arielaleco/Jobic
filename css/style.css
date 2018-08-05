@@ -18,7 +18,7 @@ light orange = color : rgba(247,125,0,0);
 body{
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
-   
+    background-color: #f2f1ec;
 }
 
 /* ==============================  landing game ============================== */
@@ -89,28 +89,27 @@ main{
 /* ==============================  main menu ============================== */
 
 #main-menu{
-    background-color: rgb(43,135,182);
+    /* background-color: rgb(43,135,182); */
     
-    
+    background-color: white;
     font-weight: 600;
     padding:0px;
 
-/* 
-    dark blue = color : rgba(21,69,115,0); 
-    medium blue = color : rgba(43,135,182,0); 
-    light blue = color : rgba(71,208,255,0); 
-    very light blue = color : rgba(119,253,255,0); 
-    orange = color : rgba(236,71,0,0); 
-    medium orange = color : rgba(246,130,0,0); 
-    light orange = color : rgba(247,125,0,0); 
-     */
 
+}
+.text-uppercase{
+    text-transform: uppercase;
 }
 
 #main-menu a{
-    color:white;
-    width:146px;
+    /* color:white; */
+    text-transform: uppercase;
+    /* width:160px; */
     text-align: center;
+    border-bottom: 0.5px solid lightgray;
+    padding-top:30px;
+    height:55px;
+    margin:0px 20px;
 }
 
 
@@ -134,7 +133,8 @@ main{
 }
 
 #navbarSupportedContent ul{
-    padding-left: 70px;
+    /* padding-left: 70px; */
+    margin:auto;
     height:60px;
 }
 #navbarSupportedContent>ul>li{
@@ -142,13 +142,14 @@ main{
     /* padding:10px 40px; */
 }
 #navbarSupportedContent>ul>li:hover{
-    background-color: rgb(71,208,255)  ;
+    background-color: rgba(71, 209, 255, 0.342)  ;
 }
 
 #navbarSupportedContent>ul>li .active{
-    background-color: rgb(21,69,115);  ;
-    /* background-color: red; ; */
-   
+    
+   font-weight: 900;
+   /* border-bottom: 2px solid rgb(71,208,255); */
+   border-bottom: 3px solid rgb(244,98,70);
     height: 100%;;
 }
 
@@ -190,11 +191,16 @@ main{
 }
 
 .gray-rec{
-    background-color:rgb(192, 197, 201); 
+    /* background-color:rgb(192, 197, 201);  */
+    background-color:#c5c5c2; 
+    
     margin: 20px 10px;
     padding:10px;
     
 	
+}
+.bg-gray-custom{
+    background-color:rgb(111, 111, 111); 
 }
 
 
@@ -341,8 +347,8 @@ margin:auto;
 
 
 /* ============================== resume-page ============================== */
-.resume-div{
-
+#resume-div{
+ background-color: #f2f1ec;
 }
 
 /* #accordionCoverLetter
@@ -358,6 +364,7 @@ margin:auto;
 .accordion-line{
     width: 100%;;
     text-align: left;
+    color: black;
 }
 
 .accordion-line.collapsed .fa-caret-down,
@@ -470,7 +477,7 @@ a.action-icons.edit-mode{
 
 .card-view .card-header{
     height: 55px;
-    background-color: blue;
+    /* background-color: blue; */
 }
 .card-view .card-header p{
    display: inline;
@@ -491,6 +498,10 @@ a.action-icons.edit-mode{
     padding:20px;
     width:600px;
     margin: auto;
+}
+
+#sendCV .nav-item a{
+    color: black;
 }
 .required-field{
     margin-left: -20px;
@@ -661,7 +672,7 @@ select:required:invalid{
   }
   
   .buttons-color{
-    background-color : rgb(21,69,115);       
+    background-color : rgb(53,139,254);       
     color:white;
   }
   .text-buttons-color{
@@ -669,6 +680,10 @@ select:required:invalid{
   }
 
 
-
+  /* .bg-primary{
+      background-color: #c5c5c2; 
+    
+  } */
+  /* background: linear-gradient(to bottom, rgba(21,69,115,1) 36%,rgba(43,135,182,1) 62%,rgba(71,208,255,0.7) 91%,rgba(119,253,255,0) 100%);  */ */
  
   

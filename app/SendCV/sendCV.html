@@ -25,9 +25,9 @@
                 <div class="card-view" ng-repeat="cvSent in cvSentArr">
                     <div class="card-grid1">
                         <div class="card w-150">
-                            <div class="card-header bg-primary text-white border-success font-weight-bold">
+                            <div class="card-header bg-gray-custom text-white text-uppercase">
 
-                                <a class="bg-primary action-icons" title="Delete current resume" data-toggle="modal" data-target="#Modal{{resume.id}}">
+                                <a class="bg-gray-custom action-icons" title="Delete current resume" data-toggle="modal" data-target="#Modal{{resume.id}}">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                                 <p>{{cvSent.company}}</p>
@@ -94,15 +94,7 @@
                             <input type="date" class="form-control col-xl-4 col-sm-4 date" placeholder="Date" ng-model="newCV.date">
                         </div>
                         <div class="row one-line">    
-                            <!-- <div class="col-xl-6 col-sm-6">
-                                    <input class="form-control" name="company" placeholder="Company" ng-model="newCV.company" ng-required="true" required>
-                                    <i class="fas fa-exclamation-circle required-field"></i>
-                            </div>
-                            <div class="col-xl-6 col-sm-6">
-                                    <input class="form-control" placeholder="Job Title" ng-model="newCV.JobTitle" ng-required="true">
-                                    <i class="fas fa-exclamation-circle required-field"></i>
-                            </div> -->
-
+                           
 
                             <input class="form-control col-xl-6 col-sm-6" name="company" placeholder="Company" ng-model="newCV.company" ng-required="true">
                             <!-- <h1 ng-if="!sendForm.company.$valid">The input field cannot be empty</h1> -->
