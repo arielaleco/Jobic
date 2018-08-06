@@ -24,8 +24,45 @@ $scope.SendAndSaveCV = function(){
     // open an account in here and use it
     // http://www.emailjs.com/
 
-    var mail = 'mailto:{{$scope.newCV.email}}?subject=' + $scope.newCV.description +
-               '&body=' + $scope.newCV.description;
+    // var templateParams = {
+    //     to_name: $scope.newCV.email,
+    //     from_name: 'jobicProj@gmail.com', // fill user email here
+    //     message_subject: 'Check this out!',
+    //     message_content: 'Check this out!',
+    //     message_signature: 'Check this out!'
+    // };
+
+    // emailjs.send("gmail", "jobic", templateParams, "jobicProj")
+    // .then(function(response) {
+    //    console.log('SUCCESS!', response.status, response.text);
+    // }, function(error) {
+    //    console.log('FAILED...', error);
+    // });
+
+    var template_params = {
+        email_to: $scope.newCV.email,
+        email_reply: "reply_to_value",
+        email_from: "from_name_value",        
+        message_html: "message_html_value",
+        message_subject:"this is the subject of the email",
+        message_content:"this is the content of the email"
+        
+     }
+     
+    //  var service_id = "default_service";
+    //  var template_id = "random";
+    //  emailjs.send(service_id,template_id,template_params);
+
+    
+     
+     var service_id = "default_service";
+     var template_id = "jobic";
+     emailjs.send(service_id,template_id,template_params);
+
+
+
+    // var mail = 'mailto:{{$scope.newCV.email}}?subject=' + $scope.newCV.description +
+    //            '&body=' + $scope.newCV.description;
     //  $window.open(mail);
 //--------------------------------------------------
 // $.ajax({

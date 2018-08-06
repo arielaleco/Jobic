@@ -51,25 +51,25 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     });
 
 
-    $scope.inReadOnlyMode = "true"
+    $scope.inReadOnlyMode = false;
     $scope.toggleEditMode = function () {
         // look for the resume
 
-        if ($scope.inReadOnlyMode == "true"){
-             $scope.inReadOnlyMode = "" }
+        if ($scope.inReadOnlyMode == true){
+             $scope.inReadOnlyMode = false }
         else { 
-            $scope.inReadOnlyMode = "true" }
+            $scope.inReadOnlyMode = true }
     
     }
 
-    $scope.inReadOnlyModeCL = "true"
+    $scope.inReadOnlyModeCL = false;
     $scope.toggleEditModeCL = function () {
         // look for the resume
 
-        if ($scope.inReadOnlyModeCL == "true"){
-             $scope.inReadOnlyModeCL = "" }
+        if ($scope.inReadOnlyModeCL == true){
+             $scope.inReadOnlyModeCL = false }
         else { 
-            $scope.inReadOnlyModeCL = "true" }
+            $scope.inReadOnlyModeCL = true }
     
     }
 
@@ -141,10 +141,11 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         // $(".collapse").collapse('hide');
         var addedIndex = sharedService.addNewResumeRecord($scope.NewObj.title, $scope.NewObj.description, $scope.NewObj.file);
         
+        
         setTimeout(function() {
             
             $("#"+addedIndex).collapse('show');
-        }, 200);
+        }, 0);
         $scope.NewObj.title="";
         //toggleEditMode();
         $scope.SelectedObj = $scope.resumeArr[$scope.resumeArr.length-1] ;
@@ -194,7 +195,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         setTimeout(function() {
             
             $("#"+addedIndex).collapse('show');
-        }, 200);
+        }, 0);
         $scope.NewObj.title="";        
         $scope.SelectedObj = $scope.coverLetterArr[$scope.coverLetterArr.length-1] ;
         
