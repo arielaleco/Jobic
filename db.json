@@ -16,16 +16,7 @@
             "birthDate":"2018-05-03T05:00:00.000Z",
             "password":"1234"
             
-        },
-        {
-            "id": 3,
-            "fname":"Noaa",
-            "lname":"Kazinski",
-            "email":"arielatestso@gmail.com",
-            "phone":"05466667778",
-            "birthDate":"2018-05-03T05:00:00.000Z",
-            "password":"1234"
-        }
+        }      
     ],
     "resumes": [
         {
