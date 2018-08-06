@@ -128,7 +128,7 @@ app.factory('sharedService', function ($log, $q, $http) {
 
 
     }
-    function addNewResumeRecord(resumeName , resumeFile) {
+    function addNewResumeRecord(resumeName ,resumeDescription ,resumeFile) {
         //var anObj ;
         resumeIdIndex++;
 
@@ -139,7 +139,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         //var x =Date.now();
         var d = new Date();
         anObj.date = d.toDateString();
-        anObj.description = "file Description";
+        anObj.description = resumeDescription;
         anObj.isOpen = true;
         var newId = "Resume" + resumeIdIndex;
         anObj.id = newId;
@@ -155,17 +155,18 @@ app.factory('sharedService', function ($log, $q, $http) {
 
     
 
-    function addNewCoverLetterRecord(coverLetterName) {
+    function addNewCoverLetterRecord(coverLetterName , coverLetterDescription, coverLetterContent) {
         //var anObj ;
         coverLetterIdIndex++;
 
         var anObj = new Object();
         anObj.type = "coverLetter";
         anObj.title = coverLetterName;
-        anObj.content = "Content";
+        anObj.content = coverLetterContent;
+        anObj.description = coverLetterDescription;
+        
         var d = new Date();
-        anObj.date = d.toDateString();
-        anObj.description = "Description...";
+        anObj.date = d.toDateString();        
         anObj.isOpen = true;
 
         var newId = "CL" + coverLetterIdIndex;

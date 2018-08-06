@@ -101,19 +101,20 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     $scope.AddNewObj = function (funcType) {
 
          
-        $scope.NewObj.type = "Resume";
+        $scope.NewObj.type = funcType;
         $scope.NewObj.title = "";
         $scope.NewObj.description= "";
+        $scope.NewObj.content= "";
         $scope.NewObj.file= "Drag & Drop File";
         
 
         switch (funcType) {
-            case 1:
+            case 'resume':
                
                   $scope.NewObj.AddNewFunc=$scope.addNewResume;
                   $scope.NewObj.panelTitle="Resume";        
              break;
-             case 2:
+             case 'coverLetter':
                
                  $scope.NewObj.AddNewFunc=$scope.addNewCoverLetter;
                  $scope.NewObj.panelTitle="Cover Letter";        
@@ -133,12 +134,12 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
    
 
     $scope.addNewResume = function () {   
-         alert('add new resume' + $scope.NewObj.file);
+         //alert('add new resume' + $scope.NewObj.file);
         
         
         $(".accordion-line").collapse('hide');
         // $(".collapse").collapse('hide');
-        var addedIndex = sharedService.addNewResumeRecord($scope.NewObj.title, $scope.NewObj.file);
+        var addedIndex = sharedService.addNewResumeRecord($scope.NewObj.title, $scope.NewObj.description, $scope.NewObj.file);
         
         setTimeout(function() {
             
@@ -152,10 +153,8 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
       
        
     }
-    $scope.fileWasSelected = function (obj) { 
-        // alert(obj.files);
-        $scope.NewObj.file = obj.files[0].name; 
-        alert($scope.NewObj.file);
+    $scope.fileWasSelected = function (obj) {         
+        $scope.NewObj.file = obj.files[0].name;        
         $scope.$apply();
         
     }
@@ -191,7 +190,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
         // sharedService.addNewCoverLetterRecord();  
         
         $(".accordion-line").collapse('hide');        
-        var addedIndex = sharedService.addNewCoverLetterRecord($scope.NewObj.title );        
+        var addedIndex = sharedService.addNewCoverLetterRecord($scope.NewObj.title,$scope.NewObj.description,$scope.NewObj.content );        
         setTimeout(function() {
             
             $("#"+addedIndex).collapse('show');

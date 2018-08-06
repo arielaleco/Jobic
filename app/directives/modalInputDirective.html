@@ -22,19 +22,20 @@
                                     <input class="full-line mb-3" type="text" ng-model="NewObj.title" placeholder="title">
                                 </div>
                                 <div class="col-sm-12 offset-sm-12">
-                                        <input class="full-line mb-3"  type="text" ng-model="NewObj.title" placeholder="short description">
-                                    </div>
+                                    <input class="full-line mb-3" type="text" ng-model="NewObj.description" placeholder="short description">
+                                </div>
+                                <div class="col-sm-12 offset-sm-12" ng-show="(NewObj.type=='coverLetter')">                                    
+                                    <textarea class="full-line mb-3" type="text" ng-model="NewObj.content"  placeholder="cover letter content..."></textarea>
+                                </div>
                             </div>
-                            <div class="row m-b-1">
+                            <div class="row m-b-1" ng-show="(NewObj.type=='resume')">
                                 <div class="col-sm-12 offset-sm-12">
 
-                                    <!-- <button id="file-upload-btn" type="button" class="btn btn-primary btn-block align-middle" onclick="document.getElementById('inputFile').click()">Add Image</button> -->
+                                    
                                     <div class="form-group inputDnD">
                                         <label class="sr-only" for="inputFile">File Upload</label>
-                                        <input type="file" ng-model="NewObj.file" class="form-control-file text-buttons-color " id="inputFile" accept="image/*"
-                                            onchange="angular.element(this).scope().fileWasSelected(this)" data-title="{{NewObj.file}}">
-                                        <!-- <input type="file" ng-model="addNewFile" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" ng-change="fileWasSelected(this)" onchange="readUrl(this)"
-                                            data-title="{{addNewFile}}"> -->
+                                        <input type="file" ng-model="NewObj.file" class="form-control-file text-buttons-color " id="inputFile" accept="image/*" onchange="angular.element(this).scope().fileWasSelected(this)"
+                                            data-title="{{NewObj.file}}">                                    
                                     </div>
                                     <button id="file-upload-btn" type="button" class="btn buttons-color btn-block align-middle" onclick="document.getElementById('inputFile').click()">Select File</button>
 
