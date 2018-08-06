@@ -22,13 +22,23 @@ body{
 }
 
 /* ==============================  landing game ============================== */
-.landing-page{                  
+#landing-page{                  
     background-image: url('../app/resources/images/glenn-carstens-peters_small.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center top; 
     width:100vw;
     height:100vh;
+    
+}
+#landing-page .gray-rec 
+{   
+    max-width: 320px;
+    margin: 0px auto;
+}
+
+#landing-page .border-button{
+    width: 100%;
 }
 
 .border-button{
@@ -50,23 +60,32 @@ body{
 
 
 .main-header{        
-    color: white;
+    /* color: white; */
     /* background-color: lightblue; */
     
     /* background: linear-gradient(to bottom, rgba(30,87,153,1) 36%,rgba(89,148,202,1) 62%,rgba(95,154,207,0.7) 91%,rgba(125,185,232,0) 100%);  */
     padding-bottom: 30px;
-    width:88%;
+    width:60%;
     margin: auto;
+    font-weight: 900;
+    position: relative;
+    top: 100px;
+    text-align: left;
 }
-.main-header p:not(:first-child){
-    font-size: 20px;
+.main-header-sub-text{
+    font-size: 24px;
     margin: 0px;
 }
 
 .main-header-text{
-    font-family: 'Juice ITC Bold', 'Juice ITC';
-    font-size: 80px;
+    font-family: 'Ruslan Display', cursive;
+    /* font-family: 'Juice ITC Bold', 'Juice ITC'; */
+    font-size: 120px;
     font-weight: 700;
+    color: white;;
+    background-color: rgb(87, 139, 250);
+    width:400px;
+    padding:0px 20px;
 }
 
 
@@ -170,9 +189,11 @@ main{
 
 }
 .opacity-rec-color{
-    background-color: rgba(201, 213, 224, 0.7);
-    margin: 50px;
+    /* background-color: rgba(201, 213, 224, 0.7); */
+    background-color: rgb(233, 233, 233, 0.3);
+    /* margin: 50px; */
 }
+
 
 /* .opacity-rec{
     background-color: white;
@@ -183,8 +204,8 @@ main{
 } */
 
 
-
-.opacity-rec-color>p{
+.main-register-header{
+/* .opacity-rec-color>p{ */
     font-size: 40px;
     font-weight: 700;
     text-align: left;

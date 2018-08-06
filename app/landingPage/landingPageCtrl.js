@@ -1,8 +1,14 @@
 app.controller("landingPageCtrl", function ($scope , $location) {
 
-    $scope.SignUp = function () {
+    // $scope.SignUp = function () {
        
-        $location.path("/signUp" );
+    //     $location.path("/signUp" );
+        
+    // }
+
+    $scope.SignIn = function () {
+       
+        $location.path("/dashBoard" );
         
     }
 
