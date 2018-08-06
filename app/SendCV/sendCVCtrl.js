@@ -38,12 +38,11 @@ $scope.SendAndSaveCV = function(){
     // }, function(error) {
     //    console.log('FAILED...', error);
     // });
-
+    
     var template_params = {
-        email_to: $scope.newCV.email,
-        email_reply: "reply_to_value",
+        email_to: $scope.newCV.email,        
         email_from: "from_name_value",        
-        message_html: "message_html_value",
+        
         message_subject:"this is the subject of the email",
         message_content:"this is the content of the email"
         

@@ -1,222 +1,242 @@
 {
-"resumes": [
-    {
-        "title": "Product Manager Web",
-        "file": "c:temp\\ProductManager.doc",
-        "description": "Send to product manager roles in mobile companies",
-        "date": "2018-04-03T05:00:00.000Z"
-        
-    },
-    {
-        "title": "Project Manager Web",
-        "file": "c:\\temp\\ProjectManager.doc",
-        "description": "Send to Project manager roles in mobile companies",
-        "date": "2018-05-03T05:00:00.000Z"
-        
-    },
-    {
-        "title": "Front End development",
-        "file": "c:\\temp\\FrontEnd.doc",
-        "description": "Front end development expert roles",
-        "date": "2018-06-03T05:00:00.000Z"
-        
-    }
-],
-"coverLetters": [
-    {
-        "title": "Light Version Product",
-        "description": "Product Manager from Facebook",        
-        "content": "Hi , My name is John Belushi and I'm a product manager ...",
-        "date": "2018-04-03T05:00:00.000Z"
-        
-    },
-    {
-        "title": "Light Version Project",        
-        "description": "Product Manager to HR",
-        "content": "Hello , I would like to apply to the Product manager position in your company ...",                
-        "date": "2018-05-03T05:00:00.000Z"
-        
-    },
-    {
-        "title": "Front End development",        
-        "description": "Project Manager Jobs",
-        "content": "Hi , Can you please help my find a new Job ? ...",                
-        "date": "2018-06-03T05:00:00.000Z"
-        
-    },
-    {
-        "title": "Front End development from friends",        
-        "description": "Project Manager Jobs",
-        "content": "Hi :-) I would appriciate if you can forward my CV to you HR...",                
-        "date": "2018-06-04T05:00:00.000Z"
-        
-    },
-    {
-        "title": "Front End development From Facebook",        
-        "description": "Project Manager Jobs",
-        "content": "Hello , I'm looking for front end development position...",                
-        "date": "2018-06-05T05:00:00.000Z"
-        
-    },
-    {
-        "title": "FullStack development Jobs",        
-        "description": "Project Manager Jobs",
-        "content": "Hi , Are you looking for a great full stuck programer ? I'm the answer ! ...",                
-        "date": "2018-06-06T05:00:00.000Z"
-        
-    }
-],
-"cvSents": [
-    { 
-        "company": "Facebook",        
-        "JobTitle": "Product Manager Cloud",
-        "contactPeron": "Amir ",                
-        "email": "amir@facebook.com",
-        "linkToAdSource":"https://www.facebook.com/1720888134898394/photos/pb.1720888134898394.-2207520000.1532938230./1762861884034352/?type=3&theater",
-        "description":"An innovative Start-up developing 3D multi-camera-based Advanced Driver Assistance Systems, is looking for an experienced Product Manager.",        
-        "resumeVersion":"1",
-        "coverLetterVersion":"2",
-        "protfolioVersion":"1",        
-        "date": "2018-05-03T21:00:00.000Z"
-    },
-    { 
-        "company": "extreme",        
-        "JobTitle": "Product Manager.",
-        "contactPeron": "Yael Tsuk‎‏ ",                
-        "email": "HR@extreme.com",
-        "linkToAdSource":"https://www.facebook.com/groups/israel.hightech/permalink/10155803547067677/",
-        "description":"An innovative Start-up developing 3D multi-camera-based Advanced Driver Assistance Systems, is looking for an experienced Product Manager.",
-        "resumeVersion":"1",
-        "coverLetterVersion":"2",
-        "protfolioVersion":"1",        
-        "date": "2018-05-14T05:00:00.000Z"
-    },{ 
-        "company": "tangelogames",        
-        "JobTitle": "Product Manager",
-        "contactPeron": "‎Tom Muallem",                
-        "email": "tom.muallem@tangelogames.com",
-        "description":"Tangelo Games Israel is looking for its next Product Manager",        
-        "linkToAdSource":"https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
-        "resumeVersion":"2",
-        "coverLetterVersion":"3",
-        "protfolioVersion":"1",        
-        "date": "2018-06-02T21:00:00.000Z"
-    }
-    ,{ 
-        "company": "Gigya",        
-        "JobTitle": "Product Manager",
-        "contactPeron": "Nofar Shtrosberg",                
-        "email": "https://jobs.lever.co/gigya/12ffcaf2-da29-4c75-a4a5-db2fa242ea2b?lever-via=aBslzLT5PZ",
-        "linkToAdSource":"https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
-        "description":"Gigya is looking for a Senior Product Manager! Want to inspire Marketing, Business",
-        "resumeVersion":"2",
-        "coverLetterVersion":"3",
-        "protfolioVersion":"1",        
-        "date": "2018-06-03T05:00:00.000Z"
-    }
-    ,{ 
-        "company": "Slidely ",        
-        "JobTitle": "Product Manager",
-        "contactPeron": "Reut Tiger",                
-        "email": "slidely.mobileproductmanager@applynow.io",
-        "linkToAdSource":"https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
-        "description":"Slidely is looking for Mobile Product Manager",
-        "resumeVersion":"3",
-        "coverLetterVersion":"1",
-        "protfolioVersion":"2",        
-        "date": "2018-06-15T03:00:00.000Z"
-    }
-    ,{ 
-        "company": "Natural Intelligence",        
-        "JobTitle": "Product Manager",
-        "contactPeron": "Elad Yaniv‎‏",                
-        "email": "https://my.tomigo.com/jobs/9736?p=oUBJA",
-        "linkToAdSource":"https://my.tomigo.com/jobs/9736?p=oUBJA",
-        "description":"Product Manager for core verticals group",
-        "resumeVersion":"2",
-        "coverLetterVersion":"3",
-        "protfolioVersion":"1",        
-        "date": "2018-06-19T12:00:00.000Z"
-    }
-    ,{ 
-        "company": "VIBER",        
-        "JobTitle": "Junior Project Manager",
-        "contactPeron": "Natalie Katester Boimer‎‏‎‏",                
-        "email": "https://www.comeet.co/jobs/sygnia/92.005/product-manager/37.909?coref=1.1.u2C_207&1531992064653",
-        "linkToAdSource":"https://www.comeet.co/jobs/sygnia/92.005/product-manager/37.909?coref=1.1.u2C_207&1531992064653",
-        "description":"Sygnia is looking for an exceptional, highly professional and charismatic Product Manager",
-        "resumeVersion":"2",
-        "coverLetterVersion":"3",
-        "protfolioVersion":"1",        
-        "date": "2018-06-22T21:00:00.000Z"
-    }
-],
-"jobProcesss": [
-    {
-        "company": "VIBER",        
-        "JobTitle": "Junior Project Manager",
-        "contactPeron": "Elad Yaniv‎‏",
-        "description":"Product Manager for core verticals group",
-        "resumeVersion":"2",
-        "coverLetterVersion":"3",
-        "protfolioVersion":"1", 
-        "interviewsList":[
-          { 
-            "type":"PHONE",
-            "meetWith":"Michal Cohen",
-            "contactPeron": "Elad Yaniv‎‏",
-            "JobTitle": "Junior Project Manager",
-            "location":"Herzelia Pituch , Hamanor 5",
-            "date":"2018-04-03T05:00:00.000Z",
-            "purpose":"talk",
-            "description":"I dont know yet",
-            "summary":"it was nice I think"
-            },
-            { 
-                "type":"HR",
-                "meetWith":"Michal Cohen",
-                "contactPeron": "Elad Yaniv‎‏",
-                "JobTitle": "Junior Project Manager",
-                "location":"Herzelia Pituch , Hamanor 5",
-                "date":"2018-04-03T05:00:00.000Z",
-                "purpose":"talk",
-                "description":"I dont know yet",
-                "summary":"it was nice I think"
-                }
-            ]
-    },
-    {
-        "company": "Facebook",        
-        "JobTitle": "Product Manager",
-        "contactPeron": "Yaniv‎ Ben David‏",
-        "description":"Product Manager for ceburity products",
-        "resumeVersion":"2",
-        "coverLetterVersion":"3",
-        "protfolioVersion":"1", 
-        "interviewsList":[
-          { 
-            "type":"PHONE",
-            "meetWith":"Michal Cohen",
-            "contactPeron": "Yaniv‎ Ben David‏‎‏",
+    "users": [
+        {
+            "id": 1,
+            "fname": "Ariela",
+            "lname": "Leiba Cohen",
+            "email": "arielaleco@gmail.com",
+            "password": "123"
+        },
+        {
+            "id": 2,
+            "fname":"Alex",
+            "lname":"Levi",
+            "email":"arielaleco@gmail.com",
+            "phone":"0544455667",
+            "birthDate":"2018-05-03T05:00:00.000Z",
+            "password":"1234"
+            
+        },
+        {
+            "id": 3,
+            "fname":"Noaa",
+            "lname":"Kazinski",
+            "email":"arielatestso@gmail.com",
+            "phone":"05466667778",
+            "birthDate":"2018-05-03T05:00:00.000Z",
+            "password":"1234"
+        }
+    ],
+    "resumes": [
+        {
+            "title": "Product Manager Web",
+            "file": "c:temp\\ProductManager.doc",
+            "description": "Send to product manager roles in mobile companies",
+            "date": "2018-04-03T05:00:00.000Z"
+        },
+        {
+            "title": "Project Manager Web",
+            "file": "c:\\temp\\ProjectManager.doc",
+            "description": "Send to Project manager roles in mobile companies",
+            "date": "2018-05-03T05:00:00.000Z"
+        },
+        {
+            "title": "Front End development",
+            "file": "c:\\temp\\FrontEnd.doc",
+            "description": "Front end development expert roles",
+            "date": "2018-06-03T05:00:00.000Z"
+        }
+    ],
+    "coverLetters": [
+        {
+            "title": "Light Version Product",
+            "description": "Product Manager from Facebook",
+            "content": "Hi , My name is John Belushi and I'm a product manager ...",
+            "date": "2018-04-03T05:00:00.000Z"
+        },
+        {
+            "title": "Light Version Project",
+            "description": "Product Manager to HR",
+            "content": "Hello , I would like to apply to the Product manager position in your company ...",
+            "date": "2018-05-03T05:00:00.000Z"
+        },
+        {
+            "title": "Front End development",
+            "description": "Project Manager Jobs",
+            "content": "Hi , Can you please help my find a new Job ? ...",
+            "date": "2018-06-03T05:00:00.000Z"
+        },
+        {
+            "title": "Front End development from friends",
+            "description": "Project Manager Jobs",
+            "content": "Hi :-) I would appriciate if you can forward my CV to you HR...",
+            "date": "2018-06-04T05:00:00.000Z"
+        },
+        {
+            "title": "Front End development From Facebook",
+            "description": "Project Manager Jobs",
+            "content": "Hello , I'm looking for front end development position...",
+            "date": "2018-06-05T05:00:00.000Z"
+        },
+        {
+            "title": "FullStack development Jobs",
+            "description": "Project Manager Jobs",
+            "content": "Hi , Are you looking for a great full stuck programer ? I'm the answer ! ...",
+            "date": "2018-06-06T05:00:00.000Z"
+        }
+    ],
+    "cvSents": [
+        {
+            "company": "Facebook",
+            "JobTitle": "Product Manager Cloud",
+            "contactPeron": "Amir ",
+            "email": "amir@facebook.com",
+            "linkToAdSource": "https://www.facebook.com/1720888134898394/photos/pb.1720888134898394.-2207520000.1532938230./1762861884034352/?type=3&theater",
+            "description": "An innovative Start-up developing 3D multi-camera-based Advanced Driver Assistance Systems, is looking for an experienced Product Manager.",
+            "resumeVersion": "1",
+            "coverLetterVersion": "2",
+            "protfolioVersion": "1",
+            "date": "2018-05-03T21:00:00.000Z"
+        },
+        {
+            "company": "extreme",
+            "JobTitle": "Product Manager.",
+            "contactPeron": "Yael Tsuk‎‏ ",
+            "email": "HR@extreme.com",
+            "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/permalink/10155803547067677/",
+            "description": "An innovative Start-up developing 3D multi-camera-based Advanced Driver Assistance Systems, is looking for an experienced Product Manager.",
+            "resumeVersion": "1",
+            "coverLetterVersion": "2",
+            "protfolioVersion": "1",
+            "date": "2018-05-14T05:00:00.000Z"
+        },
+        {
+            "company": "tangelogames",
             "JobTitle": "Product Manager",
-            "location":"Herzelia Pituch , Hamanor 5",
-            "date":"2018-04-03T05:00:00.000Z",
-            "purpose":"talk",
-            "description":"I dont know yet",
-            "summary":"it was nice I think"
-            },
-            { 
-                "type":"HR",
-                "meetWith":"Michal Cohen",
-                "contactPeron": "Yaniv‎ Ben David‏",
-                "JobTitle": "Product Manager",
-                "location":"Herzelia Pituch , Hamanor 5",
-                "date":"2018-04-03T05:00:00.000Z",
-                "purpose":"talk",
-                "description":"I dont know yet",
-                "summary":"it was nice I think"
+            "contactPeron": "‎Tom Muallem",
+            "email": "tom.muallem@tangelogames.com",
+            "description": "Tangelo Games Israel is looking for its next Product Manager",
+            "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
+            "resumeVersion": "2",
+            "coverLetterVersion": "3",
+            "protfolioVersion": "1",
+            "date": "2018-06-02T21:00:00.000Z"
+        },
+        {
+            "company": "Gigya",
+            "JobTitle": "Product Manager",
+            "contactPeron": "Nofar Shtrosberg",
+            "email": "https://jobs.lever.co/gigya/12ffcaf2-da29-4c75-a4a5-db2fa242ea2b?lever-via=aBslzLT5PZ",
+            "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
+            "description": "Gigya is looking for a Senior Product Manager! Want to inspire Marketing, Business",
+            "resumeVersion": "2",
+            "coverLetterVersion": "3",
+            "protfolioVersion": "1",
+            "date": "2018-06-03T05:00:00.000Z"
+        },
+        {
+            "company": "Slidely ",
+            "JobTitle": "Product Manager",
+            "contactPeron": "Reut Tiger",
+            "email": "slidely.mobileproductmanager@applynow.io",
+            "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
+            "description": "Slidely is looking for Mobile Product Manager",
+            "resumeVersion": "3",
+            "coverLetterVersion": "1",
+            "protfolioVersion": "2",
+            "date": "2018-06-15T03:00:00.000Z"
+        },
+        {
+            "company": "Natural Intelligence",
+            "JobTitle": "Product Manager",
+            "contactPeron": "Elad Yaniv‎‏",
+            "email": "https://my.tomigo.com/jobs/9736?p=oUBJA",
+            "linkToAdSource": "https://my.tomigo.com/jobs/9736?p=oUBJA",
+            "description": "Product Manager for core verticals group",
+            "resumeVersion": "2",
+            "coverLetterVersion": "3",
+            "protfolioVersion": "1",
+            "date": "2018-06-19T12:00:00.000Z"
+        },
+        {
+            "company": "VIBER",
+            "JobTitle": "Junior Project Manager",
+            "contactPeron": "Natalie Katester Boimer‎‏‎‏",
+            "email": "https://www.comeet.co/jobs/sygnia/92.005/product-manager/37.909?coref=1.1.u2C_207&1531992064653",
+            "linkToAdSource": "https://www.comeet.co/jobs/sygnia/92.005/product-manager/37.909?coref=1.1.u2C_207&1531992064653",
+            "description": "Sygnia is looking for an exceptional, highly professional and charismatic Product Manager",
+            "resumeVersion": "2",
+            "coverLetterVersion": "3",
+            "protfolioVersion": "1",
+            "date": "2018-06-22T21:00:00.000Z"
+        }
+    ],
+    "jobProcesss": [
+        {
+            "company": "VIBER",
+            "JobTitle": "Junior Project Manager",
+            "contactPeron": "Elad Yaniv‎‏",
+            "description": "Product Manager for core verticals group",
+            "resumeVersion": "2",
+            "coverLetterVersion": "3",
+            "protfolioVersion": "1",
+            "interviewsList": [
+                {
+                    "type": "PHONE",
+                    "meetWith": "Michal Cohen",
+                    "contactPeron": "Elad Yaniv‎‏",
+                    "JobTitle": "Junior Project Manager",
+                    "location": "Herzelia Pituch , Hamanor 5",
+                    "date": "2018-04-03T05:00:00.000Z",
+                    "purpose": "talk",
+                    "description": "I dont know yet",
+                    "summary": "it was nice I think"
+                },
+                {
+                    "type": "HR",
+                    "meetWith": "Michal Cohen",
+                    "contactPeron": "Elad Yaniv‎‏",
+                    "JobTitle": "Junior Project Manager",
+                    "location": "Herzelia Pituch , Hamanor 5",
+                    "date": "2018-04-03T05:00:00.000Z",
+                    "purpose": "talk",
+                    "description": "I dont know yet",
+                    "summary": "it was nice I think"
                 }
             ]
-    }
-]
+        },
+        {
+            "company": "Facebook",
+            "JobTitle": "Product Manager",
+            "contactPeron": "Yaniv‎ Ben David‏",
+            "description": "Product Manager for ceburity products",
+            "resumeVersion": "2",
+            "coverLetterVersion": "3",
+            "protfolioVersion": "1",
+            "interviewsList": [
+                {
+                    "type": "PHONE",
+                    "meetWith": "Michal Cohen",
+                    "contactPeron": "Yaniv‎ Ben David‏‎‏",
+                    "JobTitle": "Product Manager",
+                    "location": "Herzelia Pituch , Hamanor 5",
+                    "date": "2018-04-03T05:00:00.000Z",
+                    "purpose": "talk",
+                    "description": "I dont know yet",
+                    "summary": "it was nice I think"
+                },
+                {
+                    "type": "HR",
+                    "meetWith": "Michal Cohen",
+                    "contactPeron": "Yaniv‎ Ben David‏",
+                    "JobTitle": "Product Manager",
+                    "location": "Herzelia Pituch , Hamanor 5",
+                    "date": "2018-04-03T05:00:00.000Z",
+                    "purpose": "talk",
+                    "description": "I dont know yet",
+                    "summary": "it was nice I think"
+                }
+            ]
+        }
+    ]
 }
