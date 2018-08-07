@@ -6,7 +6,7 @@
                 <div class="modal-content">
 
                     <!-- Modal Header -->
-                    <div class="modal-header">
+                    <div class="modal-header custom-header">
                         <h4 class="modal-title">Confirm Send </h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
@@ -16,15 +16,13 @@
                         <p>Are you sure you want to send the following email to <strong> {{newCV.email}} </strong> </p>
 
                         <div class="card">
-                                <div class="card-header bg-info text-white border-success font-weight-bold">
+                                <div class="card-header  font-weight-bold">
                                         {{newCV.JobTitle}} position at {{newCV.company}}
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body custom-body">
                                   <!-- <h4 class="card-title">{{newCV.JobTitle}} position at {{newCV.company}} </h4> -->
                                   <p class="card-text">{{newCV.coverLetterVersion.content}}</p>
-                                  <p class="no-padding-no-margin">Please check the attached files for more information.</p>
-                                  <p class="no-padding-no-margin">Thank you</p>
-                                  <p class="no-padding-no-margin">User</p>
+                                  
                                   <!-- <a href="#" class="card-link">Card link</a>
                                   <a href="#" class="card-link">Another link</a> -->
                                 </div>

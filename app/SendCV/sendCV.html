@@ -81,7 +81,10 @@
             <div class="align-center no-padding-no-margin1 col-xl-8 col-lg-8 ">
 
                 <div class="gray-rec">
-                    <p>Send CV</p>
+                    <div class="gray-rec-header">
+                            <h1>Send CV</h1>
+                    </div>
+                    
 
                     <form name="sendForm">
 
@@ -129,7 +132,7 @@
                                     <option value="">-- choose an option --</option>
 
                                 </select>
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr" ng-required="true">
                                     <option value="">-- choose an option --</option>
 
                                 </select>

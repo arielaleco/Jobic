@@ -64,7 +64,7 @@ display: inline;
 #landing-page-new .sub-header{
     font-weight: 700;  
     font-size: 32px;
-    /* padding-top:120px; */
+    padding:0px 20px;
     
     color: #7A0212;
     background-color: white;
