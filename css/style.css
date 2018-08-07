@@ -170,7 +170,8 @@ main{
     
    font-weight: 900;
    /* border-bottom: 2px solid rgb(71,208,255); */
-   border-bottom: 3px solid rgb(244,98,70);
+   /* border-bottom: 3px solid #7A0212; */
+   border-bottom: 3px solid rgb(199, 0, 63);
     height: 100%;;
 }
 
