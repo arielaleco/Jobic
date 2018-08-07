@@ -271,8 +271,7 @@ function filljobProcesssFile() {
     return asyncAction.promise;
 }
 
-
-    return {
+    return {        
         fillResumeFile: fillResumeFile,
         fillCoverLetterFile: fillCoverLetterFile,
         fillcvSentsFile: fillcvSentsFile,

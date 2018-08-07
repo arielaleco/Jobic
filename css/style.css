@@ -139,10 +139,18 @@ main{
     color: black;
 }
 #img-container a{
-    font-family: 'Juice ITC Bold', 'Juice ITC';
-    font-size: 50px;
-    font-weight: 700;
- 
+    font-family: 'Ruslan Display', cursive;    
+    /* font-family: 'Juice ITC Bold', 'Juice ITC'; */
+    font-size: 30px;
+    font-weight: 300;
+    z-index: 1;
+    border: 1px solid white;;
+    background-color: rgb(230, 58, 80);
+    margin-top:50px;
+    padding:0px 20px;
+    border-radius: 30px;
+    color: white;
+    height:40px;
     
 }
 .centered {
@@ -154,8 +162,8 @@ main{
 
 
 #navbarSupportedContent ul{
-    /* padding-left: 70px; */
-    margin:auto;
+    padding-left: 70px;
+   
     height:60px;
 }
 #navbarSupportedContent>ul>li{
@@ -163,7 +171,7 @@ main{
     /* padding:10px 40px; */
 }
 #navbarSupportedContent>ul>li:hover{
-    background-color: rgba(71, 209, 255, 0.342)  ;
+    background-color: rgba(222, 222, 222, 0.342)  ;
 }
 
 #navbarSupportedContent>ul>li .active{
@@ -320,9 +328,8 @@ input{
     width: 100%;
 }
 
-.profile-page{
-margin:auto;
-
+.margin-auto{
+    margin:auto;
 }
 
 
@@ -350,8 +357,8 @@ margin:auto;
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 75%;
-  left: 75%;
+  top: 65%;
+  left: 65%;
   transform: translate(-70%, -70%);
   -ms-transform: translate(-70%, -70%);
   text-align: center;
@@ -370,13 +377,13 @@ margin:auto;
 .middle .text {
   background-color: rgb(149,188,65);
   color: white;
-  font-size: 22px;
+  font-size: 24px;
   /* padding: 6px 16px; */
   z-index: 2;
-  height: 50px;
-  width:50px;
-  border: 5px solid white;
-  border-radius: 50px;
+  height: 40px;
+  width:40px;
+  border: 3px solid white;
+  border-radius: 40px;
 }
 
 
@@ -713,6 +720,37 @@ select:required:invalid{
   .text-buttons-color{
     color:rgb(21,69,115);       
   }
+
+  #img-container .user-icon{
+      font-size: 60px;
+      /* color:rgb(199, 0, 63); */
+      /* color:white; */
+      padding:10px;
+      /* background: linear-gradient(to bottom, rgba(199, 0, 63,1) 36%,rgb(143, 0, 45) 62%,rgba(199, 0, 63, 0.7) 91%,rgba(119,253,255,0) 100%);   */
+  }
+  
+ 
+  #img-container .c{
+      color: rgb(84, 22, 68);
+  }
+  #img-container .i{
+    color: rgb(139, 5, 59);
+}
+#img-container .b{
+    color: rgb(192, 0, 52);
+}
+#img-container .o{
+    color: rgb(177, 37, 2);
+}
+#img-container .j{
+    color: rgb(245, 85, 44);
+}
+#main-menu .small-text,.small-text{
+    font-size: 6px;
+    border: 0px;
+    margin-top:-20px;
+    
+}
 
 
   /* .bg-primary{

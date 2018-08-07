@@ -25,12 +25,12 @@
 
                     <div class="one-input">
                         <label for="email">Email address:</label>
-                        <input id="email" class="form-control full-line" placeholder="Email">
+                        <input id="email" class="form-control full-line" placeholder="Email" ng-model="email">
                     </div>
 
                     <div class="one-input">
                         <label for="pwd">Password:</label>
-                        <input id="pwd" type="password" class="form-control full-line" placeholder="Password">
+                        <input id="pwd" type="password" class="form-control full-line" placeholder="Password" ng-model="password">
                     </div>
 
                     <div class="one-input">
@@ -42,6 +42,9 @@
                     <p>or
                         <a ng-href="#!/signUp">create an account</a>
                     </p>
+                    <div class="alert alert-danger" role="alert" ng-show="invalidLogin">
+                            Invalid Credentials!
+                        </div>
 
 
                 </div>
