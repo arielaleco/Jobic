@@ -23,7 +23,7 @@ $scope.SendAndSaveCV = function(){
         email_from: "from_name_value",        
         
         message_subject:$scope.newCV.JobTitle+ " position at " + $scope.newCV.company,
-        message_content:"this is the content of the email"
+        message_content:$scope.newCV.coverLetterVersion.content
         
      }
      
