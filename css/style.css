@@ -579,7 +579,7 @@ select:required:invalid{
     display: block;
 }
 .modal-footer .btn{
-  width:100px;
+  width:120px;
 }
 
 .gray-rec-header h1{
@@ -756,5 +756,7 @@ select:required:invalid{
     
   } */
   /* background: linear-gradient(to bottom, rgba(21,69,115,1) 36%,rgba(43,135,182,1) 62%,rgba(71,208,255,0.7) 91%,rgba(119,253,255,0) 100%);  */ 
- 
+  .close {
+      color: white!important;
+  }
   
