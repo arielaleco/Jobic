@@ -72,31 +72,29 @@ body{
     top: 100px;
     text-align: left;
 }
-.main-header-sub-text{
+/* .main-header-sub-text{
     font-size: 24px;
     margin: 0px;
-}
+} */
 
-.main-header-text{
-    font-family: 'Ruslan Display', cursive;
-    /* font-family: 'Juice ITC Bold', 'Juice ITC'; */
+/* .main-header-text{
+    font-family: 'Ruslan Display', cursive;    
     font-size: 120px;
     font-weight: 700;
     color: white;;
     background-color: rgb(87, 139, 250);
     width:400px;
     padding:0px 20px;
-}
+} */
 
 
-.sub-header{
+/* .sub-header{
     font-weight: 700;  
-    font-size: 32px;
-    /* padding-top:120px; */
+    font-size: 32px;    
     color: white;;
     background-color: rgb(87, 139, 250);
     position: relative;
-}
+} */
 
 
 main{

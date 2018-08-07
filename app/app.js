@@ -5,8 +5,8 @@ var app = angular.module("JobicApp" , [ 'ngRoute','chart.js']);
 app.config(function($routeProvider) {
     $routeProvider
     .when('/', {
-      templateUrl: 'app/landingPage/landingPage.html',
-      controller: 'landingPageCtrl'
+      templateUrl: 'app/landingPage/landingPageNew.html',
+      controller: 'landingPageNewCtrl'
     })
     .when('/signUp', {
       templateUrl: 'app/signUp/signUp.html',

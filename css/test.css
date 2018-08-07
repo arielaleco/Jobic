@@ -1,0 +1,73 @@
+#landing-page-new{
+    background-color: #7A0212;
+    width: 100vw;
+    height: 100vh;
+    text-align: left;
+    /* Photo by Annie Spratt on Unsplash */
+}
+
+#landing-page-new img{
+    height: 100vh;
+    float: left;
+    display: inline;
+}
+
+.right-block{
+float: right;
+display: inline;
+
+}
+.inline{
+    display: inline;
+}
+.box {
+    float: left;
+    width: 33.33%;
+    /* padding: 50px; */
+}
+.double-box {
+    float: left;
+    width: 66.66%;
+  
+    /* padding: 50px; */
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#landing-page-new .gray-rec{
+    width: 400px;
+    margin: 69px;
+}
+
+
+#landing-page-new .main-header-text{
+    font-family: 'Ruslan Display', cursive;    
+    font-size: 120px;
+    font-weight: 700;
+    color: white;;
+    margin-left:-200px;
+    width:400px;
+    padding:0px 20px;
+}
+
+#landing-page-new .main-header-sub-text{
+    font-size: 24px;
+    margin: 0px;
+    color: white;;
+}
+
+
+#landing-page-new .sub-header{
+    font-weight: 700;  
+    font-size: 32px;
+    /* padding-top:120px; */
+    
+    color: #7A0212;
+    background-color: white;
+  width:600px;
+  margin:-30px 0px 90px -280px; 
+}
