@@ -39,6 +39,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#" ng-class="{ active: isActive('/resources') }">Resources</a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="#!profile" ng-class="{ active: isActive('/profile') }">Profile</a>
                 </li>
@@ -46,10 +47,13 @@
 
             </ul>
             <ul class="navbar-nav ml-auto">
-
+                    <li class="nav-item" ng-show="isUserLoggedIn()">
+                            <a class="nav-link special-menu-item" >Loggen in as {{LoggedInInUser().fname}}</a>
+                        </li>
                 <li class="nav-item" ng-show="isUserLoggedIn()">
                     <a class="nav-link" href="javascript:void(0)" ng-click="logout()">Logout</a>
                 </li>
+                
             </ul>
 
         </div>

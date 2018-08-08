@@ -25,12 +25,12 @@
                         <a class="small-text" href="https://icons8.com">Icon pack by Icons8</a>
 
                         <div class="row one-line">
-                            <input class="form-control col-xl-6 col-sm-6" placeholder="First Name">
-                            <input class="form-control col-xl-6 col-sm-6" placeholder="Last Name">
+                            <input class="form-control col-xl-6 col-sm-6" ng-model="LoggedInInUser().fname" placeholder="First Name">
+                            <input class="form-control col-xl-6 col-sm-6" ng-model="LoggedInInUser().lname" placeholder="Last Name">
 
                         </div>
                         <div class="one-input">
-                            <input class="form-control full-line" placeholder="Email">
+                            <input class="form-control full-line" ng-model="LoggedInInUser().email" placeholder="Email">
                         </div>
 
                         <div class="one-input">
@@ -73,7 +73,7 @@
                     </div>
 
 
-                    <button class="border-button width-button" ng-click="showResume()">Register</button>
+                    <button class="border-button width-button" ng-click="showResume()">Update Password</button>
                 </div>
 
 

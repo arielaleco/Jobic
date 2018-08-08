@@ -75,3 +75,40 @@ display: inline;
 #landing-page-new .border-button{
     width: 100%;
 }
+
+.container-img-txt{
+    position: relative;
+    text-align: center;
+    color: white;  
+}
+
+
+.top-right {
+    /* position: absolute;
+    top: 150px;
+    z-index: 3; */
+
+    right: 0px;   
+    color: white;     
+    padding:2px 10px;
+}
+
+.landing-page-texts{
+    position: absolute;
+    top: 150px;
+    z-index: 3;
+    background-color: #7A0212;
+    font-weight: 700;  
+    font-size: 32px;
+    padding:0px 15px;
+    text-transform: uppercase;
+}
+.top-left {
+    
+    left: 0px;    
+    color: #7A0212; 
+    background-color: white;
+}
+.container-sub-texts{
+    padding:30px 15px;
+}

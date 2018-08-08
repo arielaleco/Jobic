@@ -125,6 +125,14 @@ main{
     margin:0px 20px;
 }
 
+#main-menu .special-menu-item{
+    border-bottom: 0;
+    text-transform: initial;
+
+}
+
+
+
 
 #img-container {
     position: relative;

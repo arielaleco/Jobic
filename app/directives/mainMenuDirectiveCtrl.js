@@ -10,9 +10,13 @@ app.controller("mainMenuDirectiveCtrl", function ($scope, $location, sharedServi
    $scope.isUserLoggedIn = function() {
     return user.isLoggedIn();
 }
-$scope.logout = function() {
+   $scope.logout = function() {
     user.logout();
     $location.path("/");
+}
+
+$scope.LoggedInInUser = function() {
+   return user.getActiveUser();
 }
 
 });
