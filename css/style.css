@@ -550,13 +550,13 @@ a.action-icons.edit-mode{
     /* background-color: bisque; */
 }
 
-#sendCV>ul{
+#sendCV>ul , #jobProcess>ul{
     padding:20px;
     width:600px;
     margin: auto;
 }
 
-#sendCV .nav-item a{
+#sendCV .nav-item a , #jobProcess .nav-item a{
     color: black;
 }
 .required-field{

@@ -241,10 +241,35 @@ function JobProcess(anObj) {
     this.protfolioVersion = anObj.protfolioVersion;
     this.interviewsList =[];
 
+    // products.forEach((product, index) => {
+    //     console.log(product);
+    //   });
+    anObj.interviewsList.forEach(function(element){
+        console.log(element);
+      //  this.interviewsList.push(new JobProcessStep(element))
+    });
+    // this.interviewsList.push(new JobProcessStep(anObj))
+
     this.date = anObj.date;
     this.id = "JobProcess" + coverLetterIdIndex;
         
 }
+
+
+function JobProcessStep(anObj) {
+    this.type = anObj.type;
+    this.meetWith = anObj.meetWith;
+    this.contactPeron = anObj.contactPeron;
+    this.JobTitle = anObj.JobTitle;
+    this.location = anObj.location;
+    this.date = anObj.date;
+    this.purpose = anObj.purpose;
+    this.description = anObj.description;
+    this.summary = anObj.summary;
+}
+
+
+
 
 function filljobProcesssFile() {
     var asyncAction = $q.defer();
@@ -254,7 +279,7 @@ function filljobProcesssFile() {
     }
     else {
 
-        $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/cvSents").then(function Succsess(response) {
+        $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/jobProcesss").then(function Succsess(response) {
             response.data.forEach(function AddcvSent(anObj) {
                 JobProcessIdIndex++;
                 JobProcessArr.push(new JobProcess(anObj))
