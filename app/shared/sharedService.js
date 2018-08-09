@@ -241,13 +241,17 @@ function JobProcess(anObj) {
     this.protfolioVersion = anObj.protfolioVersion;
     this.interviewsList =[];
 
+    for(var i=0;i<anObj.interviewsList.length-1;i++)
+    {
+        this.interviewsList.push(new JobProcessStep(anObj.interviewsList[i]));
+    }
     // products.forEach((product, index) => {
     //     console.log(product);
     //   });
-    anObj.interviewsList.forEach(function(element){
-        console.log(element);
-      //  this.interviewsList.push(new JobProcessStep(element))
-    });
+    // anObj.interviewsList.forEach(function(element){
+    //     console.log(element);
+    //     interviewsList.push(new JobProcessStep(element))
+    // });
     // this.interviewsList.push(new JobProcessStep(anObj))
 
     this.date = anObj.date;

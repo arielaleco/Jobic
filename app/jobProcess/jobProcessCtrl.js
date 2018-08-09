@@ -3,6 +3,7 @@ app.controller("jobProcessCtrl", function ($scope , $location , $window, sharedS
     $scope.jobProcesssArr = [];
     sharedService.filljobProcesssFile().then(function (jobProcesssArr) {
         $scope.jobProcesssArr = jobProcesssArr;
+        console.log($scope.jobProcesssArr);
         //alert($scope.jobProcesssArr.length)
     }, function (error) {
 

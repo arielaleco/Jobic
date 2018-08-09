@@ -37,6 +37,15 @@
                             </div>
                             <div class="card-body">
                                 <p class="card-text">{{jobProcess.JobTitle}}</p>
+
+
+                                
+
+                                <div class="card-text1" ng-repeat="jobStep in jobProcess.interviewsList">
+                                        <p class="card-text">{{jobStep.type}}**</p>
+                                        <p class="card-text">{{jobStep.meetWith}}**</p>
+                                </div>
+
                             </div>
                             <div class="card-footer">
 
