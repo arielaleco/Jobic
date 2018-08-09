@@ -241,7 +241,7 @@ function JobProcess(anObj) {
     this.protfolioVersion = anObj.protfolioVersion;
     this.interviewsList =[];
 
-    for(var i=0;i<anObj.interviewsList.length-1;i++)
+    for(var i=0;i<anObj.interviewsList.length;i++)
     {
         this.interviewsList.push(new JobProcessStep(anObj.interviewsList[i]));
     }
