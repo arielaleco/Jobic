@@ -40,7 +40,8 @@ body{
     font-size: 16px;  
     width:100px;  
     /* margin: 20px; */
-    background-color: rgba(21,69,115,1);
+    /* background-color: rgba(21,69,115,1); */
+    background-color: #7A0212;
     color: white;
 }
 .border-button:hover{
@@ -104,7 +105,7 @@ main{
 #main-menu{
     /* background-color: rgb(43,135,182); */
     
-    background-color: white;
+    background-color: #7A0212;
     font-weight: 600;
     padding:0px;
 
@@ -115,11 +116,11 @@ main{
 }
 
 #main-menu a{
-    /* color:white; */
+    color:white;
     text-transform: uppercase;
     /* width:160px; */
     text-align: center;
-    border-bottom: 0.5px solid lightgray;
+    border-bottom: 0.2px solid lightgray;
     padding-top:30px;
     height:55px;
     margin:0px 20px;
@@ -180,7 +181,7 @@ main{
    font-weight: 900;
    /* border-bottom: 2px solid rgb(71,208,255); */
    /* border-bottom: 3px solid #7A0212; */
-   border-bottom: 3px solid rgb(199, 0, 63);
+   border-bottom: 4px solid antiquewhite;
     height: 100%;;
 }
 
@@ -199,6 +200,18 @@ main{
 
 
 }
+
+.register-page:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, white, rgb(43, 1, 7));
+    opacity: .6;
+  }
+
 .opacity-rec-color{
     /* background-color: rgba(201, 213, 224, 0.7); */
     background-color: rgb(233, 233, 233, 0.3);
