@@ -182,7 +182,7 @@
             "protfolioVersion": "1",
             "interviewsList": [
                 {
-                    "type": "PHONE",
+                    "type": "PROFECIONAL",
                     "meetWith": "Michal Cohen",
                     "contactPeron": "Yaniv‎ Ben David‏‎‏",
                     "JobTitle": "Product Manager",
@@ -193,8 +193,8 @@
                     "summary": "it was nice I think"
                 },
                 {
-                    "type": "HR",
-                    "meetWith": "Michal Cohen",
+                    "type": "CFO",
+                    "meetWith": "Lola Barbory",
                     "contactPeron": "Yaniv‎ Ben David‏",
                     "JobTitle": "Product Manager",
                     "location": "Rannaa hatidhar 17",
