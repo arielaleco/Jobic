@@ -46,7 +46,8 @@ app.factory('sharedService', function ($log, $q, $http) {
         return -1;
 
     }
-   
+
+
 
     function fillResumeFile() {
         var asyncAction = $q.defer();
@@ -102,12 +103,13 @@ app.factory('sharedService', function ($log, $q, $http) {
                 else {
 
 
-                response.data.forEach(function AddCover(anObj) {
-                    coverLetterIdIndex++;
-                    coverLetterArr.push(new CoverLetter(anObj))
+                    response.data.forEach(function AddCover(anObj) {
+                        coverLetterIdIndex++;
+                        coverLetterArr.push(new CoverLetter(anObj))
 
-                });
-                asyncAction.resolve(coverLetterArr); }
+                    });
+                    asyncAction.resolve(coverLetterArr);
+                }
             },
 
                 function Error() {
@@ -118,7 +120,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         return asyncAction.promise;
     }
 
-    
+
 
 
     function deleteResumeRecord(resume) {
@@ -128,7 +130,7 @@ app.factory('sharedService', function ($log, $q, $http) {
 
 
     }
-    function addNewResumeRecord(resumeName ,resumeDescription ,resumeFile) {
+    function addNewResumeRecord(resumeName, resumeDescription, resumeFile) {
         //var anObj ;
         resumeIdIndex++;
 
@@ -153,9 +155,9 @@ app.factory('sharedService', function ($log, $q, $http) {
         if (id > -1) { coverLetterArr.splice(id, 1); }
     }
 
-    
 
-    function addNewCoverLetterRecord(coverLetterName , coverLetterDescription, coverLetterContent) {
+
+    function addNewCoverLetterRecord(coverLetterName, coverLetterDescription, coverLetterContent) {
         //var anObj ;
         coverLetterIdIndex++;
 
@@ -164,13 +166,13 @@ app.factory('sharedService', function ($log, $q, $http) {
         anObj.title = coverLetterName;
         anObj.content = coverLetterContent;
         anObj.description = coverLetterDescription;
-        
+
         var d = new Date();
-        anObj.date = d.toDateString();        
+        anObj.date = d.toDateString();
         anObj.isOpen = true;
 
         var newId = "CL" + coverLetterIdIndex;
-        anObj.id = newId;        
+        anObj.id = newId;
         coverLetterArr.push(anObj);
         return (newId);
         //resumeArr.push(new Resume(anObj))
@@ -224,95 +226,137 @@ app.factory('sharedService', function ($log, $q, $http) {
         cvSentArr.push(new cvSent(obj));
 
         // send the email
-        
-       
+
+
     }
 
-// ================= Job Process Structure ================= 
-JobProcessIdIndex = 0;
-JobProcessArr = [];
-function JobProcess(anObj) {
-    
-    this.company = anObj.company;
-    this.JobTitle = anObj.JobTitle;
-    this.description = anObj.description;
-    this.resumeVersion = anObj.resumeVersion;
-    this.coverLetterVersion = anObj.coverLetterVersion;
-    this.protfolioVersion = anObj.protfolioVersion;
-    this.interviewsList =[];
+    // ================= Job Process Structure ================= 
+    JobProcessIdIndex = 0;
+    JobProcessArr = [];
+    function JobProcess(anObj) {
 
-    for(var i=0;i<anObj.interviewsList.length;i++)
-    {
-        JobProcessStepIdIndex++;
-        this.interviewsList.push(new JobProcessStep(anObj.interviewsList[i]));
+        this.company = anObj.company;
+        this.JobTitle = anObj.JobTitle;
+        this.description = anObj.description;
+        this.resumeVersion = anObj.resumeVersion;
+        this.coverLetterVersion = anObj.coverLetterVersion;
+        this.protfolioVersion = anObj.protfolioVersion;
+        this.interviewsList = [];
+
+        if (anObj.interviewsList != undefined) {
+            for (var i = 0; i < anObj.interviewsList.length; i++) {
+                JobProcessStepIdIndex++;
+                this.interviewsList.push(new JobProcessStep(anObj.interviewsList[i]));
+            }
+        }
+        this.date = anObj.date;
+        this.id = "JobProcess" + JobProcessIdIndex;
+
     }
-    // products.forEach((product, index) => {
-    //     console.log(product);
-    //   });
-    // anObj.interviewsList.forEach(function(element){
-    //     console.log(element);
-    //     interviewsList.push(new JobProcessStep(element))
-    // });
-    // this.interviewsList.push(new JobProcessStep(anObj))
 
-    this.date = anObj.date;
-    this.id = "JobProcess" + JobProcessIdIndex;
-        
-}
-
-JobProcessStepIdIndex = 0;
-function JobProcessStep(anObj) {
-    this.type = anObj.type;
-    this.meetWith = anObj.meetWith;
-    this.contactPeron = anObj.contactPeron;
-    this.JobTitle = anObj.JobTitle;
-    this.location = anObj.location;
-    this.date = anObj.date;
-    this.purpose = anObj.purpose;
-    this.description = anObj.description;
-    this.summary = anObj.summary;
-    this.id = "JobProcessStep" + JobProcessStepIdIndex;
-}
-
-
-
-
-function filljobProcesssFile() {
-    var asyncAction = $q.defer();
-    if (JobProcessArr.length > 0) // I read from server once)
-    {
-        asyncAction.resolve(JobProcessArr);
+    JobProcessStepIdIndex = 0;
+    function JobProcessStep(anObj) {
+        this.type = anObj.type;
+        this.meetWith = anObj.meetWith;
+        this.contactPeron = anObj.contactPeron;
+        this.JobTitle = anObj.JobTitle;
+        this.location = anObj.location;
+        this.date = anObj.date;
+        this.purpose = anObj.purpose;
+        this.description = anObj.description;
+        this.summary = anObj.summary;
+        this.id = "JobProcessStep" + JobProcessStepIdIndex;
     }
-    else {
 
-        $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/jobProcesss").then(function Succsess(response) {
-            response.data.forEach(function AddcvSent(anObj) {
-                JobProcessIdIndex++;
-                JobProcessArr.push(new JobProcess(anObj))
 
-            });
+
+
+    function filljobProcesssFile() {
+        var asyncAction = $q.defer();
+        if (JobProcessArr.length > 0) // I read from server once)
+        {
             asyncAction.resolve(JobProcessArr);
-        },
+        }
+        else {
 
-            function Error() {
-                $log.Error;
-            });
-    };
+            $http.get("https://my-json-server.typicode.com/arielaleco/Jobic/jobProcesss").then(function Succsess(response) {
+                response.data.forEach(function AddcvSent(anObj) {
+                    JobProcessIdIndex++;
+                    JobProcessArr.push(new JobProcess(anObj))
 
-    return asyncAction.promise;
-}
+                });
+                asyncAction.resolve(JobProcessArr);
+            },
 
-    return {        
+                function Error() {
+                    $log.Error;
+                });
+        };
+
+        return asyncAction.promise;
+    }
+
+    function findJobProcessById(jobProcessId) {
+        for (var i = 0; i < JobProcessArr.length; i++) {
+            if (JobProcessArr[i].id == jobProcessId)
+                return i;
+        }
+        return -1;
+
+    }
+    function addStageToJobProcess(jobProcess, JobProcessStage) {
+        for (var i = 0; i < JobProcessArr.length; i++) {
+            if (JobProcessArr[i].id == jobProcess.id) {
+                // var anObj = new Object();
+                // anObj.type = "HR";
+                // anObj.JobTitle = JobProcessArr[i].JobTitle;
+
+                // anObj.meetWith = "";
+                // anObj.contactPeron = "";            
+                // anObj.location = "";
+                // anObj.description = "";
+                // anObj.purpose = "";
+                // anObj.summary = "";                        
+
+                // var d = new Date();
+                // anObj.date = d.toDateString();
+
+                // anObj.isOpen = true;
+
+                JobProcessStepIdIndex++;
+                JobProcessStage.id = "JobProcessStep" + JobProcessStepIdIndex;
+                JobProcessArr[i].interviewsList.push(new JobProcessStep(JobProcessStage));
+
+                return JobProcessArr[i].interviewsList[JobProcessArr[i].interviewsList.length];
+
+            }
+
+        }
+        return false;
+    }
+    function addNewJobProcess(obj) {
+        JobProcessIdIndex++;
+        JobProcessArr.push(new JobProcess(obj));
+
+        // send the email
+
+
+    }
+
+    return {
         fillResumeFile: fillResumeFile,
         fillCoverLetterFile: fillCoverLetterFile,
         fillcvSentsFile: fillcvSentsFile,
         filljobProcesssFile: filljobProcesssFile,
         findResumeById: findResumeById,
+        findJobProcessById: findJobProcessById,
+        addStageToJobProcess: addStageToJobProcess,
         deleteResumeRecord: deleteResumeRecord,
         addNewResumeRecord: addNewResumeRecord,
         deleteCoverLetterRecord: deleteCoverLetterRecord,
         addNewCoverLetterRecord: addNewCoverLetterRecord,
-        addNewSentCV: addNewSentCV
+        addNewSentCV: addNewSentCV,
+        addNewJobProcess: addNewJobProcess
     }
 
 });

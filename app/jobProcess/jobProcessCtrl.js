@@ -16,6 +16,41 @@ var d = new Date();
 $scope.newJobProcess.date = d;
 
 
+$scope.selectedJobProcess={};  
+$scope.newStageJobProcess={};  
+
+
+$scope.AddNewStage = function (jobProcess){
+    $scope.newStageJobProcess={};  
+    $scope.selectedJobProcess = jobProcess;        
+    var d = new Date();
+    $scope.newStageJobProcess.date = d.toDateString();
+    $scope.newStageJobProcess.JobTitle = jobProcess.JobTitle;
+
+    // console.log($scope.newStageJobProcess);
+
+    // $scope.newStageJobProcess = sharedService.addStageToJobProcessById(jobProcess.id);
+    // $scope.$apply();
+    
+  }
+  $scope.ApplyNewStage = function (){
+  
+    $scope.newStageJobProcess = sharedService.addStageToJobProcess($scope.selectedJobProcess,$scope.newStageJobProcess);
+   // $scope.$apply();
+    
+  }
+  $scope.AddNewJobProcess = function(){
+    sharedService.addNewJobProcess($scope.newJobProcess);
+     // move to card View
+     $('[ data-target="#cardView"]').tab('show');
+     // and click the add stage
+   // AddNewStage($scope.jobProcesssArr[$scope.jobProcesssArr.length]);
+   $scope.newJobProcess={};
+     
+  }
+
+
+
 
 
 });

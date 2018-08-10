@@ -539,11 +539,13 @@ a.action-icons.edit-mode{
 }
 .card-view .card-header p{
    display: inline;
+   color: #7A0212;
 }
-.card-view i{
+#sendCV .card-view i{
    float:right;
    font-size: 13px;
    padding:2px;
+   color:#7A0212;
 }
 
 .w-150{
@@ -791,3 +793,4 @@ select:required:invalid{
 /* .float-right{
     float: right;
 } */
+

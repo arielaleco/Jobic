@@ -22,7 +22,7 @@
     <div class="tab-content">
         <div class="tab-pane container active" id="cardView">
 
-
+                <modal-stage-directive></modal-stage-directive>
 
 
             <div class="container">
@@ -42,7 +42,7 @@
                                     <i class="fas fa-trash-alt"></i>
                                 </a> -->
                                 <p>{{jobProcess.company}}</p>
-                                <button type="button" class="btn buttons-color float-right" data-toggle="modal" data-target="#ModalInput" ng-click="AddNewObj('resume')">
+                                <button type="button" class="btn buttons-color float-right" data-toggle="modal" data-target="#ModalInput" ng-click="AddNewStage(jobProcess)">
                                         <i class="fas fa-plus-square"></i> Add New Stage</button>
                             </div>
                             <div class="card-body">
@@ -108,42 +108,30 @@
 
                 <div class="gray-rec">
                     <div class="gray-rec-header">
-                            <h1>Send CV</h1>
+                            <h1>Add New Process</h1>
                     </div>
-                    
 
-                    <form name="sendForm">
+                   
 
-
-
-
-
-
+                    <form name="AddNewProcessForm">
                         <div class="row one-line">
-                            <input type="date" class="form-control col-xl-4 col-sm-4 date" placeholder="Date" ng-model="newCV.date">
+                            <input type="date" class="form-control col-xl-4 col-sm-4 date" placeholder="Date" ng-model="newJobProcess.date">
                         </div>
                         <div class="row one-line">    
                            
 
-                            <input class="form-control col-xl-6 col-sm-6" name="company" placeholder="Company" ng-model="newCV.company" ng-required="true">
+                            <input class="form-control col-xl-6 col-sm-6" name="company" placeholder="Company" ng-model="newJobProcess.company" ng-required="true">
                             <!-- <h1 ng-if="!sendForm.company.$valid">The input field cannot be empty</h1> -->
                             <!-- <i class="fas fa-exclamation-circle required-field"></i> -->
-                            <input class="form-control col-xl-6 col-sm-6"  name="JobTitle" placeholder="Job Title" ng-model="newCV.JobTitle" ng-required="true">
+                            <input class="form-control col-xl-6 col-sm-6"  name="JobTitle" placeholder="Job Title" ng-model="newJobProcess.JobTitle" >
 
                         </div>
 
 
+                        
                         <div class="row one-line">
-                            <input class="form-control col-xl-6 col-sm-6" placeholder="Contact person" ng-model="newCV.contactPeron">
-                            <input class="form-control col-xl-6 col-sm-6" name="email" placeholder="Email" ng-model="newCV.email" ng-required="true">
-
-
-
-
-                        </div>
-                        <div class="row one-line">
-                            <input class="form-control col-xl-6 col-sm-6" placeholder="Link To Ad Source" ng-model="newCV.linkToAdSource">
-                            <input class="form-control col-xl-6 col-sm-6" placeholder="Description" ng-model="newCV.description">
+                            
+                            <input class="form-control col-xl-12 col-sm-12" placeholder="Description" ng-model="newJobProcess.description">
 
 
 
@@ -154,36 +142,29 @@
 
                             <div class="row one-line">
 
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion" ng-options="resume.title for resume in resumeArr" ng-required="true">
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newJobProcess.resumeVersion" ng-options="resume.title for resume in resumeArr" ng-required="true">
                                     <option value="">-- choose an option --</option>
 
                                 </select>
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr" ng-required="true">
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newJobProcess.coverLetterVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr" ng-required="true">
                                     <option value="">-- choose an option --</option>
 
                                 </select>
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newJobProcess.protfolioVersion" ng-options="coverLetter.title for coverLetter in coverLetterArr">
                                     <option value="">-- choose an option --</option>
 
                                 </select>
-
-
-
-
-
                             </div>
 
                         </div>
-                        <!-- <button class="border-button width-button" ng-click="SendAndSaveCV()">Send &amp; Save</button> -->
-                         <!-- <h1 ng-if="!sendForm.company.$valid">The input field cannot be empty</h1> -->
-
-                         <!-- ng-class="{clearance: item.clearance, new: item.salesStatus === 'new'}" -->
-                                                  
-                        <button id="send-cv-btn" class="border-button width-button" ng-disabled="(!sendForm.company.$valid) || (!sendForm.email.$valid) ||  (!sendForm.JobTitle.$valid)" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button>
-                        <!-- <button  class="border-button width-button disabled" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button>
-                        <button  class="border-button width-button" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button> -->
-
-                        <modal-confirm-send-directive></modal-confirm-send-directive>
+                        
+                        <button id="add-process-btn" class="border-button width-button" ng-disabled="(!AddNewProcessForm.company.$valid) "  ng-click="AddNewJobProcess()">Add</button>                          
+                        
+                        <!-- <button id="add-process-btn" class="border-button width-button" ng-disabled="(!AddNewProcessForm.company.$valid) " data-toggle="modal" data-target="#ModalInput" ng-click="AddNewStage(newJobProcess)">Add</button> -->
+                        
+ 
+                       
+                        <!-- <modal-confirm-send-directive></modal-confirm-send-directive> -->
 
                         <!-- // add Good Luck !!! -->
 
