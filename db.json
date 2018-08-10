@@ -171,7 +171,7 @@
                     "summary": "it was nice I think"
                 },
                 {
-                    "type": "PROFECIONAL",
+                    "type": "PROFESSIONAL",
                     "meetWith": "Michal Cohen",
                     "contactPeron": "Elad Yaniv‎‏",
                     "JobTitle": "Junior Project Manager",
@@ -192,8 +192,8 @@
             "coverLetterVersion": "3",
             "protfolioVersion": "1",
             "interviewsList": [
-                {
-                    "type": "PROFECIONAL",
+                {                   
+                    "type": "PROFESSIONAL",
                     "meetWith": "lora Somech",
                     "contactPeron": "Yaniv‎ Ben David‏‎‏",
                     "JobTitle": "Product Manager",

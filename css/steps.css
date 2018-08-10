@@ -13,7 +13,7 @@ a:hover,a:focus{
     content: "";
     width: 5px;
     height: 100%;
-    background: #004e89;
+    background: #7A0212;
     position: absolute;
     top: 0;
     left: 22px;
@@ -36,7 +36,7 @@ a:hover,a:focus{
     background: #fff;
     font-size: 18px;
     font-weight: bold;
-    color: #004e89;
+    color: #7A0212;
     position: relative;
     transition: all 0.5s ease 0s;
 }
@@ -48,18 +48,27 @@ a:hover,a:focus{
     height: 50px;
     line-height: 40px;
     border-radius: 50%;
-    background: #cad5c2;
+    /* background: #cad5c2; */
+    color: white;
+    background-color: #7A0212;
+
     text-align: center;
     font-size: 17px;
-    color: #004e89;
-    border: 6px solid #004e89;
+    
+    border: 6px solid #7A0212;
     position: absolute;
     top: 0;
     left: -80px;
 }
 #job-accordion .panel-title a.collapsed:before{
     content: "\f067";
-    background: #fff;
+    
+    /* background: #fff; */
+    
+    background:white;
+    color: #7A0212;
+    
+    
 }
 #job-accordion .panel-body{
     padding: 10px 15px;
