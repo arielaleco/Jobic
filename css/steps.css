@@ -6,6 +6,7 @@ a:hover,a:focus{
     padding-left: 80px;
     overflow: hidden;
     position: relative;
+    background-color: white;
     z-index: 1;
 }
 #job-accordion:before{

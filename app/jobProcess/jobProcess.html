@@ -23,11 +23,13 @@
         <div class="tab-pane container active" id="cardView">
 
 
+
+
             <div class="container">
 
                 <div class="card-view" ng-repeat="jobProcess in jobProcesssArr">
                     <div class="card-grid1">
-                        <div class="card w-150">
+                        <div class="card wide-card">
                             <div class="card-header bg-gray-custom text-white text-uppercase">
 
                                 <a class="bg-gray-custom action-icons" title="Delete current resume" data-toggle="modal" data-target="#Modal{{resume.id}}">
@@ -38,7 +40,7 @@
                             <div class="card-body">
                                 <p class="card-text">{{jobProcess.JobTitle}}</p>
 
-
+                                <job-process-directive></job-process-directive>
                                 
 
                                 <div class="card-text" ng-repeat="jobStep in jobProcess.interviewsList">

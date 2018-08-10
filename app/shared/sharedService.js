@@ -191,7 +191,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.protfolioVersion = anObj.protfolioVersion;
 
         this.date = anObj.date;
-        this.id = "cvSent" + coverLetterIdIndex;
+        this.id = "cvSent" + cvSentIdIndex;
         this.isOpen = false;
     }
 
@@ -243,6 +243,7 @@ function JobProcess(anObj) {
 
     for(var i=0;i<anObj.interviewsList.length;i++)
     {
+        JobProcessStepIdIndex++;
         this.interviewsList.push(new JobProcessStep(anObj.interviewsList[i]));
     }
     // products.forEach((product, index) => {
@@ -255,11 +256,11 @@ function JobProcess(anObj) {
     // this.interviewsList.push(new JobProcessStep(anObj))
 
     this.date = anObj.date;
-    this.id = "JobProcess" + coverLetterIdIndex;
+    this.id = "JobProcess" + JobProcessIdIndex;
         
 }
 
-
+JobProcessStepIdIndex = 0;
 function JobProcessStep(anObj) {
     this.type = anObj.type;
     this.meetWith = anObj.meetWith;
@@ -270,6 +271,7 @@ function JobProcessStep(anObj) {
     this.purpose = anObj.purpose;
     this.description = anObj.description;
     this.summary = anObj.summary;
+    this.id = "JobProcessStep" + JobProcessStepIdIndex;
 }
 
 

@@ -169,6 +169,17 @@
                     "purpose": "talk",
                     "description": "I dont know yet",
                     "summary": "it was nice I think"
+                },
+                {
+                    "type": "PROFECIONAL",
+                    "meetWith": "Michal Cohen",
+                    "contactPeron": "Elad Yaniv‎‏",
+                    "JobTitle": "Junior Project Manager",
+                    "location": "Herzelia Pituch , Hamanor 5",
+                    "date": "2018-04-03T05:00:00.000Z",
+                    "purpose": "tests - lots of tests",
+                    "description": "I dont know yet",
+                    "summary": "it was nice I think"
                 }
             ]
         },

@@ -781,3 +781,6 @@ select:required:invalid{
       color: white!important;
   }
   
+.wide-card{
+    width:300px;
+}
