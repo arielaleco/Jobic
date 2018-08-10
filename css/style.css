@@ -250,7 +250,9 @@ main{
 	
 }
 .bg-gray-custom{
-    background-color:rgb(111, 111, 111); 
+    /* background-color:rgb(111, 111, 111);  */
+    background-color:#c5c5c2; 
+    color: black;
 }
 
 
@@ -610,6 +612,7 @@ select:required:invalid{
 }
 .gray-rec-header .btn{
     float: right;
+    
 }
 .gray-rec-header{
     padding:5px 0px 15px 0px;
@@ -728,7 +731,8 @@ select:required:invalid{
   }
   
   .buttons-color{
-    background-color : rgb(53,139,254);       
+    /* background-color : rgb(53,139,254);   */
+    background-color :#7A0212 ;
     color:white;
   }
   .text-buttons-color{
@@ -784,3 +788,6 @@ select:required:invalid{
 .wide-card{
     width:300px;
 }
+/* .float-right{
+    float: right;
+} */

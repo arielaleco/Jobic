@@ -1,5 +1,5 @@
 
-
+<!-- http://bestjquery.com/tutorial/accordion/demo79/ -->
 
 <div id="jobProcess">
 
@@ -31,11 +31,19 @@
                     <div class="card-grid1">
                         <div class="card wide-card">
                             <div class="card-header bg-gray-custom text-white text-uppercase">
+                                    
+                                    <!-- <div class="gray-rec">
 
-                                <a class="bg-gray-custom action-icons" title="Delete current resume" data-toggle="modal" data-target="#Modal{{resume.id}}">
+                                            <div class="gray-rec-header">
+                                                </div>
+                                                </div> -->
+
+                                <!-- <a class="bg-gray-custom action-icons" title="Delete current resume" data-toggle="modal" data-target="#Modal{{resume.id}}">
                                     <i class="fas fa-trash-alt"></i>
-                                </a>
+                                </a> -->
                                 <p>{{jobProcess.company}}</p>
+                                <button type="button" class="btn buttons-color float-right" data-toggle="modal" data-target="#ModalInput" ng-click="AddNewObj('resume')">
+                                        <i class="fas fa-plus-square"></i> Add New Stage</button>
                             </div>
                             <div class="card-body">
                                 <p class="card-text">{{jobProcess.JobTitle}}</p>
@@ -43,10 +51,10 @@
                                 <job-process-directive></job-process-directive>
                                 
 
-                                <div class="card-text" ng-repeat="jobStep in jobProcess.interviewsList">
+                                <!-- <div class="card-text" ng-repeat="jobStep in jobProcess.interviewsList">
                                         <p class="card-text">{{jobStep.type}}**</p>
                                         <p class="card-text">{{jobStep.meetWith}}**</p>
-                                </div>
+                                </div> -->
 
                             </div>
                             <div class="card-footer">
