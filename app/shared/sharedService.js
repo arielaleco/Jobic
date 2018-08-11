@@ -143,7 +143,7 @@ app.factory('sharedService', function ($log, $q, $http) {
         anObj.date = d.toDateString();
         anObj.description = resumeDescription;
         anObj.isOpen = true;
-        var newId = "Resume" + resumeIdIndex;
+        var newId = "R" + resumeIdIndex;
         anObj.id = newId;
         resumeArr.push(anObj);
         return (newId);
@@ -188,9 +188,9 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.email = anObj.email;
         this.linkToAdSource = anObj.linkToAdSource;
         this.description = anObj.description;
-        this.resumeVersionTitle = anObj.resumeVersionTitle;
-        this.coverLetterVersionTitle = anObj.coverLetterVersionTitle;
-        this.protfolioVersionTitle = anObj.protfolioVersionTitle;
+        this.resumeVersionId = anObj.resumeVersionId;
+        this.coverLetterVersionId = anObj.coverLetterVersionId;
+        this.protfolioVersionId = anObj.protfolioVersionId;
 
         this.date = anObj.date;
         this.id = "cvSent" + cvSentIdIndex;
@@ -238,9 +238,9 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.company = anObj.company;
         this.JobTitle = anObj.JobTitle;
         this.description = anObj.description;
-        this.resumeVersionTitle = anObj.resumeVersionTitle;
-        this.coverLetterVersionTitle = anObj.coverLetterVersionTitle;
-        this.protfolioVersionTitle = anObj.protfolioVersionTitle;
+        this.resumeVersionId = anObj.resumeVersionId;
+        this.coverLetterVersionId = anObj.coverLetterVersionId;
+        this.protfolioVersionId = anObj.protfolioVersionId;
         this.interviewsList = [];
 
         if (anObj.interviewsList != undefined) {

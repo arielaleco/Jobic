@@ -75,9 +75,9 @@
                         <td>{{cvSent.contactPeron}}</td>
                         <td>{{cvSent.description}}</td>
                         <!-- <td>{{cvSent.linkToAdSource}}</td> -->
-                        <td>{{cvSent.resumeVersionTitle}}</td>
-                        <td>{{cvSent.coverLetterVersionTitle}}</td>
-                        <td>{{cvSent.protfolioVersionTitle}}</td>
+                        <td>{{cvSent.resumeVersionId}}</td>
+                        <td>{{cvSent.coverLetterVersionId}}</td>
+                        <td>{{cvSent.protfolioVersionId}}</td>
 
                     </tr>
 
@@ -116,15 +116,15 @@
 
                         <div ng-controller="resumeCtrl">
                             <div class="row one-line">
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersionTitle" ng-options="resume.title for resume in resumeArr" ng-required="true">
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersionId" ng-options="resume.title for resume in resumeArr" ng-required="true">
                                     <option value="">-- Resume version --</option>
 
                                 </select>
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersionTitle" ng-options="coverLetter.title for coverLetter in coverLetterArr" ng-required="true">
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="Cover Letter Version" ng-model="newCV.coverLetterVersionId" ng-options="coverLetter.title for coverLetter in coverLetterArr" ng-required="true">
                                     <option value="">-- Cover Letter Version --</option>
 
                                 </select>
-                                <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersionTitle" ng-options="coverLetter.title for coverLetter in coverLetterArr">
+                                <select class="form-control col-xl-4 col-sm-4" placeholder="Protfolio Version" ng-model="newCV.protfolioVersionId" ng-options="coverLetter.title for coverLetter in coverLetterArr">
                                     <option value="">-- Protfolio Version --</option>
 
                                 </select>

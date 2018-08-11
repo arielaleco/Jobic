@@ -19,19 +19,22 @@
         }      
     ],
     "resumes": [
-        {
+        { 
+            "id":"R1",
             "title": "Product Manager Web",
             "file": "c:temp\\ProductManager.doc",
             "description": "Send to product manager roles in mobile companies",
             "date": "2018-04-03T05:00:00.000Z"
         },
         {
+            "id":"R2",
             "title": "Project Manager Web",
             "file": "c:\\temp\\ProjectManager.doc",
             "description": "Send to Project manager roles in mobile companies",
             "date": "2018-05-03T05:00:00.000Z"
         },
         {
+            "id":"R3",
             "title": "Front End development",
             "file": "c:\\temp\\FrontEnd.doc",
             "description": "Front end development expert roles",
@@ -40,24 +43,28 @@
     ],
     "coverLetters": [
         {
+            "id":"CL1",
             "title": "Light Version Product",
             "description": "Product Manager from Facebook",
             "content": "Hi , My name is John Belushi and I'm a product manager , I would like to apply to the product manage position at your company , please check the attached files . Thank you , Ariela Leiba Cohen",
             "date": "2018-04-03T05:00:00.000Z"
         },
         {
+            "id":"CL2",
             "title": "Light Version Project",
             "description": "Product Manager to HR",
             "content": "Hello ,  , I would like to apply to the product manage position at your company , please check the attached files . Thank you , Ariela Leiba Cohen",
             "date": "2018-05-03T05:00:00.000Z"
         },
         {
+            "id":"CL3",
             "title": "Front End development",
             "description": "Project Manager Jobs",
             "content": "Hi , Can you please help my find a new Job ? , please check the attached files . Thank you , Ariela Leiba Cohen",
             "date": "2018-06-03T05:00:00.000Z"
         },                
         {
+            "id":"CL4",
             "title": "FullStack development Jobs",
             "description": "Project Manager Jobs",
             "content": "Hi , Are you looking for a great full stuck programer ? I'm the answer ! . please check the attached files for more information . Thank you , Ariela Leiba Cohen",
@@ -72,9 +79,9 @@
             "email": "amir@facebook.com",
             "linkToAdSource": "https://www.facebook.com/1720888134898394/photos/pb.1720888134898394.-2207520000.1532938230./1762861884034352/?type=3&theater",
             "description": "An innovative Start-up developing 3D multi-camera-based Advanced Driver Assistance Systems, is looking for an experienced Product Manager.",
-            "resumeVersionTitle": "Front End development",
-            "coverLetterVersionTitle": "Light Version Product",
-            "protfolioVersionTitle": "1",
+            "resumeVersionId": "R1",
+            "coverLetterVersionId": "CL3",
+            "protfolioVersionId": "1",
             "date": "2018-05-03T21:00:00.000Z"
         },
         {
@@ -84,9 +91,9 @@
             "email": "HR@extreme.com",
             "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/permalink/10155803547067677/",
             "description": "An innovative Start-up developing 3D multi-camera-based Advanced Driver Assistance Systems, is looking for an experienced Product Manager.",
-            "resumeVersionTitle": "Project Manager Web",
-            "coverLetterVersionTitle": "Light Version Product",
-            "protfolioVersionTitle": "1",
+            "resumeVersionId": "R2",
+            "coverLetterVersionId": "CL1",
+            "protfolioVersionId": "1",
             "date": "2018-05-14T05:00:00.000Z"
         },
         {
@@ -96,9 +103,9 @@
             "email": "tom.muallem@tangelogames.com",
             "description": "Tangelo Games Israel is looking for its next Product Manager",
             "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
-            "resumeVersionTitle": "Front End development",
-            "coverLetterVersionTitle": "FullStack development Jobs",
-            "protfolioVersionTitle": "1",
+            "resumeVersionId": "R3",
+            "coverLetterVersionId": "CL3",
+            "protfolioVersionId": "1",
             "date": "2018-06-02T21:00:00.000Z"
         },
         {
@@ -108,9 +115,9 @@
             "email": "https://jobs.lever.co/gigya/12ffcaf2-da29-4c75-a4a5-db2fa242ea2b?lever-via=aBslzLT5PZ",
             "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
             "description": "Gigya is looking for a Senior Product Manager! Want to inspire Marketing, Business",
-            "resumeVersionTitle": "Front End development",
-            "coverLetterVersionTitle": "Light Version Project",
-            "protfolioVersionTitle": "1",
+            "resumeVersionId": "R1",
+            "coverLetterVersionId": "CL2",
+            "protfolioVersionId": "1",
             "date": "2018-06-03T05:00:00.000Z"
         },
         {
@@ -120,9 +127,9 @@
             "email": "slidely.mobileproductmanager@applynow.io",
             "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
             "description": "Slidely is looking for Mobile Product Manager",
-            "resumeVersionTitle": "Light Version Product",
-            "coverLetterVersionTitle": "Light Version Project",
-            "protfolioVersionTitle": "2",
+            "resumeVersionId": "R3",
+            "coverLetterVersionId": "CL3",
+            "protfolioVersionId": "2",
             "date": "2018-06-15T03:00:00.000Z"
         },
         {
@@ -132,9 +139,9 @@
             "email": "https://my.tomigo.com/jobs/9736?p=oUBJA",
             "linkToAdSource": "https://my.tomigo.com/jobs/9736?p=oUBJA",
             "description": "Product Manager for core verticals group",
-            "resumeVersionTitle": "Light Version Product",
-            "coverLetterVersionTitle": "Light Version Project",
-            "protfolioVersionTitle": "1",
+            "resumeVersionId": "R1",
+            "coverLetterVersionId": "CL2",
+            "protfolioVersionId": "1",
             "date": "2018-06-19T12:00:00.000Z"
         }
     ],
@@ -144,9 +151,9 @@
             "JobTitle": "Junior Project Manager",
             "contactPeron": "Elad Yaniv‎‏",
             "description": "Product Manager for core verticals group",
-            "resumeVersionTitle": "Light Version Product",
-            "coverLetterVersionTitle": "Light Version Project",
-            "protfolioVersionTitle": "1",
+            "resumeVersionId": "R1",
+            "coverLetterVersionId": "CL2",
+            "protfolioVersionId": "1",
             "interviewsList": [
                 {
                     "type": "PHONE",
@@ -188,9 +195,9 @@
             "JobTitle": "Product Manager",
             "contactPeron": "Yaniv‎ Ben David‏",
             "description": "Product Manager for ceburity products",
-            "resumeVersionTitle": "FullStack development Jobs",
-            "coverLetterVersionTitle": "Front End development",
-            "protfolioVersionTitle": "1",
+            "resumeVersionId": "R2",
+            "coverLetterVersionId": "CL3",
+            "protfolioVersionId": "1",
             "interviewsList": [
                 {                   
                     "type": "PROFESSIONAL",
