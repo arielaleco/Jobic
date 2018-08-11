@@ -808,3 +808,42 @@ select:required:invalid{
 #listView{
     margin: 0px 50px;
 }
+.personal-note{
+    margin: auto;
+}
+#upper-panel{
+    margin: auto;
+    padding: 10px 0px;
+}
+
+#weather-icon{
+    font-size: 40px;
+}
+
+#weather .temp{
+/* padding:0px;
+margin: 0px; */
+font-size: 32px;
+margin-top: -6px;
+}
+
+#weather .verbal{
+    font-size: 14px;
+    margin-top: -6px;
+}
+
+#weather-data{
+    padding:0px 20px;
+}
+
+/* #upper-panel span{
+    font-weight: 900;
+} */
+
+
+/* #weather{
+    float:left;
+}
+#greating{
+    float:left;
+} */

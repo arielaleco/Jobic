@@ -12,7 +12,7 @@ a:hover,a:focus{
 #job-accordion:before{
     content: "";
     width: 5px;
-    height: 90%;
+    height: 100%;
     background: #7A0212;
     position: absolute;
     top: 0;

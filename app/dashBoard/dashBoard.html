@@ -1,19 +1,36 @@
 <div id="dashboard-page">
+    <div ng-controller="dashBoardCtrl">
+
+        <div class="personal-note">
+            <div class="container-fluid">
 
 
-    <div class="personal-note">
-        <div class="container-fluid">
+                <div class="row ">
+                    <div id="upper-panel">
+                        <div class="col-xl-12 col-lg-12  col-sm-12">
+                            <div id="weather-data"  class="float-left">
+                                <div id="weather-icon" class="float-left">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div id="weather" class="float-left">
+                                    <p class="temp no-padding-no-margin">32°</p>
+                                    <p class="verbal no-padding-no-margin">Sunny</p>
+
+                                </div>
+                            </div>
+                            <div id="greating" class="float-left">
+                                <h2 class="no-padding-no-margin">Good Morning
+                                    <strong> {{LoggedInInUser().fname}} </strong> !</h2>
+                                <p>This week was great ! you are alnost there ...</p>
+                            </div>
 
 
-            <div class="row ">
-                <div id="upper-panel">
-                    <div class="col-xl-12 col-lg-12  col-sm-12">
-                        <p>Good morning </p> 
+
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row main-panel">
-               
+                <div class="row main-panel">
+
                     <div class="no-padding-no-margin col-xl-2 col-lg-2 ">
                         <div class="text-arrow-rec">
                             <p>Resume Sent This Week</p>
@@ -54,7 +71,8 @@
                         </div>
                     </div>
                     <div class="no-padding-no-margin col-xl-3 col-lg-3  ">
-                        <div id="chat-page" ng-controller="dashBoardCtrl">
+                        <!-- <div id="chat-page" ng-controller="dashBoardCtrl"> -->
+                        <div id="chat-page">
                             <div ng-repeat="chat in chatArr">
                                 <div class="chat-card">
 
@@ -84,23 +102,26 @@
                             </div>
 
                         </div>
-               
+
+                    </div>
+
+
+
+
                 </div>
+                <div class="row ">
+                    <div id="lower-panel">
+                        <div class="col-xl-12 col-lg-12  col-sm-12">
+                            <canvas id="bar" class="chart chart-bar" chart-colors="colors" chart-data="data" chart-labels="labels"> chart-series="series"</canvas>
 
 
 
 
-            </div>
-            <div class="row ">
-                <div id="lower-panel">
-                    <div class="col-xl-12 col-lg-12  col-sm-12">
-                        <canvas id="bar" class="chart chart-bar"
-                        chart-data="data" chart-labels="labels"> chart-series="series"
-                    </canvas>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
-
-
         </div>
     </div>

@@ -9,7 +9,8 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.title = anObj.title;
         this.file = anObj.file;
         this.date = anObj.date;
-        this.id = "Resume" + resumeIdIndex;
+        this.id   = anObj.id;
+        // this.id = "R" + resumeIdIndex;
         //this.editableNow="true";
         this.description = anObj.description;
         this.isOpen = false;
@@ -33,7 +34,8 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.title = anObj.title;
         this.content = anObj.content;
         this.date = anObj.date;
-        this.id = "CoverLetter" + coverLetterIdIndex;
+        this.id   = anObj.id;
+        // this.id = "CL" + coverLetterIdIndex;
         this.description = anObj.description;
         this.isOpen = false;
     }
