@@ -1,8 +1,8 @@
 
 app.factory('user', function ($http, $q) {
 
-    var activeUser = null;
-    //var activeUser = new User({ fname: "Ariela", lname: "Leiba Cohen", id: "1", email: "arielaleco@gmail.com", password: "123" , password: "123"});//null;
+    //var activeUser = null;
+    var activeUser = new User({ fname: "Ariela", lname: "Leiba Cohen", id: "1", email: "arielaleco@gmail.com", password: "123" , password: "123"});//null;
 
 
     function User(plainUser) {
@@ -14,8 +14,6 @@ app.factory('user', function ($http, $q) {
         this.phone= plainUser.phone;
         this.id = plainUser.id;
     }
-
-
     function isLoggedIn() {
         return activeUser ? true : false;
     }

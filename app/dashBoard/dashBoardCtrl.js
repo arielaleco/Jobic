@@ -1,9 +1,9 @@
-app.controller("dashBoardCtrl", function ($scope , $location, chatService,user) {
+app.controller("dashBoardCtrl", function ($scope , $location, chatService,user, sharedService) {
  // Checking if the user is logged in, if not navigating back to home page
-   if (!user.isLoggedIn()) {
-    $location.path("/");
-    return;
-   }
+//    if (!user.isLoggedIn()) {
+//     $location.path("/");
+//     return;
+//    }
 
     $scope.chatArr = [];
     chatService.fillChatFile().then(function (chatArr) {
@@ -25,5 +25,25 @@ app.controller("dashBoardCtrl", function ($scope , $location, chatService,user) 
       $scope.LoggedInInUser = function() {
         return user.getActiveUser();
      }
+
+     // suply a data set sorted by date read the Job Process array - prepare the structure
+
+     $scope.jobProcesssArr = [];
+     sharedService.filljobProcesssFile().then(function (jobProcesssArr) {
+         $scope.jobProcesssArr = jobProcesssArr;
+
+         // prepare the strcut
+         
+
+
+
+         console.log($scope.jobProcesssArr);
+         //alert($scope.jobProcesssArr.length)
+     }, function (error) {
+  
+         $log.error(error)
+     });
+
+
 
 });
