@@ -51,23 +51,34 @@
 
         </div>
         <div class="tab-pane container fade" id="listView">
-
-
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Company</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Job Title</th>
+                        <th scope="col">Email</th>                        
+                        <th scope="col">Contact Peron</th>
+                        <th scope="col">Description</th>
+                        <!-- <th scope="col">Link To Ad</th> -->
+                        <th scope="col">Resume Version</th>
+                        <th scope="col">Cover Letter Version</th>
+                        <th scope="col">"Protfolio Version</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="cvSent in cvSentArr">
                         <th scope="row">{{cvSent.company}}</th>
+                        <td>{{cvSent.date| date:'yyyy-MM-dd HH:mm'}}</td>
                         <td>{{cvSent.JobTitle}}</td>
-                        <td>{{cvSent.date}}</td>
-                        <td>@mdo</td>
+                        <td>{{cvSent.email}}</td>
+                        <td>{{cvSent.contactPeron}}</td>
+                        <td>{{cvSent.description}}</td>
+                        <!-- <td>{{cvSent.linkToAdSource}}</td> -->
+                        <td>{{cvSent.resumeVersion}}</td>
+                        <td>{{cvSent.coverLetterVersion}}</td>
+                        <td>{{cvSent.protfolioVersion}}</td>
+
                     </tr>
 
                 </tbody>
@@ -85,49 +96,26 @@
                             <h1>Send CV</h1>
                     </div>
                     
-
                     <form name="sendForm">
-
-
-
-
-
-
                         <div class="row one-line">
                             <input type="date" class="form-control col-xl-4 col-sm-4 date" placeholder="Date" ng-model="newCV.date">
                         </div>
-                        <div class="row one-line">    
-                           
-
-                            <input class="form-control col-xl-6 col-sm-6" name="company" placeholder="Company" ng-model="newCV.company" ng-required="true">
-                            <!-- <h1 ng-if="!sendForm.company.$valid">The input field cannot be empty</h1> -->
-                            <!-- <i class="fas fa-exclamation-circle required-field"></i> -->
+                        <div class="row one-line">                               
+                            <input class="form-control col-xl-6 col-sm-6" name="company" placeholder="Company" ng-model="newCV.company" ng-required="true">                            
                             <input class="form-control col-xl-6 col-sm-6"  name="JobTitle" placeholder="Job Title" ng-model="newCV.JobTitle" ng-required="true">
 
                         </div>
-
-
                         <div class="row one-line">
                             <input class="form-control col-xl-6 col-sm-6" placeholder="Contact person" ng-model="newCV.contactPeron">
                             <input class="form-control col-xl-6 col-sm-6" name="email" placeholder="Email" ng-model="newCV.email" ng-required="true">
-
-
-
-
                         </div>
                         <div class="row one-line">
                             <input class="form-control col-xl-6 col-sm-6" placeholder="Link To Ad Source" ng-model="newCV.linkToAdSource">
                             <input class="form-control col-xl-6 col-sm-6" placeholder="Description" ng-model="newCV.description">
-
-
-
-
                         </div>
 
                         <div ng-controller="resumeCtrl">
-
                             <div class="row one-line">
-
                                 <select class="form-control col-xl-4 col-sm-4" placeholder="resume version" ng-model="newCV.resumeVersion" ng-options="resume.title for resume in resumeArr" ng-required="true">
                                     <option value="">-- Resume version --</option>
 
@@ -140,23 +128,13 @@
                                     <option value="">-- Protfolio Version --</option>
 
                                 </select>
-
-
-
-
-
                             </div>
 
                         </div>
-                        <!-- <button class="border-button width-button" ng-click="SendAndSaveCV()">Send &amp; Save</button> -->
-                         <!-- <h1 ng-if="!sendForm.company.$valid">The input field cannot be empty</h1> -->
-
-                         <!-- ng-class="{clearance: item.clearance, new: item.salesStatus === 'new'}" -->
+                        
                                                   
                         <button id="send-cv-btn" class="border-button width-button" ng-disabled="(!sendForm.company.$valid) || (!sendForm.email.$valid) ||  (!sendForm.JobTitle.$valid)" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button>
-                        <!-- <button  class="border-button width-button disabled" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button>
-                        <button  class="border-button width-button" data-toggle="modal" data-target="#ModalSend">Send &amp; Save</button> -->
-
+                        
                         <modal-confirm-send-directive></modal-confirm-send-directive>
 
                         <!-- // add Good Luck !!! -->

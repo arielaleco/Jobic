@@ -530,6 +530,7 @@ a.action-icons.edit-mode{
 }
 .card-view .card-body p{
     font-size: 14px;
+   
 }
 
 
@@ -538,8 +539,10 @@ a.action-icons.edit-mode{
     /* background-color: blue; */
 }
 .card-view .card-header p{
-   display: inline;
+   /* display: inline; */
+   display: inline-flex;
    color: #7A0212;
+   width:100px;
 }
 #sendCV .card-view i{
    float:right;
@@ -736,7 +739,13 @@ select:required:invalid{
     /* background-color : rgb(53,139,254);   */
     background-color :#7A0212 ;
     color:white;
+    padding:1px 5px;
   }
+
+  .modal-dialog .buttons-color{
+    padding:6px 5px;
+  }
+
   .text-buttons-color{
     color:rgb(21,69,115);       
   }
@@ -793,4 +802,9 @@ select:required:invalid{
 /* .float-right{
     float: right;
 } */
-
+#listView table{
+    width:90vw;
+}
+#listView{
+    margin: 0px 50px;
+}

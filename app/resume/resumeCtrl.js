@@ -77,7 +77,7 @@ app.controller("resumeCtrl", function ($scope, $location, sharedService) {
     $scope.SelectedObj={};
 
     $scope.accordionWasClicked = function (obj) {
-        $scope.inReadOnlyMode = "true";
+      //  $scope.inReadOnlyMode = "true";
         $scope.SelectedObj = obj ;
   
     }

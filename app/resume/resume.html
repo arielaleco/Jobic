@@ -62,11 +62,7 @@
                                                 <span class="slider"></span>
                                             </label>
 
-                                            <div class="icon-on-accordion">
-                                                <!-- <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode()" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
-                                                    <i class="fas fa-edit"></i>
-                                                </a> -->
-
+                                            <div class="icon-on-accordion">                                                
                                                 <a class="action-icons" title="Delete current resume" data-toggle="modal" data-target="#ModalResume">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </a>
@@ -90,13 +86,7 @@
                                                 <div class="col-xl-3 col-lg-2  col-sm-2 no-padding-no-margin">
                                                     <p>File :</p>
                                                 </div>
-                                                <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">
-
-
-
-                                                    <!-- <input type="file" class="input-in-accordion" value="{{resume.file}}" ng-readonly="inReadOnlyMode" ng-class="inReadOnlyMode ? 'not-editable' : 'editable'"> -->
-
-
+                                                <div class="col-xl-9 col-lg-10  col-sm-10 no-padding-no-margin">                                                    
                                                     <input type="text" class="input-in-accordion" value="{{resume.file}}" ng-readonly="!inReadOnlyMode" ng-class="!inReadOnlyMode ? 'not-editable' : 'editable'">
                                                 </div>
                                             </div>
@@ -124,12 +114,12 @@
 
         <div class="row ">
             <div class="align-center col-xl-8 col-lg-8  col-sm-10">
-                <div class="gray-rec">                 
+                <div class="gray-rec">
                     <div class="gray-rec-header">
-                            <h1>Cover Lettes Versions</h1>
-                            <button type="button" class="btn buttons-color" data-toggle="modal" data-target="#ModalInput" ng-click="AddNewObj('coverLetter')">
-                                <i class="fas fa-plus-square"></i> Add New Cover Letter</button>
-                        </div>
+                        <h1>Cover Lettes Versions</h1>
+                        <button type="button" class="btn buttons-color" data-toggle="modal" data-target="#ModalInput" ng-click="AddNewObj('coverLetter')">
+                            <i class="fas fa-plus-square"></i> Add New Cover Letter</button>
+                    </div>
 
                     <div id="accordionCoverLetter" class="accordion">
                         <div ng-repeat="coverLetter in coverLetterArr">
@@ -150,44 +140,20 @@
                                 <div id="{{coverLetter.id}}" is-open="false" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionCoverLetter">
                                     <div class="card-body">
 
-                                            <div id="icon-row">
+                                        <div id="icon-row">
+                                            <span class="switch-text">Edit Mode</span>
+                                            <label class="switch">
+                                                <input type="checkbox" ng-model="inReadOnlyModeCL" ng-click="toggleEditModeCL()">
+                                                <span class="slider"></span>
+                                            </label>
 
-
-
-
-                                                    <span class="switch-text">Edit Mode</span>
-                                                    <label class="switch">
-                                                        <input type="checkbox" ng-model="inReadOnlyModeCL" ng-click="toggleEditModeCL()">
-                                                        <span class="slider"></span>
-                                                    </label>
-        
-                                                    <div class="icon-on-accordion">
-                                                        <!-- <a class="action-icons" title="Edit current resume" ng-click="toggleEditMode()" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a> -->
-        
-                                                        <a class="action-icons" title="Delete current cover Letter" data-toggle="modal" data-target="#ModalResume">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-        
-                                                    </div>
-        
-        
-        
-                                                </div>
-
-
-                                        <!-- <div id="icon-row">
                                             <div class="icon-on-accordion">
-                                                <a class="action-icons" title="Edit current Cover Letter" ng-click="toggleEditMode()" ng-class="inReadOnlyMode ? 'readonly-mode' : 'edit-mode'">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>                                                
+
                                                 <a class="action-icons" title="Delete current cover Letter" data-toggle="modal" data-target="#ModalResume">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </a>
-
                                             </div>
-                                        </div> -->
+                                        </div>
 
                                         <div class="container-fluid">
                                             <div class="row no-padding">
@@ -227,5 +193,5 @@
             </div>
         </div>
 
-       
+
     </div>
