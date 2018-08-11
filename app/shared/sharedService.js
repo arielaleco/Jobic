@@ -188,9 +188,9 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.email = anObj.email;
         this.linkToAdSource = anObj.linkToAdSource;
         this.description = anObj.description;
-        this.resumeVersion = anObj.resumeVersion;
-        this.coverLetterVersion = anObj.coverLetterVersion;
-        this.protfolioVersion = anObj.protfolioVersion;
+        this.resumeVersionTitle = anObj.resumeVersionTitle;
+        this.coverLetterVersionTitle = anObj.coverLetterVersionTitle;
+        this.protfolioVersionTitle = anObj.protfolioVersionTitle;
 
         this.date = anObj.date;
         this.id = "cvSent" + cvSentIdIndex;
@@ -238,9 +238,9 @@ app.factory('sharedService', function ($log, $q, $http) {
         this.company = anObj.company;
         this.JobTitle = anObj.JobTitle;
         this.description = anObj.description;
-        this.resumeVersion = anObj.resumeVersion;
-        this.coverLetterVersion = anObj.coverLetterVersion;
-        this.protfolioVersion = anObj.protfolioVersion;
+        this.resumeVersionTitle = anObj.resumeVersionTitle;
+        this.coverLetterVersionTitle = anObj.coverLetterVersionTitle;
+        this.protfolioVersionTitle = anObj.protfolioVersionTitle;
         this.interviewsList = [];
 
         if (anObj.interviewsList != undefined) {
