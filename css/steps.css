@@ -32,7 +32,7 @@ a:hover,a:focus{
 }
 #job-accordion .panel-title a{
     display: block;
-    padding: 10px 30px 15px 0;
+    padding: 8px 30px 8px 0;
     background: #fff;
     font-size: 18px;
     font-weight: bold;
