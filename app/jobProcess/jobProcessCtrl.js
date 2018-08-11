@@ -1,4 +1,10 @@
-app.controller("jobProcessCtrl", function ($scope , $location , $window, sharedService) {
+app.controller("jobProcessCtrl", function ($scope , $location , $window, sharedService,user) {
+
+ // Checking if the user is logged in, if not navigating back to home page
+ if (!user.isLoggedIn()) {
+    $location.path("/");
+    return;
+}
 
     $scope.jobProcesssArr = [];
     sharedService.filljobProcesssFile().then(function (jobProcesssArr) {

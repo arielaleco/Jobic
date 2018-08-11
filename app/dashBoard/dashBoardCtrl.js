@@ -1,5 +1,9 @@
 app.controller("dashBoardCtrl", function ($scope , $location, chatService,user) {
-
+ // Checking if the user is logged in, if not navigating back to home page
+   if (!user.isLoggedIn()) {
+    $location.path("/");
+    return;
+   }
 
     $scope.chatArr = [];
     chatService.fillChatFile().then(function (chatArr) {
