@@ -43,6 +43,7 @@ app.factory('user', function ($http, $q) {
     }
 
     function getActiveUser() {
+        console.log("activeUser == "+ activeUser);
         return activeUser;
     }
 
