@@ -35,6 +35,8 @@ app.controller("dashBoardCtrl", function ($scope , $location, chatService,user, 
             console.log(jobProcess);
             jobProcess.interviewsList.forEach(function(oneStep) {
                 console.log(oneStep);
+                oneStep.company =jobProcess.company; 
+                $scope.stepsInProcess.push(oneStep);
             });
 
         });

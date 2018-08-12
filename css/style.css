@@ -859,6 +859,20 @@ margin-top: -6px;
     padding:3px 12px;
     background-color: #e7e7e5;
 }
+
+
+#dashboard-view .timeline .container-tl p {
+    margin: 0px;
+
+}
+#dashboard-view .timeline .container-tl .header {
+    margin: 0px;
+    font-size: 18px;
+
+}
+#dashboard-view .timeline .container-tl .sub-header {
+    font-size: 16px;
+}
 /* #upper-panel span{
     font-weight: 900;
 } */
