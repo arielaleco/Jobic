@@ -28,12 +28,28 @@ app.controller("dashBoardCtrl", function ($scope , $location, chatService,user, 
 
      // suply a data set sorted by date read the Job Process array - prepare the structure
 
-     $scope.jobProcesssArr = [];
+     $scope.stepsInProcess=[];
      sharedService.filljobProcesssFile().then(function (jobProcesssArr) {
-         $scope.jobProcesssArr = jobProcesssArr;
-
-         // prepare the strcut
          
+        jobProcesssArr.forEach(function(jobProcess) {
+            console.log(jobProcess);
+            jobProcess.interviewsList.forEach(function(oneStep) {
+                console.log(oneStep);
+            });
+
+        });
+
+        //  // prepare the strcut
+        //  jobProcesssArr.forEach(function(jobProcess){
+        //      console.log(jobProcess);
+        //     jobProcess.forEach(function(oneStep){
+        //         oneStep.company=jobProcess.company; 
+        //         $scope.stepsInProcess.push(oneStep);
+
+
+        //     });
+
+        //  });
 
 
 
