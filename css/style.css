@@ -836,6 +836,15 @@ margin-top: -6px;
     padding:0px 20px;
 }
 
+.special-header{
+    background-color: white;
+    padding: 10px 0px;
+    width: 90vw;
+}
+.steps-table{
+    margin-left: 20px;
+}
+
 /* #upper-panel span{
     font-weight: 900;
 } */
