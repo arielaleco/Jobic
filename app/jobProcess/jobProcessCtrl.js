@@ -27,11 +27,9 @@ $scope.newStageJobProcess={};
 
 
 $scope.AddNewStage = function (jobProcess){
-    $scope.newStageJobProcess={};  
-    $scope.selectedJobProcess = jobProcess;        
-    var d = new Date();
-    $scope.newStageJobProcess.date = d.toDateString();
-    $scope.newStageJobProcess.JobTitle = jobProcess.JobTitle;
+    AddNewStageToJobProcess(jobProcess)
+
+    
 
     // console.log($scope.newStageJobProcess);
 
@@ -39,6 +37,16 @@ $scope.AddNewStage = function (jobProcess){
     // $scope.$apply();
     
   }
+  function AddNewStageToJobProcess(jobProcess)
+  {
+    $scope.newStageJobProcess={};  
+    $scope.selectedJobProcess = jobProcess;        
+    var d = new Date();
+    $scope.newStageJobProcess.date = d.toDateString();
+    $scope.newStageJobProcess.JobTitle = jobProcess.JobTitle;
+  }
+
+
   $scope.ApplyNewStage = function (){
   
     $scope.newStageJobProcess = sharedService.addStageToJobProcess($scope.selectedJobProcess,$scope.newStageJobProcess);
@@ -49,8 +57,15 @@ $scope.AddNewStage = function (jobProcess){
     sharedService.addNewJobProcess($scope.newJobProcess);
      // move to card View
      $('[ data-target="#cardView"]').tab('show');
+
+    // open the modal window
+     $('#ModalStageInput').modal({
+        show: true
+    });     
      // and click the add stage
-   // AddNewStage($scope.jobProcesssArr[$scope.jobProcesssArr.length]);
+     AddNewStageToJobProcess($scope.jobProcesssArr[$scope.jobProcesssArr.length-1]);
+
+
    $scope.newJobProcess={};
      
   }

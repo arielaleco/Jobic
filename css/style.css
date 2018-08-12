@@ -166,7 +166,7 @@ main{
 #navbarSupportedContent ul{
     padding-left: 70px;
    
-    height:60px;
+    /* height:60px; */
 }
 #navbarSupportedContent>ul>li{
     font-size: 14px;
@@ -526,7 +526,7 @@ a.action-icons.edit-mode{
 }
 
 .card-view .card-body{
-    height: 60px;
+    /* height: 60px; */
 }
 .card-view .card-body p{
     font-size: 14px;
@@ -566,6 +566,12 @@ a.action-icons.edit-mode{
 #sendCV .nav-item a , #jobProcess .nav-item a{
     color: black;
 }
+
+#sendCV table tr th {
+    padding:3px 12px;
+    background-color: #e7e7e5;
+}
+
 .required-field{
     margin-left: -20px;
     z-index: 1;
@@ -837,14 +843,22 @@ margin-top: -6px;
 }
 
 .special-header{
-    background-color: white;
+    background-color: darkgray;
+    color:white;
     padding: 10px 0px;
     width: 90vw;
 }
 .steps-table{
-    margin-left: 20px;
+    /* margin-left: 2px; */
+}
+.special-header span{
+    padding-right: 30px;
 }
 
+.steps-table tr th {
+    padding:3px 12px;
+    background-color: #e7e7e5;
+}
 /* #upper-panel span{
     font-weight: 900;
 } */

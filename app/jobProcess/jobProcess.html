@@ -41,7 +41,7 @@
                                     <i class="fas fa-trash-alt"></i>
                                 </a> -->
                                 <p>{{jobProcess.company}}</p>
-                                <button type="button" class="btn buttons-color float-right" data-toggle="modal" data-target="#ModalInput" ng-click="AddNewStage(jobProcess)">
+                                <button type="button" class="btn buttons-color float-right" data-toggle="modal" data-target="#ModalStageInput" ng-click="AddNewStage(jobProcess)">
                                     <i class="fas fa-plus-square"></i> Add New Stage</button>
                             </div>
                             <div class="card-body">
@@ -87,7 +87,7 @@
                             <span>{{jobProcess.coverLetterVersionId}}</span>
                             <span>{{jobProcess.protfolioVersionId}}</span>
                         </div>                            
-                            <div class="steps-table"  ng-repeat="jobStep in jobProcess.interviewsList">
+                            <div class="steps-table"  >
 
                                     <table class="table table-hover">
                                             <thead>
@@ -104,8 +104,8 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr ng-repeat="jobProcess in jobProcesssArr">
-                                                    <th scope="row">{{jobProcess.type}}</th>
+                                                <tr ng-repeat="jobStep in jobProcess.interviewsList">
+                                                    <th scope="row">{{jobStep.type}}</th>
                                                     <td>{{jobStep.meetWith}}</td>
                                                     <td>{{jobStep.contactPeron}}</td>
                                                     <td>{{jobStep.JobTitle}}</td>
@@ -113,7 +113,7 @@
                                                     <td>{{jobStep.purpose}}</td>
                                                     <td>{{jobStep.description}}</td>
                                                     <td>{{jobStep.summary}}</td>   
-                                                    <td>{{jobStep.date}}</td>                                                  
+                                                    <td>{{jobStep.date| date:'yyyy-MM-dd HH:mm'}}}}</td>                                                  
                             
                                                 </tr>
                             
@@ -190,7 +190,7 @@
 
                         <button id="add-process-btn" class="border-button width-button" ng-disabled="(!AddNewProcessForm.company.$valid) " ng-click="AddNewJobProcess()">Add</button>
 
-                        <!-- <button id="add-process-btn" class="border-button width-button" ng-disabled="(!AddNewProcessForm.company.$valid) " data-toggle="modal" data-target="#ModalInput" ng-click="AddNewStage(newJobProcess)">Add</button> -->
+                        <!-- <button id="add-process-btn" class="border-button width-button" ng-disabled="(!AddNewProcessForm.company.$valid) " data-toggle="modal" data-target="#ModalStageInput" ng-click="AddNewStage(newJobProcess)">Add</button> -->
 
 
 
