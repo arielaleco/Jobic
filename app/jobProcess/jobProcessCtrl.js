@@ -54,6 +54,18 @@ $scope.AddNewStage = function (jobProcess){
     
   }
   $scope.AddNewJobProcess = function(){
+
+    if ($scope.newJobProcess.resumeVersion != undefined) { 
+        $scope.newJobProcess.resumeVersionId = $scope.newJobProcess.resumeVersion.id; 
+    }
+    if ($scope.newJobProcess.coverLetterVersion != undefined) {
+         $scope.newJobProcess.coverLetterVersionId = $scope.newJobProcess.coverLetterVersion.id;
+         }
+    if ($scope.newJobProcess.protfolioVersion != undefined) {
+         $scope.newJobProcess.protfolioVersionId = $scope.newJobProcess.protfolioVersion.id;
+         }
+
+
     sharedService.addNewJobProcess($scope.newJobProcess);
      // move to card View
      $('[ data-target="#cardView"]').tab('show');
