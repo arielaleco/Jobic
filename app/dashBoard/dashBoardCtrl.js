@@ -4,7 +4,7 @@ app.controller("dashBoardCtrl", function ($scope , $location, chatService,user, 
 //     $location.path("/");
 //     return;
 //    }
-
+ 
     $scope.chatArr = [];
     chatService.fillChatFile().then(function (chatArr) {
         $scope.chatArr = chatArr;
