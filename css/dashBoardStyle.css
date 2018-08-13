@@ -9,22 +9,29 @@
 .text-arrow-rec{
     background-color: white;
     height: 16%;
-    margin: 10px;
+    margin: 8px 6px 20px 6px;
     text-align: center;
 }
 .text-arrow-rec>p{
     padding: 2px 0px;
     margin: 0px;
     font-size: 14px;
+    font-weight: 900;
 }
-.text-arrow-rec>h3{
+.text-arrow-rec h3{
     padding: 0px;
     margin: 0px;
-    font-size: 28px;
+    font-size: 50px;
     font-weight: 700;
+    margin-left:-50px;
 }
+.text-arrow-rec a{
+    color:white;
+}
+
+
 .pay-attention{
-    height: 42%;;
+    height: 37%;;
 }
 
 
@@ -88,7 +95,7 @@
 }
 
 #lower-panel{
-    /* background-color: red; */
+    background-color: white;
     width:100%; 
 }
 .main-panel{
@@ -100,9 +107,173 @@
 #bar{
     height:100px!important;
 }   
+.border-button-dashboard{
+    border: 2px solid rgba(125,185,232,0);
+    padding : 0px;
+    font-size: 14px;  
+    width:100%;  
+    /* margin: 20px; */
+    /* background-color: rgba(21,69,115,1); */
+    background-color: #7A0212;
+    color: white;
+    top:-10px;
+    position: relative;
+}
+.dashboard-values{
+    margin-top: -10px;
+    padding-bottom: 16px;
+}
 
 
+/* //--------------------------// */
+.css-typing{
+    padding-top:10px;
+}
 
+.css-typing p {
+    border-right: .15em solid orange;
+    
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    margin:0px;
+    padding:0px 20px 0px 20px;
+
+    width: 17em;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 4s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(1) {
+    width: 17em;
+    animation: type 4s steps(40, end);    
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing p:nth-child(2) {
+    width: 17em;
+    opacity: 0;    
+    animation: type2 2s steps(40, end);    
+    animation-delay: 4s;    
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing p:nth-child(3) {
+    width: 17em;
+    opacity: 0;    
+    animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;    
+    animation-delay: 6s;    
+    animation-fill-mode: forwards;
+  }
+
+  .css-typing p:nth-child(4) {
+    width: 17em;
+    opacity: 0;    
+    animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;    
+    animation-delay: 8s;    
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing p:nth-child(5) {
+    width: 17em;
+    opacity: 0;    
+    animation: type2 2s steps(40, end);    
+    animation-delay: 10s;    
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      border-color: tranparent;
+    }
+  }
 
 /* .inline{
     display: inline;

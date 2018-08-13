@@ -53,6 +53,8 @@ body{
 }
 
 
+
+
 .main-header{        
     /* color: white; */
     /* background-color: lightblue; */
@@ -974,12 +976,12 @@ margin-top: -6px;
 
 .one-pay-attention-msg{
     text-align: left;
-    padding:5px 20px;
+    padding:0px 10px 0px 15px;
 }
 .one-pay-attention-msg p{
     font-size:12px;
     display: inline;
-    padding: 10px;
+    padding: 0px 5px 0px 10px;
     text-align: left;
 
 }
