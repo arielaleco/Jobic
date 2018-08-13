@@ -35,7 +35,7 @@
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
-    background-color: rgba(122, 2, 18, 0.562);
+    background-color: rgba(122, 2, 18, 0.362);
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
