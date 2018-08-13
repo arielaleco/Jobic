@@ -37,7 +37,7 @@
             
             <div class="container-tl" ng-repeat="oneStep in stepsInProcess | orderBy:'date'" ng-class="(($index%2==0) ) ? 'left' : 'right'">
               <div class="content">
-                <p class="header inline" >{{oneStep.date|date:'yy-MM-yyyy'}} </p>
+                <p class="header inline" >{{oneStep.date|date:'dd-MM-yyyy'}} </p>
                 <p class="sub-header inline">{{oneStep.company}}</p>
                 <p class="">{{oneStep.type}} with {{oneStep.meetWith}}</p>
               </div>

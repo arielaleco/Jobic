@@ -1,103 +1,123 @@
 <div id="dashboard-page">
     <!-- <div >  ng-controller="dashBoardCtrl" -->
 
-        <div class="personal-note">
-            <div class="container-fluid">
+    <div class="personal-note">
+        <div class="container-fluid">
 
 
-                <div class="row ">
-                    <div id="upper-panel">
-                        <div class="col-xl-12 col-lg-12  col-sm-12">
-                            <div id="weather-data"  class="float-left">
-                                <div id="weather-icon" class="float-left">
-                                    <i class="fas fa-sun"></i>
-                                </div>
-                                <div id="weather" class="float-left">
-                                    <p class="temp no-padding-no-margin">32°</p>
-                                    <p class="verbal no-padding-no-margin">Sunny</p>
-
-                                </div>
+            <div class="row ">
+                <div id="upper-panel">
+                    <div class="col-xl-12 col-lg-12  col-sm-12">
+                        <div id="weather-data" class="float-left">
+                            <div id="weather-icon" class="float-left">
+                                <i class="fas fa-sun"></i>
                             </div>
-                            <div id="greating" class="float-left">
-                                <h2 class="no-padding-no-margin">Good Morning
-                                    <strong> {{LoggedInInUser().fname}} </strong> !</h2>
-                                <p>This week was great ! you are alnost there ...</p>
+                            <div id="weather" class="float-left">
+                                <p class="temp no-padding-no-margin">32°</p>
+                                <p class="verbal no-padding-no-margin">Sunny</p>
+
                             </div>
-
-
-
                         </div>
+                        <div id="greating" class="float-left">
+                            <h2 class="no-padding-no-margin">Good Morning
+                                <strong> {{LoggedInInUser().fname}} </strong> !</h2>
+                            <p>This week was great ! you are alnost there ...</p>
+                        </div>
+
+
+
                     </div>
                 </div>
-                <div class="row main-panel">
+            </div>
+            <div class="row main-panel">
 
-                    <div class="no-padding-no-margin col-xl-2 col-lg-2 ">
-                        <div class="text-arrow-rec">
-                            <p>Resume Sent This Week</p>
-                            <h3>34</h3>
-                            <p class="red">-18%
-                                <i class="fas fa-caret-down"></i>
-                            </p>
-
-                        </div>
-                        <div class="text-arrow-rec">
-                            <p>Heard Back From</p>
-                            <h3>11</h3>
-                            <p class="green">2%
-                                <i class="fas fa-caret-up"></i>
-                            </p>
-
-                        </div>
-                        <div class="text-arrow-rec">
-                            <p>Job Proceess Progress</p>
-                            <h3>2</h3>
-                            <p class="green">20%
-                                <i class="fas fa-caret-up"></i>
-                            </p>
-
-                        </div>
-                        <div class="text-arrow-rec">
-                            <p>
-                                <i class="fas fa-exclamation-triangle"></i>
-                                Pay Attention</p>
-                        </div>
-
-
+                <div class="no-padding-no-margin col-xl-2 col-lg-2 ">
+                    <div class="text-arrow-rec">
+                        <p>Resume Sent This Week</p>
+                        <h3>34</h3>
+                        <p class="red">-18%
+                            <i class="fas fa-caret-down"></i>
+                        </p>
 
                     </div>
-                    <div class="no-padding-no-margin col-xl-7 col-lg-7  ">
-                        <div id="middle-panel">
-                            <job-process-view-directive></job-process-view-directive>
-                        </div>
+                    <div class="text-arrow-rec">
+                        <p>Heard Back From</p>
+                        <h3>11</h3>
+                        <p class="green">2%
+                            <i class="fas fa-caret-up"></i>
+                        </p>
+
                     </div>
-                    <div class="no-padding-no-margin col-xl-3 col-lg-3  ">
-                        <!-- <div id="chat-page" ng-controller="dashBoardCtrl"> -->
-                        <div id="chat-page">
-                            <div ng-repeat="chat in chatArr">
-                                <div class="chat-card">
+                    <div class="text-arrow-rec">
+                        <p>Job Proceess Progress</p>
+                        <h3>2</h3>
+                        <p class="green">20%
+                            <i class="fas fa-caret-up"></i>
+                        </p>
 
-                                    <!-- <div class="chat-card-up d-flex bg-secondary text-white"> -->
-                                    <div class="chat-card-up d-flex ">
-                                        <div class="">
-                                            <img ng-src="{{chat.imageUrl}}">
-                                            <i class="fas fa-thumbs-up"></i>
-                                        </div>
-                                        <!-- <div class="p-2 "> -->
-                                        <div class="">
-                                            <p class="user-name">{{chat.userName}}</p>
-                                            <div class="clearfix">
-                                                <span class="small-font">{{chat.status}}</span>
-                                                <span class="small-font">{{chat.date}}</span>
-                                            </div>
-                                        </div>
-
+                    </div>
+                    <div class="text-arrow-rec pay-attention">
+                            <p><i class="fas fa-exclamation-triangle"></i> Pay Attention</p>
+                            
+                        <div>                                                       
+                            <div class="one-pay-attention-msg">
+                                <i class="far fa-clock"></i>
+                                <p>FACEBOOK did not get back to you</p>
+                            </div>
+                            <div class="one-pay-attention-msg">
+                                <i class="far fa-clock"></i>
+                                <p>Call VIBER this week</p>
+                            </div>
+                            <div class="one-pay-attention-msg">
+                                <i class="far fa-clock"></i>
+                                <p>Send 5 more CV</p>
+                            </div>
+                            <div class="one-pay-attention-msg">
+                                    <i class="far fa-clock"></i>
+                                    <p>Call FACEBOOK</p>
+                                </div>
+                                <div class="one-pay-attention-msg">
+                                        <i class="far fa-clock"></i>
+                                        <p>Send 5 more CV</p>
                                     </div>
-                                    <p class="chat-title">{{chat.title}}</p>
+                        </div>
+
+                    </div>
 
 
 
+                </div>
+                <div class="no-padding-no-margin col-xl-7 col-lg-7  ">
+                    <div id="middle-panel">
+                        <job-process-view-directive></job-process-view-directive>
+                    </div>
+                </div>
+                <div class="no-padding-no-margin col-xl-3 col-lg-3  ">
+                    <!-- <div id="chat-page" ng-controller="dashBoardCtrl"> -->
+                    <div id="chat-page">
+                        <div ng-repeat="chat in chatArr">
+                            <div class="chat-card">
+
+                                <!-- <div class="chat-card-up d-flex bg-secondary text-white"> -->
+                                <div class="chat-card-up d-flex ">
+                                    <div class="">
+                                        <img ng-src="{{chat.imageUrl}}">
+                                        <i class="fas fa-thumbs-up"></i>
+                                    </div>
+                                    <!-- <div class="p-2 "> -->
+                                    <div class="">
+                                        <p class="user-name">{{chat.userName}}</p>
+                                        <div class="clearfix">
+                                            <span class="small-font">{{chat.status}}</span>
+                                            <span class="small-font">{{chat.date}}</span>
+                                        </div>
+                                    </div>
 
                                 </div>
+                                <p class="chat-title">{{chat.title}}</p>
+
+
+
 
                             </div>
 
@@ -105,23 +125,25 @@
 
                     </div>
 
-
-
-
                 </div>
-                <div class="row ">
-                    <div id="lower-panel">
-                        <div class="col-xl-12 col-lg-12  col-sm-12">
-                            <canvas id="bar" class="chart chart-bar" chart-colors="colors" chart-data="data" chart-labels="labels"> chart-series="series"</canvas>
 
 
-
-
-                        </div>
-                    </div>
-                </div>
 
 
             </div>
+            <div class="row ">
+                <div id="lower-panel">
+                    <div class="col-xl-12 col-lg-12  col-sm-12">
+                        <canvas id="bar" class="chart chart-bar" chart-colors="colors" chart-data="data" chart-labels="labels"> chart-series="series"</canvas>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
+</div>

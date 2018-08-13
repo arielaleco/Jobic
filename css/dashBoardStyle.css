@@ -8,7 +8,7 @@
 
 .text-arrow-rec{
     background-color: white;
-    height: 86px;
+    height: 16%;
     margin: 10px;
     text-align: center;
 }
@@ -23,6 +23,11 @@
     font-size: 28px;
     font-weight: 700;
 }
+.pay-attention{
+    height: 42%;;
+}
+
+
 .red{
     color: red;
 }
@@ -32,7 +37,7 @@
 #middle-panel{
     background-color: white;
     margin: 10px;
-    height: 80%;
+    height: 96%;
 }
 
 .user-name{
@@ -44,7 +49,7 @@
 #chat-page{
     padding:5px;
     overflow: auto;
-    height:100%;
+    height:101%;
 }
 
 .chat-card img{
