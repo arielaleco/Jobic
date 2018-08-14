@@ -156,7 +156,7 @@ display: inline;
 }
 
 .igData1 {
-  background: rgb(100,100,100);
+  background: #FF9F55;
   height: 0px;
   left: 0%;
   -webkit-animation: showBar1 1.2s 0.1s forwards;
@@ -174,7 +174,7 @@ display: inline;
 }
 
 .igData3 {
-  background: rgb(100,100,100);
+  background: #FF9F55;
   height: 0px;
   left: 20%;
   -webkit-animation: showBar3 1.2s 0.3s forwards;
@@ -210,7 +210,7 @@ display: inline;
 }
 
 .igData7 {
-  background: rgb(100,100,100);
+  background: #FF9F55;
   height: 0px;
   left: 60%;
   -webkit-animation: showBar7 1.2s 0.7s forwards;
@@ -228,7 +228,7 @@ display: inline;
 }
 
 .igData9 {
-  background: rgb(100,100,100);
+  background: #FF9F55;
   height: 0px;
   left: 80%;
   -webkit-animation: showBar9 1.2s 0.9s forwards;
@@ -237,7 +237,7 @@ display: inline;
 }
 
 .igData10 {
-  background: rgb(100,100,100);
+  background: #FF9F55;
   height: 0px;
   left: 90%;
   -webkit-animation: showBar10 1.2s 1s forwards;
