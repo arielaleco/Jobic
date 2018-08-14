@@ -112,3 +112,484 @@ display: inline;
 .container-sub-texts{
     padding:30px 15px;
 }
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+.igFrameBar {
+  /* width: 400px; */
+  height: 200px;
+  position: relative;
+  background: #f2f2f2;
+  margin: 15% auto 0px auto;
+  transform: translate(0, -50%);
+  margin-top:100px;
+}
+
+.igFrameBar:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+}
+
+.igFrameBar:after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  background: transparent;
+  position: absolute;
+  top: 25%;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.igData {
+  width: 150px;
+  position: absolute;
+  bottom: 1px;
+  margin: 0px 0px 0px 0px;
+  z-index: 99;
+  float: left;
+}
+
+.igData1 {
+  background: #7a0212;
+  height: 0px;
+  left: 0%;
+  -webkit-animation: showBar1 1.2s 0.1s forwards;
+  -moz-animation: showBar1 1.2s 0.1s forwards;
+  animation: showBar1 1.2s 0.1s forwards;
+}
+
+.igData2 {
+  background: #7a0212;
+  height: 0px;
+  left: 10%;
+  -webkit-animation: showBar2 1.2s 0.2s forwards;
+  -moz-animation: showBar2 1.2s 0.2s forwards;
+  animation: showBar2 1.2s 0.2s forwards;
+}
+
+.igData3 {
+  background: #4b000a;
+  height: 0px;
+  left: 20%;
+  -webkit-animation: showBar3 1.2s 0.3s forwards;
+  -moz-animation: showBar3 1.2s 0.3s forwards;
+  animation: showBar3 1.2s 0.3s forwards;
+}
+
+.igData4 {
+  background: rgb(202,143,70,0.3);
+  height: 0px;
+  left: 30%;
+  -webkit-animation: showBar4 1.2s 0.4s forwards;
+  -moz-animation: showBar4 1.2s 0.4s forwards;
+  animation: showBar4 1.2s 0.4s forwards;
+}
+
+.igData5 {
+  background: rgb(202,143,70,0.3);
+  height: 0px;
+  left: 40%;
+  -webkit-animation: showBar5 1.2s 0.5s forwards;
+  -moz-animation: showBar5 1.2s 0.5s forwards;
+  animation: showBar5 1.2s 0.5s forwards;
+}
+
+.igData6 {
+  background: rgb(202,143,70,0.3);
+  height: 0px;
+  left: 50%;
+  -webkit-animation: showBar6 1.2s 0.6s forwards;
+  -moz-animation: showBar6 1.2s 0.6s forwards;
+  animation: showBar6 1.2s 0.6s forwards;
+}
+
+.igData7 {
+  background: #4b000a;
+  height: 0px;
+  left: 60%;
+  -webkit-animation: showBar7 1.2s 0.7s forwards;
+  -moz-animation: showBar7 1.2s 0.7s forwards;
+  animation: showBar7 1.2s 0.7s forwards;
+}
+
+.igData8 {
+  background: rgb(202,143,70,0.3);
+  height: 0px;
+  left: 70%;
+  -webkit-animation: showBar8 1.2s 0.8s forwards;
+  -moz-animation: showBar8 1.2s 0.8s forwards;
+  animation: showBar8 1.2s 0.8s forwards;
+}
+
+.igData9 {
+  background: #4b000a;
+  height: 0px;
+  left: 80%;
+  -webkit-animation: showBar9 1.2s 0.9s forwards;
+  -moz-animation: showBar9 1.2s 0.9s forwards;
+  animation: showBar9 1.2s 0.9s forwards;
+}
+
+.igData10 {
+  background: #4b000a;
+  height: 0px;
+  left: 90%;
+  -webkit-animation: showBar10 1.2s 1s forwards;
+  -moz-animation: showBar10 1.2s 1s forwards;
+  animation: showBar10 1.2s 1s forwards;
+}
+
+.igData:before {
+  position: absolute;
+  top: -16px;
+  font-size: 12px;
+  color: #333;
+  font-family: "roboto";
+  font-weight: 300;
+}
+
+.igData1:before {
+  content: "50%";
+}
+
+.igData2:before {
+  content: "40%";
+}
+
+.igData3:before {
+  content: "70%";
+}
+
+.igData4:before {
+  content: "22%";
+}
+
+.igData5:before {
+  content: "35%";
+}
+
+.igData6:before {
+  content: "40%";
+}
+
+.igData7:before {
+  content: "85%";
+}
+
+.igData8:before {
+  content: "36%";
+}
+
+.igData9:before {
+  content: "88%";
+}
+
+.igData10:before {
+  content: "62%";
+}
+
+.igData:after {
+  position: absolute;
+  bottom: -55px;
+  transform: rotate(30deg);
+  color: #666;
+  font-size: 14px;
+  text-align: left;
+  font-family: "roboto";
+  font-weight: 300;
+  width: 150px;
+}
+
+.igData1:after {
+  content: "May -First week";
+}
+
+.igData2:after {
+  content: "May -Second week";
+}
+
+.igData3:after {
+  content: "May -Third week";
+}
+
+.igData4:after {
+  content: "May -Forth week";
+}
+
+.igData5:after {
+  content: "June -First week";
+}
+
+.igData6:after {
+  content: "June -Second week";
+}
+
+.igData7:after {
+  content: "June -Third week";
+}
+
+.igData8:after {
+  content: "June -Forth week";
+}
+
+.igData9:after {
+  content: "Agust -First week";
+}
+
+.igData10:after {
+  content: "Agust -Second week";
+}
+
+@-webkit-keyframes showBar1 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 50%;
+  }
+}
+@-webkit-keyframes showBar2 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 40%;
+  }
+}
+@-webkit-keyframes showBar3 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 70%;
+  }
+}
+@-webkit-keyframes showBar4 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 22%;
+  }
+}
+@-webkit-keyframes showBar5 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 35%;
+  }
+}
+@-webkit-keyframes showBar6 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 40%;
+  }
+}
+@-webkit-keyframes showBar7 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 85%;
+  }
+}
+@-webkit-keyframes showBar8 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 36%;
+  }
+}
+@-webkit-keyframes showBar9 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 88%;
+  }
+}
+@-webkit-keyframes showBar10 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 62%;
+  }
+}
+@-moz-keyframes showBar1 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 50%;
+  }
+}
+@-moz-keyframes showBar2 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 40%;
+  }
+}
+@-moz-keyframes showBar3 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 70%;
+  }
+}
+@-moz-keyframes showBar4 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 22%;
+  }
+}
+@-moz-keyframes showBar5 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 35%;
+  }
+}
+@-moz-keyframes showBar6 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 40%;
+  }
+}
+@-moz-keyframes showBar7 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 85%;
+  }
+}
+@-moz-keyframes showBar8 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 36%;
+  }
+}
+@-moz-keyframes showBar9 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 88%;
+  }
+}
+@-moz-keyframes showBar10 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 62%;
+  }
+}
+@keyframes showBar1 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 50%;
+  }
+}
+@keyframes showBar2 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 40%;
+  }
+}
+@keyframes showBar3 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 70%;
+  }
+}
+@keyframes showBar4 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 22%;
+  }
+}
+@keyframes showBar5 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 35%;
+  }
+}
+@keyframes showBar6 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 40%;
+  }
+}
+@keyframes showBar7 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 85%;
+  }
+}
+@keyframes showBar8 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 36%;
+  }
+}
+@keyframes showBar9 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 88%;
+  }
+}
+@keyframes showBar10 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 62%;
+  }
+}
+
+
+
+
+
+
+
