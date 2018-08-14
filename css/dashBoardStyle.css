@@ -35,6 +35,9 @@
 }
 
 
+
+
+
 .red{
     color: red;
 }
@@ -118,6 +121,19 @@
     color: white;
     top:-10px;
     position: relative;
+
+    background: linear-gradient(243deg,#7a0212, #7a0212,#7a0212, rgb(202,143,70,0.3),#7a0212);
+    /* background: linear-gradient(243deg, #7a0212, rgb(230, 58, 80),#7a0212); */
+    background-size: 400% 400%;
+
+    animation: AnimationName 10s ease infinite;
+  }
+
+
+@keyframes AnimationName { 
+    0%{background-position:0% 58%}
+    50%{background-position:100% 43%}
+    100%{background-position:0% 58%}
 }
 .dashboard-values{
     margin-top: -10px;
