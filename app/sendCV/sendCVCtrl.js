@@ -22,7 +22,7 @@ app.controller("sendCVCtrl", function ($scope, $location, $window, sharedService
     // $scope.newCV.date = d.toDateString();
 
 
-    $scope.SaveCV = function () {
+    function saveCVTodatabase(){
         if ($scope.newCV.resumeVersion != undefined) { 
             $scope.newCV.resumeVersionId = $scope.newCV.resumeVersion.id; 
         }
@@ -44,6 +44,30 @@ app.controller("sendCVCtrl", function ($scope, $location, $window, sharedService
         // clen the fields from the last sent !
     }
 
+    $scope.SaveCV = function () {
+
+        saveCVTodatabase();
+        // if ($scope.newCV.resumeVersion != undefined) { 
+        //     $scope.newCV.resumeVersionId = $scope.newCV.resumeVersion.id; 
+        // }
+        // if ($scope.newCV.coverLetterVersion != undefined) {
+        //      $scope.newCV.coverLetterVersionId = $scope.newCV.coverLetterVersion.id;
+        //      }
+        // if ($scope.newCV.protfolioVersion != undefined) {
+        //      $scope.newCV.protfolioVersionId = $scope.newCV.protfolioVersion.id;
+        //      }
+
+
+        // sharedService.addNewSentCV($scope.newCV);
+
+        // // notify the user
+
+        // // move to card View
+        // $('[ data-target="#cardView"]').tab('show');
+
+        // clen the fields from the last sent !
+    }
+
     $scope.SendAndSaveCV = function () {
         // validation check - confirmation 
 
@@ -59,7 +83,7 @@ app.controller("sendCVCtrl", function ($scope, $location, $window, sharedService
         var service_id = "default_service";
         var template_id = "jobic";
         emailjs.send(service_id, template_id, template_params);
-        SaveCV();
+        saveCVTodatabase();
 
 
         // var mail = 'mailto:{{$scope.newCV.email}}?subject=' + $scope.newCV.description +
