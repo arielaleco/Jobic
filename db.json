@@ -11,12 +11,31 @@
         },
         {
             "id": 2,
-            "fname":"Alex",
-            "lname":"Levi",
-            "email":"arielaleco@gmail.com",
-            "phone":"0544455667",
+            "fname": "Ariela1",
+            "lname": "Cohen",
+            "email": "arielaleco1@gmail.com",
+            "phone":"0544455668",
             "birthDate":"2018-05-03T05:00:00.000Z",
-            "password":"1234"
+            "password": "123"
+        },
+        {
+            "id": 3,
+            "fname":"Ariela2",
+            "lname":"Levi",
+            "email":"arielaleco2@gmail.com",
+            "phone":"0544455669",
+            "birthDate":"2018-05-03T05:00:00.000Z",
+            "password":"123"
+            
+        },
+        {
+            "id": 4,
+            "fname":"Ariela3",
+            "lname":"Levinmski",
+            "email":"arielaleco3@gmail.com",
+            "phone":"0544455660",
+            "birthDate":"2018-05-03T05:00:00.000Z",
+            "password":"123"
             
         }      
     ],
@@ -27,13 +46,6 @@
             "file": "c:temp\\ProductManager.doc",
             "description": "Send to product manager roles in mobile companies",
             "date": "2018-04-03T05:00:00.000Z"
-        },
-        {
-            "id":"R2",
-            "title": "Project Manager Web",
-            "file": "c:\\temp\\ProjectManager.doc",
-            "description": "Send to Project manager roles in mobile companies",
-            "date": "2018-05-03T05:00:00.000Z"
         },
         {
             "id":"R3",
@@ -50,13 +62,6 @@
             "description": "Product Manager from Facebook",
             "content": "Hi , My name is John Belushi and I'm a product manager , I would like to apply to the product manage position at your company , please check the attached files . Thank you , Ariela Leiba Cohen",
             "date": "2018-04-03T05:00:00.000Z"
-        },
-        {
-            "id":"CL2",
-            "title": "Light Version Project",
-            "description": "Product Manager to HR",
-            "content": "Hello ,  , I would like to apply to the product manage position at your company , please check the attached files . Thank you , Ariela Leiba Cohen",
-            "date": "2018-05-03T05:00:00.000Z"
         },
         {
             "id":"CL3",
@@ -87,18 +92,6 @@
             "date": "2018-05-03T21:00:00.000Z"
         },
         {
-            "company": "extreme",
-            "JobTitle": "Product Manager.",
-            "contactPeron": "Yael Tsuk‎‏ ",
-            "email": "HR@extreme.com",
-            "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/permalink/10155803547067677/",
-            "description": "An innovative Start-up developing 3D multi-camera-based Advanced Driver Assistance Systems, is looking for an experienced Product Manager.",
-            "resumeVersionId": "R2",
-            "coverLetterVersionId": "CL1",
-            "protfolioVersionId": "1",
-            "date": "2018-05-14T05:00:00.000Z"
-        },
-        {
             "company": "tangelogames",
             "JobTitle": "Product Manager",
             "contactPeron": "‎Tom Muallem",
@@ -121,18 +114,6 @@
             "coverLetterVersionId": "CL2",
             "protfolioVersionId": "1",
             "date": "2018-06-03T05:00:00.000Z"
-        },
-        {
-            "company": "Slidely ",
-            "JobTitle": "Product Manager",
-            "contactPeron": "Reut Tiger",
-            "email": "slidely.mobileproductmanager@applynow.io",
-            "linkToAdSource": "https://www.facebook.com/groups/israel.hightech/search/?query=product%20manager",
-            "description": "Slidely is looking for Mobile Product Manager",
-            "resumeVersionId": "R3",
-            "coverLetterVersionId": "CL3",
-            "protfolioVersionId": "2",
-            "date": "2018-06-15T03:00:00.000Z"
         },
         {
             "company": "Natural Intelligence",
